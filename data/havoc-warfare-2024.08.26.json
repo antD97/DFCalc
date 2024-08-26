@@ -1,0 +1,1208 @@
+{
+    "attachments": {
+        "muzzle": {
+            "Silent Suppressor": {
+                "effects": [ { "type": "range multiplier", "amount": 0.25 } ],
+                "compatibleGuns": [
+                    "CAR-15",
+                    "PTR-32",
+                    "AKS-74",
+                    "QBZ95-1",
+                    "M4A1",
+                    "M16A4",
+                    "AK-12",
+                    "AKM",
+                    "SKS",
+                    "SCAR-H",
+                    "K416",
+                    "Bizon",
+                    "UZI",
+                    "Vityaz",
+                    "MP5",
+                    "SMG-45",
+                    "SR-3M",
+                    "P90",
+                    "Vector",
+                    "G3",
+                    "AUG",
+                    "M7",
+                    "PKM",
+                    "M249",
+                    "M14",
+                    "SG 552",
+                    "Mini-14",
+                    "SVD",
+                    "SR-25",
+                    "R93",
+                    "M700",
+                    "SV-98"
+                ]
+            },
+            "Precision Tactical Suppressor": {
+                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "compatibleGuns": [
+                    "CAR-15",
+                    "PTR-32",
+                    "AKS-74",
+                    "QBZ95-1",
+                    "M4A1",
+                    "M16A4",
+                    "AK-12",
+                    "AKM",
+                    "SKS",
+                    "SCAR-H",
+                    "K416",
+                    "Bizon",
+                    "UZI",
+                    "Vityaz",
+                    "MP5",
+                    "SMG-45",
+                    "SR-3M",
+                    "P90",
+                    "Vector",
+                    "G3",
+                    "AUG",
+                    "M7",
+                    "PKM",
+                    "M249",
+                    "M14",
+                    "SG 552",
+                    "Mini-14",
+                    "SVD",
+                    "SR-25",
+                    "R93",
+                    "M700",
+                    "SV-98"
+                ]
+            },
+            "AK Practical Suppressor": {
+                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "compatibleGuns": [ "AKS-74", "AK-12", "AKM", "SKS", "SR-3M", "PKM" ]
+            },
+            "SMG Echo Suppressor": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "Bizon", "UZI", "Vityaz", "MP5", "SMG-45", "P90", "Vector", "G17", "93R" ]
+            },
+            "Resonant Sniper Rifle Suppressor": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "SVD", "SR-25", "R93", "M700", "SV-98", "AWM" ]
+            }
+        },
+        "barrel": {
+            "G3 Enhanced Long Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "PTR-32", "G3" ]
+            },
+            "G3 Hurricane Short Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": -0.125 } ],
+                "compatibleGuns": [ "PTR-32", "G3" ]
+            },
+            "G3 Enhanced Standard Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "compatibleGuns": [ "PTR-32", "G3" ]
+            },
+            "AKS-74 Practical Long Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "AKS-74" ]
+            },
+            "AKS-74 Practical Standard Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "compatibleGuns": [ "AKS-74" ]
+            },
+            "QBZ95-1 Prac Short Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": -0.05 } ], // not 100% see qbz coomment
+                "compatibleGuns": [ "QBZ95-1" ]
+            },
+            "QBZ95-1 Longbow Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "QBZ95-1" ]
+            },
+            "M4A1 Integral Suppressor": {
+                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "compatibleGuns": [ "M4A1" ],
+                "incompatibleAttachments": [ "muzzle" ]
+            },
+            "M4 Elite Long Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "M4A1", "M16A4" ]
+            },
+            "M4 Elite Standard Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "compatibleGuns": [ "M4A1", "M16A4" ]
+            },
+            "M4 Elite Short Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": -0.125 } ],
+                "compatibleGuns": [ "M4A1", "M16A4" ]
+            },
+            "M4 Practical Long Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "compatibleGuns": [ "M4A1", "M16A4" ]
+            },
+            "M16A4 Practical Standard Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": -0.05 } ],
+                "compatibleGuns": [ "M16A4" ]
+            },
+            "AK-12 Elite Bipod Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "AK-12" ]
+            },
+            "AK-12 Practical Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": -0.125 } ],
+                "compatibleGuns": [ "AK-12" ]
+            },
+            "AKM Performance Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.05 } ],
+                "compatibleGuns": [ "AKM" ]
+            },
+            "AKM Practical Long Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "compatibleGuns": [ "AKM" ]
+            },
+            "AKM Practical Standard Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": -0.05 } ],
+                "compatibleGuns": [ "AKM" ]
+            },
+            "AKM Beaver Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.125 } ],
+                "compatibleGuns": [ "AKM" ]
+            },
+            "AKM Elite Long Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "compatibleGuns": [ "AKM" ]
+            },
+            "AKM Beaver Long Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "AKM" ]
+            },
+            "VSS Tsunami Long Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.25 } ],
+                "compatibleGuns": [ "AS Val", "VSS" ]
+            },
+            "M1014 Practical Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.25 } ],
+                "compatibleGuns": [ "M1014" ]
+            },
+            "S12K Practical Long Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.25 } ],
+                "compatibleGuns": [ "S12K" ]
+            },
+            "S12K Elite Precision Long Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.25 } ],
+                "compatibleGuns": [ "S12K" ]
+            },
+            "SKS Elite Ultra-Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns"
+                : [ "SKS" ]
+            },
+            "SKS Elite Standard Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": -0.125 } ],
+                "compatibleGuns": [ "SKS" ]
+            },
+            "SCAR-H Practical Standard Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.05 } ],
+                "compatibleGuns": [ "SCAR-H" ]
+            },
+            "SCAR-H Practical Short Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": -0.125 } ],
+                "compatibleGuns": [ "SCAR-H" ]
+            },
+            "SCAR-H Practical Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "SCAR-H" ]
+            },
+            "K416 Short Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": -0.125 } ],
+                "compatibleGuns": [ "K416" ]
+            },
+            "K416 A8 Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": -0.166666667 } ], // damage dropoff graph looks good with this amount but the listed range value on the menu doesn't make sense to me :/
+                "compatibleGuns": [ "K416" ]
+            },
+            "K416 Elite Heavy Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.05 } ],
+                "compatibleGuns": [ "K416" ]
+            },
+            "K416 A8 Long Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "K416" ]
+            },
+            "Bizon Practical Ultra-Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.25 } ],
+                "compatibleGuns": [ "Bizon" ]
+            },
+            "Bizon Practical Standard Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "compatibleGuns": [ "Bizon", "Vityaz" ]
+            },
+            "Bizon Practical Short Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": -0.125 } ],
+                "compatibleGuns": [ "Bizon", "Vityaz" ]
+            },
+            "UZI Practical Standard Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": -0.125 } ],
+                "compatibleGuns": [ "UZI" ]
+            },
+            "UZI Practical Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "compatibleGuns": [ "UZI" ]
+            },
+            "UZI Performance Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "UZI" ]
+            },
+            "MP5 Tactical Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.05 } ],
+                "compatibleGuns": [ "MP5" ]
+            },
+            "MP5 Performance Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.05 } ],
+                "compatibleGuns": [ "MP5" ]
+            },
+            "MP5 Long Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "compatibleGuns": [ "MP5" ]
+            },
+            "MP5 Short Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": -0.125 } ],
+                "compatibleGuns": [ "MP5" ],
+                "incompatibleAttachments": [ "muzzle" ]
+            },
+            "MP5 Integral Suppressor": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "MP5" ],
+                "incompatibleAttachments": [ "muzzle" ]
+            },
+            "SMG-45 Practical Heavy Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.05 } ],
+                "compatibleGuns": [ "SMG-45" ]
+            },
+            "SMG-45 Practical Short Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": -0.125 } ],
+                "compatibleGuns": [ "SMG-45" ]
+            },
+            "SMG-45 Practical Ultra-Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "SMG-45" ]
+            },
+            "P90 Practical Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "P90" ]
+            },
+            "P90 Elite Heavy Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": -0.125 } ],
+                "compatibleGuns": [ "P90" ]
+            },
+            "Vector Longsword Ultra-Long Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "Vector" ]
+            },
+            "Vector Rail Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.05 } ],
+                "compatibleGuns": [ "Vector" ]
+            },
+            "Vector Fortress Heavy Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": -0.125 } ],
+                "compatibleGuns": [ "Vector" ]
+            },
+            "AUG Elite Integral Suppressor": {
+                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "compatibleGuns": [ "AUG" ],
+                "incompatibleAttachments": [ "muzzle" ]
+            },
+            "AUG Practical Integral 3x Scope Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.05 } ],
+                "compatibleGuns": [ "AUG" ]
+            },
+            "AUG Practical Standard Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": -0.125 } ],
+                "compatibleGuns": [ "AUG" ]
+            },
+            "AUG Elite Bipod Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "AUG" ]
+            },
+            "ASh-12 High Accuracy Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": -0.125 } ],
+                "compatibleGuns": [ "ASh-12" ]
+            },
+            "M7 Elite Ultra-Long Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "M7" ]
+            },
+            "M7 Practical Long Barrel Combo": {
+                "effects": [ { "type": "range multiplier", "amount": 0.05 } ],
+                "compatibleGuns": [ "M7" ]
+            },
+            "PKM Practical Short Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": -0.125 } ],
+                "compatibleGuns": [ "PKM" ]
+            },
+            "PKM Elite Standard Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "PKM" ]
+            },
+            "M249 Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "M249" ]
+            },
+            "M249 Short Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": -0.125 } ],
+                "compatibleGuns": [ "M249" ]
+            },
+            "M14 Practical Short Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": -0.125 } ],
+                "compatibleGuns": [ "M14" ]
+            },
+            "M14 Practical Standard Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "compatibleGuns": [ "M14" ]
+            },
+            "M14 Practical Ultra-Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "M14" ]
+            },
+            "SG 552 Heavy Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "compatibleGuns": [ "SG 552" ]
+            },
+            "Mini-14 Enhanced Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "Mini-14" ]
+            },
+            "SVD Practical Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.1875 } ],
+                "compatibleGuns": [ "SVD" ]
+            },
+            "SVD Elite Ultra-Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "SVD" ]
+            },
+            "SR-25 Practical Short Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": -0.125 } ],
+                "compatibleGuns": [ "SR-25" ]
+            },
+            "SR-25 Practical Ultra-Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "SR-25" ]
+            },
+            "SR-25 Practical Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.18 } ],
+                "compatibleGuns": [ "SR-25" ]
+            },
+            "R93 Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "R93" ]
+            },
+            "R93 Short Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": -0.18 } ],
+                "compatibleGuns": [ "R93" ]
+            },
+            "SV-98 Light Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.18 } ],
+                "compatibleGuns": [ "SV-98" ]
+            },
+            "SV-98 Ultra-Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "SV-98" ]
+            },
+            "SV-98 Short Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": -0.18 } ],
+                "compatibleGuns": [ "SV-98" ]
+            },
+            "AWM Skyline Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "AWM" ]
+            },
+            "Revolver Practical Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.05 } ],
+                "compatibleGuns": [ "Revolver" ]
+            },
+            "Revolver Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.18 } ],
+                "compatibleGuns": [ "Revolver" ]
+            },
+            "Revolver Short Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.05 } ],
+                "compatibleGuns": [ "Revolver" ]
+            },
+            "93R Practical Light Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": -0.05 } ],
+                "compatibleGuns": [ "93R" ]
+            },
+            "93R Practical Heavy Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.05 } ],
+                "compatibleGuns": [ "93R" ]
+            },
+            "93R Practical Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.18 } ],
+                "compatibleGuns": [ "93R" ]
+            },
+            "93R Ultra-Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 1.3 } ],
+                "compatibleGuns": [ "93R" ]
+            },
+            "Desert Eagle Practical Comp. Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": -0.125 } ],
+                "compatibleGuns": [ "Desert Eagle" ]
+            },
+            "Desert Eagle Practical Long Barrel": {
+                "effects": [ { "type": "range multiplier", "amount": 0.3 } ],
+                "compatibleGuns": [ "Desert Eagle" ]
+            }
+        }
+    },
+    "guns": {
+        "CAR-15": {
+            "damage": 25,
+            "fireRate": 632,
+            "armorPenetration": 32,
+            "damageFalloffMultipliers": [
+                { "from": 30, "multiplier": 0.85 },
+                { "from": 50, "multiplier": 0.7 },
+                { "from": 80, "multiplier": 0.6 }
+            ],
+            "headMultiplier": 1.9,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1,
+            "upperLegMultiplier": 0.9,
+            "lowerLegMultiplier": 0.9,
+            "type": "Assault Rifle",
+            "characterClass": [ "Assault", "Support", "Engineer", "Recon" ]
+        },
+        "PTR-32": {
+            "damage": 28,
+            "fireRate": 632,
+            "armorPenetration": 36,
+            "damageFalloffMultipliers": [
+                { "from": 30, "multiplier": 0.85 },
+                { "from": 50, "multiplier": 0.7 },
+                { "from": 80, "multiplier": 0.6 }
+            ],
+            "headMultiplier": 1.9,
+            "stomachMultiplier": 1,
+            "armMultiplier": 0.8,
+            "upperLegMultiplier": 0.8,
+            "lowerLegMultiplier": 0.8,
+            "type": "Assault Rifle",
+            "characterClass": [ "Assault" ]
+        },
+        "AKS-74": {
+            "damage": 27,
+            "fireRate": 533,
+            "armorPenetration": 36,
+            "damageFalloffMultipliers": [
+                { "from": 30, "multiplier": 0.8 },
+                { "from": 50, "multiplier": 0.7 },
+                { "from": 80, "multiplier": 0.6 }
+            ],
+            "headMultiplier": 2.0,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Assault Rifle",
+            "characterClass": [ "Assault", "Support", "Engineer", "Recon" ]
+        },
+        "QBZ95-1": {
+            "damage": 22,
+            "fireRate": 679,
+            "armorPenetration": 42,
+            "damageFalloffMultipliers": [
+                { "from": 40, "multiplier": 0.85 },
+                { "from": 70, "multiplier": 0.7 },
+                { "from": 100, "multiplier": 0.6 } // estimated using attachments but previous range drops at 100m showed on graph but this didnt :thinking:
+            ],
+            "headMultiplier": 1.9,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Assault Rifle",
+            "characterClass": [ "Assault" ]
+        },
+        "M4A1": {
+            "damage": 20,
+            "fireRate": 800,
+            "armorPenetration": 32,
+            "damageFalloffMultipliers": [
+                { "from": 30, "multiplier": 0.9 },
+                { "from": 50, "multiplier": 0.7 },
+                { "from": 80, "multiplier": 0.6 }
+            ],
+            "headMultiplier": 1.9,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Assault Rifle",
+            "characterClass": [ "Assault" ]
+        },
+        "M16A4": {
+            "damage": 25,
+            "fireRate": 672,
+            "armorPenetration": 39,
+            "damageFalloffMultipliers": [
+                { "from": 30, "multiplier": 0.85 },
+                { "from": 50, "multiplier": 0.7 },
+                { "from": 80, "multiplier": 0.6 }
+            ],
+            "headMultiplier": 1.9,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Assault Rifle",
+            "characterClass": [ "Assault", "Support", "Engineer", "Recon" ]
+        },
+        "AK-12": {
+            "damage": 24,
+            "fireRate": 735,
+            "armorPenetration": 41,
+            "damageFalloffMultipliers": [
+                { "from": 30, "multiplier": 0.75 },
+                { "from": 50, "multiplier": 0.7 },
+                { "from": 80, "multiplier": 0.6 }
+            ],
+            "headMultiplier": 1.9,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Assault Rifle",
+            "characterClass": [ "Assault" ]
+        },
+        "AKM": {
+            "damage": 26,
+            "fireRate": 600,
+            "armorPenetration": 42,
+            "damageFalloffMultipliers": [
+                { "from": 30, "multiplier": 0.85 },
+                { "from": 50, "multiplier": 0.7 },
+                { "from": 80, "multiplier": 0.6 }
+            ],
+            "headMultiplier": 1.9,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Assault Rifle",
+            "characterClass": [ "Assault" ]
+        },
+        "AS Val": {
+            "damage": 20,
+            "fireRate": 972,
+            "armorPenetration": 48,
+            "damageFalloffMultipliers": [
+                { "from": 20, "multiplier": 0.85 },
+                { "from": 40, "multiplier": 0.7 },
+                { "from": 60, "multiplier": 0.6 }
+            ],
+            "headMultiplier": 1.9,
+            "stomachMultiplier": 1,
+            "armMultiplier": 1,
+            "upperLegMultiplier": 0.8,
+            "lowerLegMultiplier": 0.8,
+            "type": "Assault Rifle",
+            "characterClass": [ "Assault" ]
+        },
+        "M870": {
+            "damage": 17,
+            "numBullets": 8,
+            "fireRate": 67,
+            "armorPenetration": 16,
+            "damageFalloffMultipliers": [
+                { "from": 10, "multiplier": 0.9 },
+                { "from": 15, "multiplier": 0.8 },
+                { "from": 20, "multiplier": 0.3 },
+                { "from": 80, "multiplier": 0.0, "isAffectedByAttachments": false }
+            ],
+            "headMultiplier": 1.25,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Shotgun",
+            "characterClass": [ "Assault", "Support", "Engineer", "Recon" ]
+        },
+        "M1014": {
+            "damage": 15,
+            "numBullets": 8,
+            "fireRate": 300,
+            "armorPenetration": 16,
+            "damageFalloffMultipliers": [
+                { "from": 6, "multiplier": 0.9 },
+                { "from": 12, "multiplier": 0.8 },
+                { "from": 18, "multiplier": 0.3 },
+                { "from": 50, "multiplier": 0.0, "isAffectedByAttachments": false }
+            ],
+            "headMultiplier": 1.25,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Shotgun",
+            "characterClass": [ "Assault", "Support", "Engineer", "Recon" ]
+        },
+        "S12K": {
+            "damage": 14,
+            "numBullets": 8,
+            "fireRate": 300,
+            "armorPenetration": 16,
+            "damageFalloffMultipliers": [
+                { "from": 4, "multiplier": 0.9 },
+                { "from": 8, "multiplier": 0.7 },
+                { "from": 12, "multiplier": 0.3 },
+                { "from": 50, "multiplier": 0.0, "isAffectedByAttachments": false }
+            ],
+            "headMultiplier": 1.25,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Shotgun",
+            "characterClass": [ "Assault", "Support", "Engineer", "Recon" ]
+        },
+        "SKS": {
+            "damage": 27,
+            "fireRate": 585,
+            "armorPenetration": 40,
+            "damageFalloffMultipliers": [
+                { "from": 55, "multiplier": 0.85 },
+                { "from": 90, "multiplier": 0.7 }
+            ],
+            "headMultiplier": 1.9,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Marksman Rifle",
+            "characterClass": [ "Assault", "Recon" ]
+        },
+        "SCAR-H": {
+            "damage": 26,
+            "fireRate": 585,
+            "armorPenetration": 38,
+            "damageFalloffMultipliers": [
+                { "from": 40, "multiplier": 0.9 },
+                { "from": 70, "multiplier": 0.75 }
+            ],
+            "headMultiplier": 1.8,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 0.8,
+            "type": "Battle Rifle",
+            "characterClass": [ "Support", "Engineer" ]
+        },
+        "K416": {
+            "damage": 21,
+            "fireRate": 880,
+            "armorPenetration": 35,
+            "damageFalloffMultipliers": [
+                { "from": 20, "multiplier": 0.85 },
+                { "from": 40, "multiplier": 0.7 },
+                { "from": 60, "multiplier": 0.6 }
+            ],
+            "headMultiplier": 1.9,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 0.8,
+            "upperLegMultiplier": 0.8,
+            "lowerLegMultiplier": 0.8,
+            "type": "Assault Rifle",
+            "characterClass": [ "Support" ]
+        },
+        "Bizon": {
+            "damage": 25,
+            "fireRate": 659,
+            "armorPenetration": 35,
+            "damageFalloffMultipliers": [
+                { "from": 15, "multiplier": 0.75 },
+                { "from": 25, "multiplier": 0.65 },
+                { "from": 35, "multiplier": 0.55 },
+                { "from": 45, "multiplier": 0.45 }
+            ],
+            "headMultiplier": 1.25,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Submachine Gun",
+            "characterClass": [ "Support" ]
+        },
+        "UZI": {
+            "damage": 24,
+            "fireRate": 780,
+            "armorPenetration": 35,
+            "damageFalloffMultipliers": [
+                { "from": 15, "multiplier": 0.75 },
+                { "from": 25, "multiplier": 0.65 },
+                { "from": 35, "multiplier": 0.55 },
+                { "from": 45, "multiplier": 0.45 }
+            ],
+            "headMultiplier": 1.25,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Submachine Gun",
+            "characterClass": [ "Support", "Recon" ]
+        },
+        "Vityaz": {
+            "damage": 25,
+            "fireRate": 700,
+            "armorPenetration": 35,
+            "damageFalloffMultipliers": [
+                { "from": 15, "multiplier": 0.75 },
+                { "from": 25, "multiplier": 0.65 },
+                { "from": 35, "multiplier": 0.55 },
+                { "from": 45, "multiplier": 0.45 }
+            ],
+            "headMultiplier": 1.9,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Submachine Gun",
+            "characterClass": [ "Support" ]
+        },
+        "MP5": {
+            "damage": 26,
+            "fireRate": 820,
+            "armorPenetration": 32,
+            "damageFalloffMultipliers": [
+                { "from": 15, "multiplier": 0.75 },
+                { "from": 25, "multiplier": 0.6 },
+                { "from": 35, "multiplier": 0.5 },
+                { "from": 45, "multiplier": 0.45 }
+            ],
+            "headMultiplier": 1.25,
+            "stomachMultiplier": 1,
+            "armMultiplier": 1,
+            "upperLegMultiplier": 0.7,
+            "lowerLegMultiplier": 0.7,
+            "type": "Submachine Gun",
+            "characterClass": [ "Support" ]
+        },
+        "SMG-45": {
+            "damage": 26,
+            "fireRate": 605,
+            "armorPenetration": 40,
+            "damageFalloffMultipliers": [
+                { "from": 20, "multiplier": 0.85 },
+                { "from": 35, "multiplier": 0.7 },
+                { "from": 50, "multiplier": 0.6 }
+            ],
+            "headMultiplier": 1.25,
+            "stomachMultiplier": 1,
+            "armMultiplier": 0.925,
+            "upperLegMultiplier": 0.925,
+            "lowerLegMultiplier": 0.925,
+            "type": "Submachine Gun",
+            "characterClass": [ "Support", "Recon" ]
+        },
+        "SR-3M": {
+            "damage": 27,
+            "fireRate": 747,
+            "armorPenetration": 48,
+            "damageFalloffMultipliers": [
+                { "from": 15, "multiplier": 0.85 },
+                { "from": 25, "multiplier": 0.7 },
+                { "from": 35, "multiplier": 0.6 }
+            ],
+            "headMultiplier": 1.25,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Submachine Gun",
+            "characterClass": [ "Support" ]
+        },
+        "P90": {
+            "damage": 22,
+            "fireRate": 898,
+            "armorPenetration": 35,
+            "damageFalloffMultipliers": [
+                { "from": 15, "multiplier": 0.75 },
+                { "from": 25, "multiplier": 0.65 },
+                { "from": 35, "multiplier": 0.5 },
+                { "from": 45, "multiplier": 0.45 }
+            ],
+            "headMultiplier": 1.25,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Submachine Gun",
+            "characterClass": [ "Support", "Recon" ]
+        },
+        "Vector": {
+            "damage": 20,
+            "fireRate": 1091,
+            "armorPenetration": 28,
+            "damageFalloffMultipliers": [
+                { "from": 15, "multiplier": 0.75 },
+                { "from": 25, "multiplier": 0.65 },
+                { "from": 35, "multiplier": 0.55 },
+                { "from": 45, "multiplier": 0.45 }
+            ],
+            "headMultiplier": 1.25,
+            "stomachMultiplier": 1,
+            "armMultiplier": 1,
+            "upperLegMultiplier": 0.9,
+            "lowerLegMultiplier": 0.9,
+            "type": "Submachine Gun",
+            "characterClass": [ "Support", "Recon" ]
+        },
+        "G3": {
+            "damage": 26,
+            "fireRate": 533,
+            "armorPenetration": 42,
+            "damageFalloffMultipliers": [
+                { "from": 40, "multiplier": 0.9 },
+                { "from": 70, "multiplier": 0.75 },
+                { "from": 100, "multiplier": 0.6 }
+            ],
+            "headMultiplier": 2.0,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Battle Rifle",
+            "characterClass": [ "Engineer" ]
+        },
+        "AUG": {
+            "damage": 20,
+            "fireRate": 679,
+            "armorPenetration": 35,
+            "damageFalloffMultipliers": [
+                { "from": 40, "multiplier": 0.9 },
+                { "from": 70, "multiplier": 0.8 },
+                { "from": 100, "multiplier": 0.7 }
+            ],
+            "headMultiplier": 2.5,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Assault Rifle",
+            "characterClass": [ "Engineer" ]
+        },
+        "ASh-12": {
+            "damage": 34,
+            "fireRate": 500,
+            "armorPenetration": 55,
+            "damageFalloffMultipliers": [
+                { "from": 40, "multiplier": 0.9 },
+                { "from": 70, "multiplier": 0.8 },
+                { "from": 100, "multiplier": 0.6 }
+            ],
+            "headMultiplier": 1.6,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Battle Rifle",
+            "characterClass": [ "Engineer" ]
+        },
+        "M7": {
+            "damage": 25,
+            "fireRate": 649,
+            "armorPenetration": 42,
+            "damageFalloffMultipliers": [
+                { "from": 40, "multiplier": 0.9 },
+                { "from": 70, "multiplier": 0.75 },
+                { "from": 100, "multiplier": 0.6 }
+            ],
+            "headMultiplier": 1.9,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Battle Rifle",
+            "characterClass": [ "Engineer" ]
+        },
+        "PKM": {
+            "damage": 25,
+            "fireRate": 669,
+            "armorPenetration": 42,
+            "damageFalloffMultipliers": [
+                { "from": 40, "multiplier": 0.85 },
+                { "from": 70, "multiplier": 0.7 },
+                { "from": 100, "multiplier": 0.6 }
+            ],
+            "headMultiplier": 1.9,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 0.8,
+            "lowerLegMultiplier": 0.8,
+            "type": "Light Machine Gun",
+            "characterClass": [ "Engineer" ]
+        },
+        "M249": {
+            "damage": 20,
+            "fireRate": 858,
+            "armorPenetration": 38,
+            "damageFalloffMultipliers": [
+                { "from": 40, "multiplier": 0.85 },
+                { "from": 70, "multiplier": 0.7 },
+                { "from": 100, "multiplier": 0.6 }
+            ],
+            "headMultiplier": 1.9,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1,
+            "upperLegMultiplier": 0.8,
+            "lowerLegMultiplier": 0.8,
+            "type": "Light Machine Gun",
+            "characterClass": [ "Engineer" ]
+        },
+        "M14": {
+            "damage": 27,
+            "fireRate": 727,
+            "armorPenetration": 41,
+            "damageFalloffMultipliers": [
+                { "from": 27, "multiplier": 0.7 },
+                { "from": 40, "multiplier": 0.6 }
+            ],
+            "headMultiplier": 1.9,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 0.8,
+            "lowerLegMultiplier": 0.8,
+            "type": "Marksman Rifle",
+            "characterClass": [ "Engineer" ]
+        },
+        "SG 552": {
+            "damage": 19,
+            "fireRate": 906,
+            "armorPenetration": 30,
+            "damageFalloffMultipliers": [
+                { "from": 40, "multiplier": 0.85 },
+                { "from": 70, "multiplier": 0.7 },
+                { "from": 100, "multiplier": 0.6 }
+            ],
+            "headMultiplier": 1.9,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 0.8,
+            "lowerLegMultiplier": 0.8,
+            "type": "Assault Rifle",
+            "characterClass": [ "Recon" ]
+        },
+        "VSS": {
+            "damage": 33,
+            "fireRate": 480,
+            "armorPenetration": 48,
+            "damageFalloffMultipliers": [
+                { "from": 120, "multiplier": 0.85 }
+            ],
+            "headMultiplier": 1.9,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Marksman Rifle",
+            "characterClass": [ "Recon" ]
+        },
+        "Mini-14": {
+            "damage": 25,
+            "fireRate": 474,
+            "armorPenetration": 38,
+            "damageFalloffMultipliers": [
+                { "from": 90, "multiplier": 0.85 }
+            ],
+            "headMultiplier": 1.9,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Marksman Rifle",
+            "characterClass": [ "Recon" ]
+        },
+        "SVD": {
+            "damage": 40,
+            "fireRate": 300,
+            "armorPenetration": 52,
+            "damageFalloffMultipliers": [
+                { "from": 70, "multiplier": 0.9 },
+                { "from": 90, "multiplier": 0.625 }
+            ],
+            "headMultiplier": 1.5,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 0.7,
+            "upperLegMultiplier": 0.7,
+            "lowerLegMultiplier": 0.7,
+            "type": "Marksman Rifle",
+            "characterClass": [ "Recon" ]
+        },
+        "SR-25": {
+            "damage": 35,
+            "fireRate": 364,
+            "armorPenetration": 55,
+            "damageFalloffMultipliers": [
+                { "from": 90, "multiplier": 0.85 }
+            ],
+            "headMultiplier": 1.5,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 0.9,
+            "upperLegMultiplier": 0.9,
+            "lowerLegMultiplier": 0.9,
+            "type": "Marksman Rifle",
+            "characterClass": [ "Recon" ]
+        },
+        "R93": {
+            "damage": 74,
+            "fireRate": 50,
+            "armorPenetration": 53,
+            "damageFalloffMultipliers": [
+                { "from": 70, "multiplier": 0.7 }
+            ],
+            "headMultiplier": 2.4,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Sniper Rifle",
+            "characterClass": [ "Recon" ]
+        },
+        "M700": {
+            "damage": 72,
+            "fireRate": 48,
+            "armorPenetration": 53,
+            "damageFalloffMultipliers": [
+                { "from": 70, "multiplier": 0.7 }
+            ],
+            "headMultiplier": 2.4,
+            "stomachMultiplier": 1,
+            "armMultiplier": 0.93,
+            "upperLegMultiplier": 0.93,
+            "lowerLegMultiplier": 0.93,
+            "type": "Sniper Rifle",
+            "characterClass": [ "Recon" ]
+        },
+        "SV-98": {
+            "damage": 76,
+            "fireRate": 40,
+            "armorPenetration": 53,
+            "damageFalloffMultipliers": [
+                { "from": 70, "multiplier": 0.7 }
+            ],
+            "headMultiplier": 2.4,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Sniper Rifle",
+            "characterClass": [ "Recon" ]
+        },
+        "AWM": {
+            "damage": 85,
+            "fireRate": 35,
+            "armorPenetration": 10,
+            "damageFalloffMultipliers": [
+                { "from": 70, "multiplier": 0.7 }
+            ],
+            "headMultiplier": 2.4,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Sniper Rifle",
+            "characterClass": [ "Recon" ]
+        },
+        "G18": {
+            "damage": 19,
+            "fireRate": 1172,
+            "armorPenetration": 16,
+            "damageFalloffMultipliers": [
+                { "from": 10, "multiplier": 0.7 },
+                { "from": 20, "multiplier": 0.6 },
+                { "from": 30, "multiplier": 0.5 }
+            ],
+            "headMultiplier": 1.25,
+            "stomachMultiplier": 1,
+            "armMultiplier": 1,
+            "upperLegMultiplier": 0,
+            "lowerLegMultiplier": 0,
+            "type": "Pistol",
+            "characterClass": [ "Assault", "Support", "Engineer", "Recon" ]
+        },
+        "G17": {
+            "damage": 24,
+            "fireRate": 462,
+            "armorPenetration": 25,
+            "damageFalloffMultipliers": [
+                { "from": 27, "multiplier": 0.75 },
+                { "from": 54, "multiplier": 0.6 }
+            ],
+            "headMultiplier": 1.25,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Pistol",
+            "characterClass": [ "Assault", "Support", "Engineer", "Recon" ]
+        },
+        "QSZ-92G": {
+            "damage": 25,
+            "fireRate": 375,
+            "armorPenetration": 32,
+            "damageFalloffMultipliers": [
+                { "from": 27, "multiplier": 0.75 },
+                { "from": 54, "multiplier": 0.6 }
+            ],
+            "headMultiplier": 1.25,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Pistol",
+            "characterClass": [ "Assault", "Support", "Engineer", "Recon" ]
+        },
+        "Revolver": {
+            "damage": 49,
+            "fireRate": 182,
+            "armorPenetration": 39,
+            "damageFalloffMultipliers": [],
+            "headMultiplier": 1.9,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Pistol",
+            "characterClass": [ "Assault", "Support", "Engineer", "Recon" ]
+        },
+        "93R": {
+            "damage": 20,
+            "fireRate": 375,
+            "armorPenetration": 32,
+            "damageFalloffMultipliers": [
+                { "from": 22, "multiplier": 0.8 },
+                { "from": 44, "multiplier": 0.65 }
+            ],
+            "headMultiplier": 1.25,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Pistol",
+            "characterClass": [ "Assault", "Support", "Engineer", "Recon" ]
+        },
+        "Desert Eagle": {
+            "damage": 49,
+            "fireRate": 207,
+            "armorPenetration": 34,
+            "damageFalloffMultipliers": [
+                { "from": 35, "multiplier": 0.85 },
+                { "from": 77.5, "multiplier": 0.6 }
+            ],
+            "headMultiplier": 1.9,
+            "stomachMultiplier": 1.0,
+            "armMultiplier": 1.0,
+            "upperLegMultiplier": 1.0,
+            "lowerLegMultiplier": 1.0,
+            "type": "Pistol",
+            "characterClass": [ "Assault", "Support", "Engineer", "Recon" ]
+        }
+    }
+}
