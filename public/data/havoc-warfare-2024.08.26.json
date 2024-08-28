@@ -1,4 +1,8 @@
 {
+    "version": 1,
+    "description": "Havoc Warfare Alpha",
+    "lastUpdated": "2024-08-26",
+    "credits": "antD",
     "attachments": {
         "muzzle": {
             "Silent Suppressor": {
