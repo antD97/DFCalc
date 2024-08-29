@@ -4,14 +4,14 @@ import { A } from "@/app/components/ui/anchor";
 import { P } from "@/app/components/ui/paragraph";
 import ToolSwitcher from "@/app/components/toolSwitcher";
 import GameDataSelector from "@/app/components/gameDataSelector";
-import { GameDataProvider } from "./components/gameDataContext";
+import { GameDataProvider } from "@/app/components/gameDataContext";
 
 export default function Home() {
   return (
     <>
       <div className="w-full py-16">
-        <H level="1" className="text-center">DFCalc</H>
-        <H level="2" className="text-lg text-center">A <A href="https://www.playdeltaforce.com/en/index.html">Delta Force</A> tool by <A href="https://github.com/antD97">antD</A></H>
+        <H level="1" variant="title">DFCalc</H>
+        <H level="2" className="text-lg">A <A href="https://www.playdeltaforce.com/en/index.html">Delta Force</A> tool by <A href="https://github.com/antD97">antD</A></H>
       </div>
 
       <Box variant="no-bg" className="mb-8 py-0">

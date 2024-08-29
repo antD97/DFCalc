@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`flex flex-col items-center w-screen min-h-screen bg-[url('imgs/background.png')] bg-cover bg-center bg-fixed ${ubuntu.className} text-white`}>
+      <body className={`flex flex-col items-center w-screen max-w-screen min-h-screen bg-[url('imgs/background.png')] bg-cover bg-center bg-fixed ${ubuntu.className} text-white`}>
         <ThemeProvider theme={theme}>
           <main className="flex-grow w-full flex flex-col items-center max-w-screen-lg">
             {children}

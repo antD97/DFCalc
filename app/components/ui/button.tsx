@@ -8,7 +8,7 @@ const buttonVariants = cva(
     variants: {
       'variant': {
         'primary': 'bg-amber-500 disabled:bg-amber-500 hover:bg-amber-400 active:bg-amber-300 text-black',
-        'white': 'bg-neutral-100 disabled:bg-neutral-100 hover:bg-neutral-200 active:bg-neutral-300 text-black',
+        'white': 'bg-neutral-100 disabled:bg-neutral-100 hover:bg-neutral-300 active:bg-neutral-400 text-black',
       }
     },
     defaultVariants: {

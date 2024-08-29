@@ -3,28 +3,34 @@ import { VariantProps, cva } from 'class-variance-authority'
 import { twMerge } from 'tailwind-merge'
 
 const boxVariants = cva(
-  'w-full rounded-lg',
+  'w-full',
   {
     variants: {
       'variant': {
         'no-bg': 'p-6',
         'outer': 'bg-neutral-800/75 shadow-xl p-6',
         'inner': 'bg-neutral-900/75 shadow-xl p-4'
+      },
+      'maxWidth': {
+        'large': 'max-w-screen-lg rounded-none lg:rounded-lg',
+        'small': 'max-w-screen-sm rounded-none sm:rounded-lg',
+        'none': 'rounded-lg'
       }
     },
     defaultVariants: {
-      'variant': 'outer'
+      'variant': 'outer',
+      'maxWidth': 'large'
     }
   }
 )
 
 interface BoxProps extends HTMLAttributes<HTMLDivElement>, VariantProps<typeof boxVariants> { }
 
-const Box: FC<BoxProps> = forwardRef<HTMLDivElement, BoxProps>(({ variant, className, children, ...props }, ref) => {
+const Box: FC<BoxProps> = forwardRef<HTMLDivElement, BoxProps>(({ variant, maxWidth, className, children, ...props }, ref) => {
   return (
     <div
       ref={ref}
-      className={twMerge(boxVariants({ variant, className }))}
+      className={twMerge(boxVariants({ variant, maxWidth, className }))}
       {...props}
     >
       {children}
