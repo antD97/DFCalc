@@ -3,7 +3,7 @@ import { VariantProps, cva } from 'class-variance-authority'
 import { twMerge } from 'tailwind-merge'
 
 const headerVariants = cva(
-  'text-8xl',
+  'text-8xl text-center',
   {
     variants: {},
     defaultVariants: {}

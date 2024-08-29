@@ -12,15 +12,13 @@ const inputVariants = cva(
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement>, VariantProps<typeof inputVariants> { }
 
-const Input: FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(({ className, children, ...props }, ref) => {
+const Input = forwardRef<HTMLInputElement, InputProps>(({ className, ...props }, ref) => {
   return (
     <input
       ref={ref}
       className={twMerge(inputVariants({ className }))}
       {...props}
-    >
-      {children}
-    </input>
+    />
   )
 })
 

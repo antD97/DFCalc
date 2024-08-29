@@ -114,7 +114,7 @@
                 "compatibleGuns": [ "AKS-74" ]
             },
             "QBZ95-1 Prac Short Barrel": {
-                "effects": [ { "type": "range multiplier", "amount": -0.05 } ], // not 100% see qbz coomment
+                "effects": [ { "type": "range multiplier", "amount": -0.05 } ],
                 "compatibleGuns": [ "QBZ95-1" ]
             },
             "QBZ95-1 Longbow Barrel Combo": {
@@ -220,7 +220,7 @@
                 "compatibleGuns": [ "K416" ]
             },
             "K416 A8 Barrel Combo": {
-                "effects": [ { "type": "range multiplier", "amount": -0.166666667 } ], // damage dropoff graph looks good with this amount but the listed range value on the menu doesn't make sense to me :/
+                "effects": [ { "type": "range multiplier", "amount": -0.166666667 } ],
                 "compatibleGuns": [ "K416" ]
             },
             "K416 Elite Heavy Barrel Combo": {
@@ -515,7 +515,7 @@
             "damageFalloffMultipliers": [
                 { "from": 40, "multiplier": 0.85 },
                 { "from": 70, "multiplier": 0.7 },
-                { "from": 100, "multiplier": 0.6 } // estimated using attachments but previous range drops at 100m showed on graph but this didnt :thinking:
+                { "from": 100, "multiplier": 0.6 }
             ],
             "headMultiplier": 1.9,
             "stomachMultiplier": 1.0,
