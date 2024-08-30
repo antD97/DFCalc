@@ -25,8 +25,8 @@ export default function Issues() {
       <Box maxWidth="small">
         <P>
           Found a gun statistic that doesn't match what you see in game? Discovered a damage mechanic that the
-          calculator doesn't account for? Want a feature added? All issues and feature requests can be submitted on the
-          GitHub issues page <A href={issuesUrl}>here</A>.
+          calculator doesn't account for? Want a new feature added? All issues and feature requests can be submitted on
+          the GitHub issues page <A href={issuesUrl}>here</A>.
         </P>
         <P>
           If you have any questions, feel free to contact me directly on Discord or through email.

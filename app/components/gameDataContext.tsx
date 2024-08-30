@@ -3,11 +3,9 @@
 import { createContext, FC, HTMLAttributes, ReactNode, useContext, useState } from "react";
 import { GameData } from "@/app/gameData/gameData";
 
-export type LoadedGameData = GameData | "error" | null;
-
 type GameDataContextType = {
-  gameData: LoadedGameData;
-  setGameData: (gameData: GameData | "error" | null) => void;
+  gameData: GameData | null;
+  setGameData: (gameData: GameData | null) => void;
   gameDataUrl: string | null;
   setGameDataUrl: (gameDataUrl: string | null) => void;
 }
@@ -15,7 +13,7 @@ type GameDataContextType = {
 const GameDataContext = createContext<GameDataContextType | undefined>(undefined);
 
 export const GameDataProvider: FC<{ children: ReactNode }> = ({ children }) => {
-  const [gameData, setGameData] = useState<LoadedGameData>(null);
+  const [gameData, setGameData] = useState<GameData | null>(null);
   const [gameDataUrl, setGameDataUrl] = useState<string | null>(null);
   return (
     <GameDataContext.Provider value={{ gameData, setGameData, gameDataUrl, setGameDataUrl }}>

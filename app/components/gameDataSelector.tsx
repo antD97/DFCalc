@@ -11,42 +11,108 @@ import { A } from "@/app/components/ui/anchor";
 import { Button } from "@/app/components/ui/button";
 import { IoIosInformationCircle } from "react-icons/io";
 import { CircularProgress, Tooltip } from "@mui/material";
-import { LoadedGameData, useGameData } from "@/app/components/gameDataContext";
-import { validateGameData } from "@/app/gameData/gameData";
-import { LI, OL } from "./ui/list";
-
-const latestHavocWarfareURL = '/data/havoc-warfare-2024.08.26.json';
-const latestTacticalTurmoilURL = 'WIP';
+import { useGameData } from "@/app/components/gameDataContext";
+import { GameData, validateGameData } from "@/app/gameData/gameData";
+import { LI, OL } from "@/app/components/ui/list";
+import gameDataListSchema from "@/app/gameData/gameDataListSchema";
 
 const GameDataSelector: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...props }) => {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [currentGameDataState, setCurrentGameDataState] = useState<{
+    state: 'ok' | 'loading' | 'empty'
+  } | {
+    state: 'error', 'message': string
+  }>({ state: 'empty' });
+
+  const [latestGameDataUrls, setLatestGameDataUrls] = useState<{
+    havocWarfare: string | null;
+    tacticalTurmoil: string | null;
+  }>({
+    havocWarfare: null,
+    tacticalTurmoil: null
+  })
   const { gameData, setGameData, gameDataUrl, setGameDataUrl } = useGameData();
 
   const loadUrlInput = useRef<HTMLInputElement>(null);
 
-  const { gameDataVersion, gameDataDescription, gameDataLastUpdated, gameDataCredits } = gameData === "error" ? {
-    gameDataVersion: "error",
-    gameDataDescription: "error",
-    gameDataLastUpdated: "error",
-    gameDataCredits: "error"
-  } : gameData === null ? {
-    gameDataVersion: "",
-    gameDataDescription: "",
-    gameDataLastUpdated: "",
-    gameDataCredits: ""
-  } : {
-    gameDataVersion: gameData.version,
-    gameDataDescription: gameData.description,
-    gameDataLastUpdated: gameData.lastUpdated,
-    gameDataCredits: gameData.credits
-  };
+  async function getLatestGameDataURL(gameMode: 'Havoc Warfare' | 'Tactical Turmoil'): Promise<{
+    result: 'success',
+    url: string
+  } | {
+    result: 'error',
+    message: string
+  }> {
+    if (gameMode === 'Havoc Warfare' && latestGameDataUrls.havocWarfare) {
+      return { result: 'success', url: latestGameDataUrls.havocWarfare };
+    } else if (gameMode === 'Tactical Turmoil' && latestGameDataUrls.tacticalTurmoil) {
+      return { result: 'success', url: latestGameDataUrls.tacticalTurmoil };
+    }
 
-  if (gameData === "error") {
+    setCurrentGameDataState({ state: 'loading' });
 
+    try {
+      // retrieve game data list
+      const response = await fetch('/data/list.json');
+      if (!response.ok) { throw new Error('Failed to retrieve DFCalc game data list'); }
+
+      // find newest game data file based on filename date suffix
+      const filenames = gameDataListSchema.parse(await response.json())
+        .filter(gameData => gameData.gameMode === gameMode)
+        .map(gameData => gameData.filename)
+        .sort((a, b) => {
+          const dateA = a.substring(a.length - 15);
+          const dateB = b.substring(a.length - 15);
+          return dateA.localeCompare(dateB);
+        });
+
+      if (filenames.length === 0) { throw new Error(`No ${gameMode} game data found from DFCalc`); }
+      
+      const url = `/data/${filenames[0]}`;
+
+      // update cached value
+      if (gameMode === 'Havoc Warfare') {
+        setLatestGameDataUrls({
+          havocWarfare: url,
+          tacticalTurmoil: latestGameDataUrls.tacticalTurmoil
+        })
+      } else if (gameMode === 'Tactical Turmoil') {
+        setLatestGameDataUrls({
+          havocWarfare: latestGameDataUrls.havocWarfare,
+          tacticalTurmoil: url
+        })
+      }
+
+      return { result: 'success', url: url };
+
+    } catch (error: any) {
+      return {
+        result: 'error',
+        message: error?.message ? error.message : `Failed to retrieve latest ${gameMode} game data URL`
+      };
+    }
+  }
+
+  async function loadGameData(url: string) {
+    setGameData(null);
+    setCurrentGameDataState({ state: 'loading' });
+    try {
+      const response = await fetch(url);
+      if (!response.ok) { throw new Error('Failed to retrieve game data file'); }
+      setGameData(await validateGameData(await response.json()));
+      setGameDataUrl(url);
+      setCurrentGameDataState({ state: 'ok' });
+    } catch (error: any) {
+      setCurrentGameDataState({
+        'state': 'error',
+        'message': error?.message ? error.message : 'Unknown error loading game data'
+      })
+    }
   }
 
   useEffect(() => {
-    loadGameData(latestHavocWarfareURL, setIsLoading, setGameDataUrl, setGameData);
+    getLatestGameDataURL('Havoc Warfare').then((result) => {
+      if (result.result === 'success') { loadGameData(result.url); }
+      else { setCurrentGameDataState({ state: 'error', message: result.message }); }
+    });
   }, []);
 
   return (
@@ -93,12 +159,12 @@ const GameDataSelector: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...pr
 
       <div className="flex items-center justify-center">
         {
-          isLoading ? (
+          currentGameDataState.state === 'loading' && (
             <CircularProgress className="absolute text-white z-10" />
-          ) : null
+          )
         }
-        <div className={`w-full ${isLoading ? 'opacity-25' : ''}`}>
-          <fieldset disabled={isLoading}>
+        <div className={`w-full ${currentGameDataState.state === 'loading' && 'opacity-25'}`}>
+          <fieldset disabled={currentGameDataState.state === 'loading'}>
 
             <div className="flex pb-4">
               <Label>Load from URL</Label>
@@ -110,7 +176,7 @@ const GameDataSelector: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...pr
               <Button
                 className="ml-4"
                 onClick={() => {
-                  loadGameData(loadUrlInput.current!!.value, setIsLoading, setGameDataUrl, setGameData);
+                  loadGameData(loadUrlInput.current!!.value);
                 }}
               >
                 Load
@@ -120,40 +186,36 @@ const GameDataSelector: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...pr
             <div className="flex flex-col items-center gap-y-2 pb-4">
               <Button
                 variant='primary'
-                onClick={() => {
-                  loadGameData(latestHavocWarfareURL, setIsLoading, setGameDataUrl, setGameData);
+                onClick={async () => {
+                  const result = await getLatestGameDataURL('Havoc Warfare');
+                  if (result.result === 'success') { loadGameData(result.url); }
+                  else { setCurrentGameDataState({ state: 'error', message: result.message }); }
                 }}
               >
                 Load Latest Havoc Warfare Data from DFCalc
               </Button>
               <Button
                 variant='primary'
-                onClick={() => {
-                  loadGameData(latestTacticalTurmoilURL, setIsLoading, setGameDataUrl, setGameData);
+                onClick={async () => {
+                  const result = await getLatestGameDataURL('Tactical Turmoil');
+                  if (result.result === 'success') { loadGameData(result.url); }
+                  else { setCurrentGameDataState({ state: 'error', message: result.message }); }
                 }}
               >
                 Load Latest Tactical Turmoil Data from DFCalc
               </Button>
             </div>
 
-            <H level="3" className="text-2xl pb-4 text-center">Current Game Data</H>
-
-            <div className="flex">
-              <div className="flex flex-col">
-                <Label className="grow">URL</Label>
-                <Label className="grow">Version</Label>
-                <Label className="grow">Description</Label>
-                <Label className="grow">Last Updated</Label>
-                <Label className="grow">Credits</Label>
-              </div>
-              <div className="flex flex-col grow">
-                <Input value={gameDataUrl ? gameDataUrl : ""} disabled={true} className="text-white/50 w-auto" />
-                <Input value={gameDataVersion} disabled={true} className="text-white/50 w-auto" />
-                <Input value={gameDataDescription} disabled={true} className="text-white/50 w-auto" />
-                <Input value={gameDataLastUpdated} disabled={true} className="text-white/50 w-auto" />
-                <Input value={gameDataCredits} disabled={true} className="text-white/50 w-auto" />
-              </div>
-            </div>
+            {
+              currentGameDataState.state === 'ok' && (
+                <CurrentGameData gameDataUrl={gameDataUrl!!} gameData={gameData!!} />
+              )
+            }
+            {
+              currentGameDataState.state === 'error' && (
+                <P className="text-red-500">Error: {currentGameDataState.message}</P>
+              )
+            }
           </fieldset>
         </div>
       </div>
@@ -161,22 +223,29 @@ const GameDataSelector: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...pr
   );
 }
 
-async function loadGameData(
-  url: string,
-  setIsLoading: (isLoading: boolean) => void,
-  setGameDataUrl: (gameDataUrl: string) => void,
-  setGameData: (gameData: LoadedGameData) => void
-) {
-  setIsLoading(true);
-  try {
-    const response = await fetch(url);
-    if (!response.ok) { throw new Error(); }
-    setGameData(await validateGameData(await response.json()));
-  } catch (error: any) {
-    setGameData('error');
-  }
-  setGameDataUrl(url);
-  setIsLoading(false);
-}
+const CurrentGameData: FC<{ gameDataUrl: string; gameData: GameData }> = ({ gameDataUrl, gameData }) => {
+  return (
+    <>
+      <H level="3" className="text-2xl pb-4">Current Game Data</H>
+
+      <div className="flex">
+        <div className="flex flex-col">
+          <Label className="grow">URL</Label>
+          <Label className="grow">Version</Label>
+          <Label className="grow">Description</Label>
+          <Label className="grow">Last Updated</Label>
+          <Label className="grow">Credits</Label>
+        </div>
+        <div className="flex flex-col grow">
+          <Input value={gameDataUrl} disabled={true} className="text-white/50 w-auto" />
+          <Input value={gameData.version} disabled={true} className="text-white/50 w-auto" />
+          <Input value={gameData.description} disabled={true} className="text-white/50 w-auto" />
+          <Input value={gameData.lastUpdated} disabled={true} className="text-white/50 w-auto" />
+          <Input value={gameData.credits} disabled={true} className="text-white/50 w-auto" />
+        </div>
+      </div>
+    </>
+  )
+};
 
 export default GameDataSelector;

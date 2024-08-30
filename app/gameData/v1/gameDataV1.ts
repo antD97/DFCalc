@@ -1,5 +1,3 @@
-import GameDataV1Schema from "@/app/gameData/v1/gameDataSchema";
-
 export type GameDataV1 = {
   version: 1;
   description?: string;
