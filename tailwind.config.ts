@@ -8,11 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+      boxShadow: {
+        'inner-lg': 'inset 0 8px 8px -5px rgb(0 0 0 / 0.2), inset 0px -8px 8px -5px rgb(0 0 0 / 0.2)',
+      }
     },
   },
   plugins: [],

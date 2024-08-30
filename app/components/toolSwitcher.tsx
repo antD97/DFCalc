@@ -18,11 +18,8 @@ const ToolSwitcher: FC = () => {
           Inspect One
         </ToolButton>
       </div>
-      {
-        currentTool === 'compare' ? <CompareTool />
-          : currentTool === 'inspect' ? <InspectTool />
-            : ''
-      }
+      {currentTool === 'compare' && <CompareTool />}
+      {currentTool === 'inspect' && <InspectTool />}
     </>
   );
 };

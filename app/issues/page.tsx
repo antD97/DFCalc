@@ -26,10 +26,11 @@ export default function Issues() {
         <P>
           Found a gun statistic that doesn't match what you see in game? Discovered a damage mechanic that the
           calculator doesn't account for? Want a new feature added? All issues and feature requests can be submitted on
-          the GitHub issues page <A href={issuesUrl}>here</A>.
+          the <A href={issuesUrl}>GitHub issues page</A>.
         </P>
         <P>
-          If you have any questions, feel free to contact me directly on Discord or through email.
+          If you have any questions, feel free to contact me directly on <A href={discordUrl}>Discord</A> or
+          through <A href={emailUrl}>email</A>.
         </P>
         <UL>
           <LI>Discord: <A href={discordUrl}>antD</A></LI>

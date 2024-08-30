@@ -23,9 +23,9 @@ export default function RootLayout({
             {children}
           </main>
           <footer className="self-center justify-self-end flex gap-x-4 pt-4">
-            <A href="https://github.com/antD97/DFCalc" className="no-underline text-white/50 hover:text-white hover:no-underline">Source</A>
             <A href="issues" className="no-underline text-white/50 hover:text-white hover:no-underline">Issues</A>
             <A href="contribute" className="no-underline text-white/50 hover:text-white hover:no-underline">Contribute</A>
+            <A href="https://github.com/antD97/DFCalc" className="no-underline text-white/50 hover:text-white hover:no-underline">Source</A>
             <A href="legal" className="no-underline text-white/50 hover:text-white hover:no-underline">Legal</A>
           </footer>
         </ThemeProvider>

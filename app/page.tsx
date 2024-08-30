@@ -25,9 +25,10 @@ export default function Home() {
         <P>
           Currently, all of the data used by calculations was recorded by me, antD, which means there likely will be
           mistakes. If you find any problems with the data that don't match what you experience in-game, visit
-          the <A href="issues">issues</A> page to help correct it. If you'd like to help keep this tool up-to-date visit
-          the <A href="contribute">contribute</A> page to see how you can help. All of the raw data used by the
-          calculator can be found <A href="https://github.com/antD97/DFCalc/tree/main/public/data">here</A>.
+          the <A href="issues">issues page</A> to help correct it. If you'd like to help keep this tool up-to-date visit
+          the <A href="contribute">contribute page</A> to see how you can help. All of the raw data used by the
+          calculator can be found in
+          the <A href="https://github.com/antD97/DFCalc/tree/main/public/data">project source</A>.
         </P>
       </Box>
 

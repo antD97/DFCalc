@@ -12,7 +12,7 @@ import { Button } from "@/app/components/ui/button";
 import { IoIosInformationCircle } from "react-icons/io";
 import { CircularProgress, Tooltip } from "@mui/material";
 import { useGameData } from "@/app/components/gameDataContext";
-import { GameData, validateGameData } from "@/app/gameData/gameData";
+import { GameData, parseGameData } from "@/app/gameData/gameData";
 import { LI, OL } from "@/app/components/ui/list";
 import gameDataListSchema from "@/app/gameData/gameDataListSchema";
 
@@ -23,13 +23,6 @@ const GameDataSelector: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...pr
     state: 'error', 'message': string
   }>({ state: 'empty' });
 
-  const [latestGameDataUrls, setLatestGameDataUrls] = useState<{
-    havocWarfare: string | null;
-    tacticalTurmoil: string | null;
-  }>({
-    havocWarfare: null,
-    tacticalTurmoil: null
-  })
   const { gameData, setGameData, gameDataUrl, setGameDataUrl } = useGameData();
 
   const loadUrlInput = useRef<HTMLInputElement>(null);
@@ -41,12 +34,6 @@ const GameDataSelector: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...pr
     result: 'error',
     message: string
   }> {
-    if (gameMode === 'Havoc Warfare' && latestGameDataUrls.havocWarfare) {
-      return { result: 'success', url: latestGameDataUrls.havocWarfare };
-    } else if (gameMode === 'Tactical Turmoil' && latestGameDataUrls.tacticalTurmoil) {
-      return { result: 'success', url: latestGameDataUrls.tacticalTurmoil };
-    }
-
     setCurrentGameDataState({ state: 'loading' });
 
     try {
@@ -65,23 +52,8 @@ const GameDataSelector: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...pr
         });
 
       if (filenames.length === 0) { throw new Error(`No ${gameMode} game data found from DFCalc`); }
-      
-      const url = `/data/${filenames[0]}`;
 
-      // update cached value
-      if (gameMode === 'Havoc Warfare') {
-        setLatestGameDataUrls({
-          havocWarfare: url,
-          tacticalTurmoil: latestGameDataUrls.tacticalTurmoil
-        })
-      } else if (gameMode === 'Tactical Turmoil') {
-        setLatestGameDataUrls({
-          havocWarfare: latestGameDataUrls.havocWarfare,
-          tacticalTurmoil: url
-        })
-      }
-
-      return { result: 'success', url: url };
+      return { result: 'success', url: `/data/${filenames[0]}` };
 
     } catch (error: any) {
       return {
@@ -95,11 +67,17 @@ const GameDataSelector: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...pr
     setGameData(null);
     setCurrentGameDataState({ state: 'loading' });
     try {
+      
       const response = await fetch(url);
       if (!response.ok) { throw new Error('Failed to retrieve game data file'); }
-      setGameData(await validateGameData(await response.json()));
+
+      const parsedData = await parseGameData(await response.json());
+      if (parsedData.result === 'error') { throw new Error(parsedData.message); }
+
+      setGameData(parsedData.gameData);
       setGameDataUrl(url);
       setCurrentGameDataState({ state: 'ok' });
+      
     } catch (error: any) {
       setCurrentGameDataState({
         'state': 'error',

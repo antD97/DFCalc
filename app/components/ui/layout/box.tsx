@@ -9,7 +9,7 @@ const boxVariants = cva(
       'variant': {
         'no-bg': 'p-6',
         'outer': 'bg-neutral-800/75 shadow-xl p-6',
-        'inner': 'bg-neutral-900/75 shadow-xl p-4'
+        'inner': 'bg-neutral-900/60 shadow p-4'
       },
       'maxWidth': {
         'large': 'max-w-screen-lg rounded-none lg:rounded-lg',
