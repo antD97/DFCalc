@@ -1,3 +1,5 @@
+import CharacterClass from "@/app/types/characterClass";
+
 export type GameDataV1 = {
   version: 1;
   description?: string;
@@ -7,7 +9,7 @@ export type GameDataV1 = {
     muzzle: { [name: string]: Attachment; };
     barrel: { [name: string]: Attachment; };
   };
-  guns: { [name: string]: Gun; };
+  guns: { [name: string]: GunData; };
 };
 
 export type Attachment = {
@@ -21,9 +23,9 @@ export type Effect = RangeMultiplierEffect;
 export type RangeMultiplierEffect = {
   type: 'range multiplier';
   amount: number;
-}
+};
 
-type BaseGun = {
+export type BaseGunData = {
   damage: number;
   fireRate: number;
   armorPenetration: number;
@@ -33,15 +35,19 @@ type BaseGun = {
   armMultiplier: number;
   upperLegMultiplier: number;
   lowerLegMultiplier: number;
-  characterClass: ('Assault' | 'Support' | 'Engineer' | 'Recon')[];
-}
+  characterClass: CharacterClass[];
+};
 
-export type Gun = BaseGun & ({
+export type NonShotgunData = BaseGunData & {
   type: 'Assault Rifle' | 'Marksman Rifle' | 'Battle Rifle' | 'Submachine Gun' | 'Light Machine Gun' | 'Marksman Rifle' | 'Sniper Rifle' | 'Pistol';
-} | {
+};
+
+export type ShotgunData = BaseGunData & {
   type: 'Shotgun';
   numBullets: number;
-});
+};
+
+export type GunData = NonShotgunData | ShotgunData;
 
 export type DamageFalloffMultiplier = {
   from: number;

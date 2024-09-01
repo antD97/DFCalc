@@ -1,116 +1,87 @@
 'use client'
 
-import { Slider } from "@mui/material";
 import { FC, useState } from "react";
-import { P } from "@/app/components/ui/paragraph";
 import { Box } from "@/app/components/ui/layout/box";
-import { Input } from "@/app/components/ui/input";
 import { Label } from "@/app/components/ui/label";
 import { H } from "@/app/components/ui/header";
 import { AnimatePresence, motion } from "framer-motion";
+import DistanceSlider from "./distanceSlider";
+import { useDebouncedCallback } from "use-debounce";
+import { CompareToolDataProvider, useCompareToolData } from "./compareToolContext";
+import CompareToolResults from "./compareToolResults";
+import { Input } from "./ui/input";
 
 const CompareTool: FC = () => {
-  const [distanceStr, setDistanceStr] = useState<string>('100');
-  const [isDistanceStrValid, setIsDistanceStrValid] = useState<boolean>(true);
-  const [distance, setDistance] = useState<number>(100);
+  const { compareAllArgs, setCompareAllArgs } = useCompareToolData();
+  const {
+    targetHp,
+    distance,
+    headWeight,
+    thoraxWeight,
+    stomachWeight,
+    armsWeight,
+    upperLegsWeight,
+    lowerLegsWeight
+  } = compareAllArgs;
+
+  const weightsTotal = headWeight + thoraxWeight + stomachWeight + armsWeight + upperLegsWeight + lowerLegsWeight;
 
   return (
-    <div className="flex w-full gap-8">
-      <Box className="basis-1/4 grow">
+    <div className="w-full flex flex-col items-center gap-8 lg: lg:grid lg:grid-rows-[min-content_auto] lg:grid-cols-[minmax(0,_1fr)_minmax(0,_2fr)] lg:items-stretch">
+
+      <Box maxWidth="none" className="max-w-screen-sm rounded-none order-2 sm:rounded-lg lg:order-none lg:row-span-2 lg:max-w-none">
         <H level="3" className="text-2xl">Restrictions</H>
       </Box>
-      <div className="basis-3/4 grow flex flex-col gap-8">
-        <Box>
-          <H level="3" className="text-2xl">Settings</H>
-        </Box>
-        <Box className="flex flex-col max-h-96">
-          <H level="3" className="text-2xl pb-4">Result</H>
 
-          <div className="overflow-y-scroll shadow-inner-lg">
-            <AnimatedList />
+      <Box maxWidth="none" className="max-w-screen-sm rounded-none order-1 flex flex-col sm:rounded-lg lg:order-none lg:max-w-none">
+        <H level="3" className="text-2xl mb-4">Settings</H>
+
+        <div className="flex flex-col items-center sm:flex-row ">
+          <div className="grow flex basis-0">
+            <Label className="w-36 sm:w-auto sm:pr-4">Target Health</Label>
+            <Input type="number" className="w-12 text-center" value={targetHp} />
           </div>
-        </Box>
-      </div>
+
+          <div className="grow flex basis-0">
+            <Label className="w-36 sm:w-auto sm:pr-4">Distance (meters)</Label>
+            <Input type="number" className="w-12 text-center" value={distance} />
+          </div>
+        </div>
+
+        <H level="4" className="text-lg my-4">Hit Distribution</H>
+
+        <div className="flex flex-col items-center sm:flex-row">
+          <div className="grow">
+            <HitDistributionInput label="Head" value={headWeight} weightsTotal={weightsTotal} />
+            <HitDistributionInput label="Thorax" value={thoraxWeight} weightsTotal={weightsTotal} />
+            <HitDistributionInput label="Stomach" value={stomachWeight} weightsTotal={weightsTotal} />
+          </div>
+          <div className="grow">
+            <HitDistributionInput label="Arms" value={armsWeight} weightsTotal={weightsTotal} />
+            <HitDistributionInput label="Upper Legs" value={upperLegsWeight} weightsTotal={weightsTotal} />
+            <HitDistributionInput label="Lower Legs" value={lowerLegsWeight} weightsTotal={weightsTotal} />
+          </div>
+        </div>
+      </Box>
+
+
+      <Box maxWidth="none" className="max-w-screen-sm rounded-none order-3 flex flex-col p-0 sm:rounded-lg lg:max-w-none lg:order-none">
+        <CompareToolResults />
+      </Box>
     </div>
-    // <Box>
-    //   <div className="flex items-center">
-    //     <Label>Distance (meters)</Label>
-    //     <Input
-    //       value={distanceStr}
-    //       placeholder="0"
-    //       onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-    //         const ds = /\S/.test(event.target.value) ? event.target.value.replace(/^0+/, '') : '';
-    //         setDistanceStr(ds);
-
-    //         const valueAsNumber = Number(ds);
-    //         if (!isNaN(valueAsNumber) && valueAsNumber >= 0) {
-    //           setDistance(valueAsNumber);
-    //           setIsDistanceStrValid(true);
-    //         } else {
-    //           setDistance(0);
-    //           setIsDistanceStrValid(false);
-    //         }
-    //       }}
-    //       className={`w-12 text-center ${isDistanceStrValid ? '' : 'text-red-500 focus:text-red-500 border-red-500 focus:border-red-500'}`}
-    //     />
-    //     <div className="px-4 w-full h-full">
-    //       <Slider
-    //         aria-label="Distance (meters)"
-    //         value={distance}
-    //         onChange={(event: Event, newValue: number | number[]) => {
-    //           setDistance(newValue as number);
-    //           setDistanceStr(String(newValue as number));
-    //         }}
-    //         max={200}
-    //       />
-    //     </div>
-    //   </div>
-
-    //   <P>
-    //     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat fugiat, officia molestiae dolore amet rem quod dicta porro blanditiis atque aut ea suscipit mollitia, ipsam at iure non cumque exercitationem explicabo doloremque. Ex alias id mollitia quasi ratione perspiciatis totam facilis ipsam, accusantium sit eveniet, inventore quisquam molestias. Harum excepturi error officia fuga repudiandae laborum maxime minima molestiae sapiente iusto ipsam eos fugiat provident quod, quidem tempora dolore commodi esse voluptate hic. Laboriosam, earum. Autem tempora officia, repudiandae tenetur qui consectetur incidunt quas soluta reiciendis id pariatur officiis illum culpa ad, distinctio optio recusandae ut nisi tempore impedit sed omnis.
-    //   </P>
-
-    //   <div>
-    //     <div className="flex">
-    //       <div className="flex-1 text-nowrap p-4">Gun</div>
-    //       <div className="flex-1 text-nowrap p-4">Damage per Shot</div>
-    //       <div className="flex-1 text-nowrap p-4">Shots to Kill</div>
-    //       <div className="flex-1 text-nowrap p-4">Time to Kill</div>
-    //     </div>
-    //   </div>
-    // </Box>
   );
 }
 
-export default CompareTool;
-
-const AnimatedList = () => {
-  const [items, setItems] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
-
-  const shuffleItems = () => {
-    const shuffled = [...items].sort(() => Math.random() - 0.5);
-    setItems(shuffled);
-  };
-
+const HitDistributionInput: FC<{ label: string, value: number, weightsTotal: number }> = ({ label, value, weightsTotal }) => {
   return (
-    <div>
-      <button onClick={shuffleItems}>Shuffle</button>
-      <ul className="flex flex-col">
-        <AnimatePresence>
-          {items.map((item) => (
-            <motion.li
-              key={item}
-              layout
-              transition={{ duration: 0.3 }}
-              className="first:mt-2 mb-2"
-            >
-              <Box variant="inner" className="p-2">
-                Item {item}
-              </Box>
-            </motion.li>
-          ))}
-        </AnimatePresence>
-      </ul>
+    <div className="flex">
+      <Label className="w-28">{label}</Label>
+      <div className="relative">
+        <Input type="number" value={value} className="w-24 text-start" />
+        <span className="absolute right-0 text-white/50 pointer-events-none">{`${((value / weightsTotal) * 100).toFixed(1)}%`}</span>
+      </div>
     </div>
   );
 };
+
+export default CompareTool;

@@ -67,7 +67,7 @@ const GameDataSelector: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...pr
     setGameData(null);
     setCurrentGameDataState({ state: 'loading' });
     try {
-      
+
       const response = await fetch(url);
       if (!response.ok) { throw new Error('Failed to retrieve game data file'); }
 
@@ -77,7 +77,7 @@ const GameDataSelector: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...pr
       setGameData(parsedData.gameData);
       setGameDataUrl(url);
       setCurrentGameDataState({ state: 'ok' });
-      
+
     } catch (error: any) {
       setCurrentGameDataState({
         'state': 'error',
@@ -99,8 +99,10 @@ const GameDataSelector: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...pr
       <div className="relative flex justify-center items-center text-2xl pb-4">
         <H level="3" className="text-2xl">Game Data</H>
         <Tooltip
+          placement="bottom-end"
+          arrow
           title={
-            <div className="text-sm">
+            <div className="text-sm font-normal">
               <P>
                 In order for the calculator to perform any calculations, it first needs data. This is where you can
                 select what data the calculator uses.There are a couple of reasons why the game data has to be
@@ -128,7 +130,6 @@ const GameDataSelector: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...pr
               </P>
             </div>
           }
-          placement="bottom-end"
           className="absolute right-0"
         >
           <button><IoIosInformationCircle /></button>
@@ -170,7 +171,8 @@ const GameDataSelector: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...pr
                   else { setCurrentGameDataState({ state: 'error', message: result.message }); }
                 }}
               >
-                Load Latest Havoc Warfare Data from DFCalc
+                <span className="inline-block">Load Latest Havoc Warfare</span>
+                <span className="inline-block">Data from DFCalc</span>
               </Button>
               <Button
                 variant='primary'
@@ -180,7 +182,8 @@ const GameDataSelector: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...pr
                   else { setCurrentGameDataState({ state: 'error', message: result.message }); }
                 }}
               >
-                Load Latest Tactical Turmoil Data from DFCalc
+                 <span className="inline-block">Load Latest Tactical Turmoil</span>
+                 <span className="inline-block">Data from DFCalc</span>
               </Button>
             </div>
 
@@ -214,12 +217,12 @@ const CurrentGameData: FC<{ gameDataUrl: string; gameData: GameData }> = ({ game
           <Label className="grow">Last Updated</Label>
           <Label className="grow">Credits</Label>
         </div>
-        <div className="flex flex-col grow">
-          <Input value={gameDataUrl} disabled={true} className="text-white/50 w-auto" />
-          <Input value={gameData.version} disabled={true} className="text-white/50 w-auto" />
-          <Input value={gameData.description} disabled={true} className="text-white/50 w-auto" />
-          <Input value={gameData.lastUpdated} disabled={true} className="text-white/50 w-auto" />
-          <Input value={gameData.credits} disabled={true} className="text-white/50 w-auto" />
+        <div className="grow flex flex-col">
+          <Input value={gameDataUrl} disabled={true} />
+          <Input value={gameData.version} disabled={true} />
+          <Input value={gameData.description} disabled={true} />
+          <Input value={gameData.lastUpdated} disabled={true} />
+          <Input value={gameData.credits} disabled={true} />
         </div>
       </div>
     </>

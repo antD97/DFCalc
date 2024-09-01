@@ -11,24 +11,24 @@ export async function parseGameData(json: any): Promise<{
   message: string
 }> {
   try {
-    
+
     switch (json.version) {
-      case 1: return {
-        result: 'success',
-        gameData: GameDataV1Schema.parse(json)
-      };
+      case 1:
+        return {
+          result: 'success',
+          gameData: GameDataV1Schema.parse(json)
+        };
+      default:
+        return {
+          result: 'error',
+          message: 'Unknown game data version number'
+        };
     }
 
   } catch (error: any) {
-
     return {
       result: 'error',
       message: 'Failed to parse JSON data'
     }
-  }
-
-  return {
-    result: 'error',
-    message: 'Failed to parse JSON data'
   }
 }

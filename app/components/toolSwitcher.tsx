@@ -4,13 +4,14 @@ import { ButtonHTMLAttributes, FC, useState } from "react";
 import CompareTool from "@/app/components/compareTool";
 import InspectTool from "@/app/components/inspectTool";
 import { twMerge } from "tailwind-merge";
+import { CompareToolDataProvider } from "./compareToolContext";
 
 const ToolSwitcher: FC = () => {
   const [currentTool, setCurrentTool] = useState<ToolStates>('compare');
 
   return (
     <>
-      <div className="w-full flex justify-around text-2xl pb-4">
+      <div className="max-w-screen-sm w-full flex justify-around text-2xl pb-4 lg:max-w-none">
         <ToolButton isSelected={currentTool === 'compare'} onClick={() => { setCurrentTool('compare') }}>
           Compare All
         </ToolButton>
@@ -18,7 +19,7 @@ const ToolSwitcher: FC = () => {
           Inspect One
         </ToolButton>
       </div>
-      {currentTool === 'compare' && <CompareTool />}
+      {currentTool === 'compare' && <CompareToolDataProvider><CompareTool /></CompareToolDataProvider>}
       {currentTool === 'inspect' && <InspectTool />}
     </>
   );

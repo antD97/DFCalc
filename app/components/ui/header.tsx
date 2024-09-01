@@ -21,7 +21,7 @@ interface HeaderProps extends HTMLAttributes<HTMLHeadingElement>, VariantProps<t
   level: '1' | '2' | '3' | '4' | '5' | '6'
 }
 
-const H: FC<HeaderProps> = forwardRef<HTMLHeadingElement, HeaderProps>(({ level, variant, className, ...props }, ref) => {
+const H = forwardRef<HTMLHeadingElement, HeaderProps>(({ level, variant, className, ...props }, ref) => {
   const cn = twMerge(headerVariants({ variant, className }));
 
   switch (level) {

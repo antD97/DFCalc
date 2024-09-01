@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, FC, HTMLAttributes, ReactNode, useContext, useState } from "react";
+import { createContext, FC, ReactNode, useContext, useState } from "react";
 import { GameData } from "@/app/gameData/gameData";
 
 type GameDataContextType = {
