@@ -46,7 +46,7 @@ const GunNameTooltip: FC<{
                   {gunResultData.muzzle && <LI>{gunResultData.muzzle.name}</LI>}
                 </UL>
 
-                <P className="pb-0">Range Multipliers with Attachments <IoIosConstruct className="inline text-amber-500" /></P>
+                <P className="pb-0">Range Multipliers With Attachments <IoIosConstruct className="inline text-amber-500" /></P>
                 <UL>
                   {[{ from: 0, multiplier: 1 }, ...gunResultData.withAttachmentsDamageFalloffMultipliers].map((dfm, i, allDfm) => {
                     const isLast = i === allDfm.length - 1;

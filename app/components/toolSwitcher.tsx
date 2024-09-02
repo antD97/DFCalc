@@ -22,10 +22,10 @@ const ToolSwitcher: FC = () => {
           <>
             <div className="max-w-screen-sm w-full flex justify-around text-2xl pb-4 lg:max-w-none">
               <ToolButton isSelected={currentTool === 'compare'} onClick={() => { setCurrentTool('compare') }}>
-                Compare All
+                Compare
               </ToolButton>
               <ToolButton isSelected={currentTool === 'inspect'} onClick={() => { setCurrentTool('inspect') }}>
-                Inspect One
+                Inspect
               </ToolButton>
             </div>
             {currentTool === 'compare' && <CompareToolDataProvider><CompareTool /></CompareToolDataProvider>}

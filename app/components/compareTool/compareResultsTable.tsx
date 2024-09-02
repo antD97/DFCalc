@@ -84,7 +84,7 @@ const CompareResultsTable = () => {
 
           {/* gun rows */}
           {sortedResultList.map(([gunName, gunResultData]) => (
-            <motion.tr key={gunName} layout className="block divide-x divide-neutral-900">
+            <motion.tr key={gunName} layout="position" className="block divide-x-2 divide-neutral-900 hover:bg-neutral-900/50">
 
               {/* gun cells */}
               {columnStates.map(({ column, width }) => (

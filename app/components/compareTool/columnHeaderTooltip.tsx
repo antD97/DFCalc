@@ -10,7 +10,7 @@ const ColumnHeaderTooltip: FC<{
   column,
   children
 }) => {
-    return (
+    return column.long === 'Gun Name' ? <>{children}</> : (
       <Tooltip
         placement="top"
         arrow
