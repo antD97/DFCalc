@@ -1,10 +1,12 @@
-import { Box } from "@/app/components/ui/layout/box";
-import { H } from "@/app/components/ui/header";
+
+import HomeButton from "@/app/components/homeButton";
 import { A } from "@/app/components/ui/anchor";
+import { Box } from "@/app/components/ui/box";
+import { H } from "@/app/components/ui/header";
+import { UL } from "@/app/components/ui/list";
+import { LI } from "@/app/components/ui/listItem";
 import { P } from "@/app/components/ui/paragraph";
 import { Metadata } from "next";
-import HomeButton from "@/app/components/homeButton";
-import { LI, UL } from "../components/ui/list";
 
 export const metadata: Metadata = { title: "DFCalc - Contribute" };
 

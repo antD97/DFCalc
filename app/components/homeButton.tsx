@@ -6,7 +6,7 @@ const HomeButton: FC = () => {
   return (
     <div className="absolute left-0 top-0 flex justify-center w-screen h-16">
       <div className="relative w-full max-w-screen-lg">
-        <Link href="/" className="absolute text-3xl top-5 left-5 text-neutral-100 hover:text-neutral-300 active:text-neutral-400">
+        <Link href="/" className="absolute text-3xl top-6 right-6 text-neutral-100 hover:text-neutral-300 active:text-neutral-400">
           <IoIosHome />
         </Link>
       </div>

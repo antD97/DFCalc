@@ -1,14 +1,18 @@
-import { FC, HTMLAttributes, forwardRef } from 'react'
+'use client';
+
+import { isInTooltipTitle } from '@/app/components/ui/tooltip'
 import { VariantProps, cva } from 'class-variance-authority'
+import { HTMLAttributes, forwardRef } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 const headerVariants = cva(
-  'text-center',
+  '',
   {
     variants: {
       'variant': {
-        'title': 'text-6xl md:text-8xl',
-        'none': ''
+        'title': 'text-6xl md:text-8xl text-center',
+        'none': 'text-center',
+        'tooltip': 'text-base font-bold text-start'
       }
     },
     defaultVariants: {
@@ -22,7 +26,8 @@ interface HeaderProps extends HTMLAttributes<HTMLHeadingElement>, VariantProps<t
 }
 
 const H = forwardRef<HTMLHeadingElement, HeaderProps>(({ level, variant, className, ...props }, ref) => {
-  const cn = twMerge(headerVariants({ variant, className }));
+  if (!variant && isInTooltipTitle()) { variant = 'tooltip'; }
+  const cn = twMerge(headerVariants({ variant }), className);
 
   switch (level) {
     case '1': return <h1 ref={ref} className={cn} {...props} />

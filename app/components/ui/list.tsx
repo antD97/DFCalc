@@ -1,22 +1,34 @@
-import { FC, forwardRef, HTMLAttributes, OlHTMLAttributes } from 'react'
-import { VariantProps, cva } from 'class-variance-authority'
+'use client';
+
+import { isInTooltipTitle } from '@/app/components/ui/tooltip'
+import { cva, VariantProps } from 'class-variance-authority'
+import { forwardRef, HTMLAttributes, OlHTMLAttributes } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 const orderedListVariants = cva(
-  'list-decimal flex flex-col gap-y-4 pb-4 last:pb-0',
+  'list-decimal flex flex-col last:pb-0',
   {
-    variants: {},
-    defaultVariants: {}
+    variants: {
+      variant: {
+        default: 'gap-y-4 pb-4',
+        tooltip: 'font-normal pb-2'
+      }
+    },
+    defaultVariants: {
+      variant: 'default'
+    }
   }
 )
 
 interface OrderedListProps extends OlHTMLAttributes<HTMLOListElement>, VariantProps<typeof orderedListVariants> { }
 
-const OL: FC<OrderedListProps> = forwardRef<HTMLOListElement, OrderedListProps>(({ className, children, ...props }, ref) => {
+const OL = forwardRef<HTMLOListElement, OrderedListProps>(({ variant, className, children, ...props }, ref) => {
+  if (!variant && isInTooltipTitle()) { variant = 'tooltip'; }
+
   return (
     <ol
       ref={ref}
-      className={twMerge(orderedListVariants({ className }))}
+      className={twMerge(orderedListVariants({ variant }), className)}
       {...props}
     >
       {children}
@@ -25,20 +37,29 @@ const OL: FC<OrderedListProps> = forwardRef<HTMLOListElement, OrderedListProps>(
 })
 
 const unorderedListVariants = cva(
-  'list-disc flex flex-col gap-y-4 pb-4 last:pb-0',
+  'list-disc flex flex-col last:pb-0',
   {
-    variants: {},
-    defaultVariants: {}
+    variants: {
+      variant: {
+        default: 'gap-y-4 pb-4',
+        tooltip: 'font-normal pb-2'
+      }
+    },
+    defaultVariants: {
+      variant: 'default'
+    }
   }
 )
 
 interface UnorderedListProps extends HTMLAttributes<HTMLUListElement>, VariantProps<typeof unorderedListVariants> { }
 
-const UL: FC<UnorderedListProps> = forwardRef<HTMLUListElement, UnorderedListProps>(({ className, children, ...props }, ref) => {
+const UL = forwardRef<HTMLUListElement, UnorderedListProps>(({ variant, className, children, ...props }, ref) => {
+  if (!variant && isInTooltipTitle()) { variant = 'tooltip'; }
+
   return (
     <ul
       ref={ref}
-      className={twMerge(unorderedListVariants({ className }))}
+      className={twMerge(unorderedListVariants({ variant }), className)}
       {...props}
     >
       {children}
@@ -46,26 +67,4 @@ const UL: FC<UnorderedListProps> = forwardRef<HTMLUListElement, UnorderedListPro
   )
 })
 
-const listItemVariants = cva(
-  'ml-4',
-  {
-    variants: {},
-    defaultVariants: {}
-  }
-)
-
-interface ListItemProps extends HTMLAttributes<HTMLLIElement>, VariantProps<typeof listItemVariants> { }
-
-const LI: FC<ListItemProps> = forwardRef<HTMLLIElement, ListItemProps>(({ className, children, ...props }, ref) => {
-  return (
-    <li
-      ref={ref}
-      className={twMerge(listItemVariants({ className }))}
-      {...props}
-    >
-      {children}
-    </li>
-  )
-})
-
-export { OL, orderedListVariants, UL, unorderedListVariants, LI, listItemVariants }
+export { OL, orderedListVariants, UL, unorderedListVariants }

@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+import theme from "@/app/components/theme";
+import { A } from "@/app/components/ui/anchor";
 import { ubuntu } from "@/app/components/ui/fonts";
 import "@/app/globals.css";
-import { A } from "@/app/components/ui/anchor";
-import theme from "@/app/components/theme";
 import { ThemeProvider } from "@mui/material";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "DFCalc",

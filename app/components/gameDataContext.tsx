@@ -1,22 +1,54 @@
 'use client';
 
+import { GameData, parseGameData } from "@/app/gameData/gameData";
 import { createContext, FC, ReactNode, useContext, useState } from "react";
-import { GameData } from "@/app/gameData/gameData";
+
+type GameDataState = { state: 'loaded', gameData: GameData, url: string }
+  | { state: 'loading' | 'empty' }
+  | { state: 'error', 'message': string, url?: string }
 
 type GameDataContextType = {
-  gameData: GameData | null;
-  setGameData: (gameData: GameData | null) => void;
-  gameDataUrl: string | null;
-  setGameDataUrl: (gameDataUrl: string | null) => void;
+  gameDataState: GameDataState,
+  loadGameData: (url: string) => void,
+  setGameDataLoadingState: () => void,
+  setGameDataErrorState: (message: string, url?: string) => void
 }
 
 const GameDataContext = createContext<GameDataContextType | undefined>(undefined);
 
 export const GameDataProvider: FC<{ children: ReactNode }> = ({ children }) => {
-  const [gameData, setGameData] = useState<GameData | null>(null);
-  const [gameDataUrl, setGameDataUrl] = useState<string | null>(null);
+  const [gameDataState, setGameDataState] = useState<GameDataState>({ state: 'empty' });
+
+  const loadGameData = async (url: string) => {
+
+    setGameDataState({ state: 'loading' });
+
+    try {
+      const response = await fetch(url);
+      if (!response.ok) { throw new Error('Failed to retrieve game data file'); }
+
+      const parsedData = await parseGameData(await response.json());
+      if (parsedData.result === 'error') { throw new Error(parsedData.message); }
+
+      setGameDataState({ 'state': 'loaded', 'gameData': parsedData.gameData, url });
+      
+    } catch (error: any) {
+      setGameDataState({
+        'state': 'error',
+        'message': error?.message ? error.message : 'Unknown error loading game data',
+        url
+      });
+    }
+  }
+
+  const setGameDataLoadingState = () => setGameDataState({ state: 'loading' });
+
+  const setGameDataErrorState = (message: string, url?: string) => {
+    setGameDataState({ 'state': 'error', 'message': message, 'url': url });
+  };
+
   return (
-    <GameDataContext.Provider value={{ gameData, setGameData, gameDataUrl, setGameDataUrl }}>
+    <GameDataContext.Provider value={{ gameDataState, loadGameData, setGameDataLoadingState, setGameDataErrorState }}>
       {children}
     </GameDataContext.Provider>
   )

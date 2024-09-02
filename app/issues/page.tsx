@@ -1,10 +1,11 @@
-import { Box } from "@/app/components/ui/layout/box";
-import { H } from "@/app/components/ui/header";
+import HomeButton from "@/app/components/homeButton";
 import { A } from "@/app/components/ui/anchor";
+import { Box } from "@/app/components/ui/box";
+import { H } from "@/app/components/ui/header";
+import { UL } from "@/app/components/ui/list";
+import { LI } from "@/app/components/ui/listItem";
 import { P } from "@/app/components/ui/paragraph";
 import { Metadata } from "next";
-import HomeButton from "@/app/components/homeButton";
-import { LI, UL } from "@/app/components/ui/list";
 
 export const metadata: Metadata = { title: "DFCalc - Issues" };
 
@@ -19,7 +20,7 @@ export default function Issues() {
 
       <div className="w-full py-16">
         <H level="1" variant="title">Issues</H>
-        <H level="2" className="text-lg">Miscalculations or typos</H>
+        <H level="2" className="text-lg">Miscalculations and typos</H>
       </div>
 
       <Box maxWidth="small">

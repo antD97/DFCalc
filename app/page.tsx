@@ -1,10 +1,10 @@
-import { Box } from "@/app/components/ui/layout/box";
-import { H } from "@/app/components/ui/header";
-import { A } from "@/app/components/ui/anchor";
-import { P } from "@/app/components/ui/paragraph";
-import ToolSwitcher from "@/app/components/toolSwitcher";
-import GameDataSelector from "@/app/components/gameDataSelector";
 import { GameDataProvider } from "@/app/components/gameDataContext";
+import GameDataSelector from "@/app/components/gameDataSelector/gameDataSelector";
+import ToolSwitcher from "@/app/components/toolSwitcher";
+import { A } from "@/app/components/ui/anchor";
+import { Box } from "@/app/components/ui/box";
+import { H } from "@/app/components/ui/header";
+import { P } from "@/app/components/ui/paragraph";
 
 export default function Home() {
   return (

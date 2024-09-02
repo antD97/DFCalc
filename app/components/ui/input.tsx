@@ -1,5 +1,5 @@
-import { FC, forwardRef, InputHTMLAttributes } from 'react'
-import { VariantProps, cva } from 'class-variance-authority'
+import { cva, VariantProps } from 'class-variance-authority'
+import { forwardRef, InputHTMLAttributes } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 const inputVariants = cva(
@@ -14,13 +14,11 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement>, VariantProps
 
 const Input = forwardRef<HTMLInputElement, InputProps>(({ className, ...props }, ref) => {
   return (
-    <>
-      <input
-        ref={ref}
-        className={twMerge(inputVariants({ className }))}
-        {...props}
-      />
-    </>
+    <input
+      ref={ref}
+      className={twMerge(inputVariants({}), className)}
+      {...props}
+    />
   )
 })
 

@@ -1,9 +1,9 @@
 'use client';
 
+import AttachmentRestriction from "@/app/types/attachmentRestriction";
+import CharacterClass from "@/app/types/characterClass";
+import GunType from "@/app/types/gunType";
 import { createContext, FC, ReactNode, useContext, useState } from "react";
-import CharacterClass from "../types/characterClass";
-import GunType from "../types/gunType";
-import AttachmentRestriction from "../types/attachmentRestriction";
 
 export type CompareAllArgs = {
   targetHp: number,
@@ -32,7 +32,7 @@ const defaultCompareToolData: CompareAllArgs = {
   armsWeight: 0.0,
   stomachWeight: 0.0,
   upperLegsWeight: 0.0,
-  lowerLegsWeight: 1.0,
+  lowerLegsWeight: 0.0,
   characterClasses: ['Assault', 'Support', 'Engineer', 'Recon'],
   gunTypes: [
     'Assault Rifle',

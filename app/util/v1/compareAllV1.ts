@@ -1,7 +1,7 @@
-import { GameData } from "../../gameData/gameData"
-import AttachmentRestriction from "../../types/attachmentRestriction";
-import { Attachment, NonShotgunData, DamageFalloffMultiplier, GunData, ShotgunData } from "@/app/gameData/v1/gameDataV1";
-import { CompareAllArgs } from "@/app/components/compareToolContext";
+import { CompareAllArgs } from "@/app/components/compareTool/compareToolContext";
+import { GameData } from "@/app/gameData/gameData";
+import { Attachment, DamageFalloffMultiplier, GunData, NonShotgunData, ShotgunData } from "@/app/gameData/v1/gameDataV1";
+import AttachmentRestriction from "@/app/types/attachmentRestriction";
 
 type AdditionGunData = {
   avgDamage: number,
@@ -21,8 +21,10 @@ type AdditionalShotgunData = {
   maxTimeToKill: number
 };
 
-type ResultType = {
-  [name: string]: (NonShotgunData & AdditionGunData) | (ShotgunData & AdditionGunData & AdditionalShotgunData)
+export type GunResultData = (NonShotgunData & AdditionGunData) | (ShotgunData & AdditionGunData & AdditionalShotgunData);
+
+export type ResultType = {
+  [name: string]: GunResultData
 };
 
 export default function compareAllV1(
@@ -100,7 +102,7 @@ export default function compareAllV1(
 
       // additional shotgun values
       else {
-        
+
         const minAvgDamagePerShot = getDistanceMultiplier(gunData, distance)
           * calcAvgDamagePerShot(
             gunData.damage,

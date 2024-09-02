@@ -1,5 +1,5 @@
-import { FC, forwardRef, LabelHTMLAttributes } from 'react'
-import { VariantProps, cva } from 'class-variance-authority'
+import { cva, VariantProps } from 'class-variance-authority'
+import { forwardRef, LabelHTMLAttributes } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 const labelVariants = cva(
@@ -12,11 +12,11 @@ const labelVariants = cva(
 
 interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement>, VariantProps<typeof labelVariants> { }
 
-const Label: FC<LabelProps> = forwardRef<HTMLLabelElement, LabelProps>(({ className, children, ...props }, ref) => {
+const Label = forwardRef<HTMLLabelElement, LabelProps>(({ className, children, ...props }, ref) => {
   return (
     <label
       ref={ref}
-      className={twMerge(labelVariants({ className }))}
+      className={twMerge(labelVariants({}), className)}
       {...props}
     >
       {children}

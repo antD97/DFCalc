@@ -1,7 +1,6 @@
 'use client'
 
-import { P } from "@/app/components/ui/paragraph";
-import { Box } from "@/app/components/ui/layout/box";
+import { Box } from "@/app/components/ui/box";
 import { FC } from "react";
 import { H } from "./ui/header";
 

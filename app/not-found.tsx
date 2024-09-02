@@ -1,6 +1,6 @@
+import HomeButton from "@/app/components/homeButton";
 import { H } from "@/app/components/ui/header";
 import { Metadata } from "next";
-import HomeButton from "@/app/components/homeButton";
 
 export const metadata: Metadata = { title: "DFCalc - Issues" };
 

@@ -1,5 +1,5 @@
-import { HTMLAttributes, FC, forwardRef } from 'react'
 import { VariantProps, cva } from 'class-variance-authority'
+import { HTMLAttributes, forwardRef } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 const boxVariants = cva(
@@ -26,11 +26,11 @@ const boxVariants = cva(
 
 interface BoxProps extends HTMLAttributes<HTMLDivElement>, VariantProps<typeof boxVariants> { }
 
-const Box: FC<BoxProps> = forwardRef<HTMLDivElement, BoxProps>(({ variant, maxWidth, className, children, ...props }, ref) => {
+const Box = forwardRef<HTMLDivElement, BoxProps>(({ variant, maxWidth, className, children, ...props }, ref) => {
   return (
     <div
       ref={ref}
-      className={twMerge(boxVariants({ variant, maxWidth, className }))}
+      className={twMerge(boxVariants({ variant, maxWidth }), className)}
       {...props}
     >
       {children}

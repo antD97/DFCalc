@@ -1,9 +1,8 @@
-import { Box } from "@/app/components/ui/layout/box";
+import HomeButton from "@/app/components/homeButton";
+import { Box } from "@/app/components/ui/box";
 import { H } from "@/app/components/ui/header";
-import { A } from "@/app/components/ui/anchor";
 import { P } from "@/app/components/ui/paragraph";
 import { Metadata } from "next";
-import HomeButton from "@/app/components/homeButton";
 
 export const metadata: Metadata = { title: "DFCalc - Issues" };
 
