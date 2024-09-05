@@ -1,4 +1,4 @@
-import { Column } from "@/app/components/compareTool/columns";
+import { Column } from "@/app/components/compareTool/resultsTable/columns";
 import { P } from "@/app/components/ui/paragraph";
 import { Tooltip } from "@/app/components/ui/tooltip";
 import { FC } from "react";

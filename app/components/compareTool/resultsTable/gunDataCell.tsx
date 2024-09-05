@@ -1,5 +1,5 @@
-import { avgDamageColumn, Column, dpsColumn, stkColumn } from "@/app/components/compareTool/columns";
-import GunNameTooltip from "@/app/components/compareTool/gunDetailsTooltip";
+import { avgDamageColumn, Column, dpsColumn, stkColumn } from "@/app/components/compareTool/resultsTable/columns";
+import GunNameTooltip from "@/app/components/compareTool/resultsTable/gunDetailsTooltip";
 import GunType from "@/app/types/gunType";
 import { GunResultData } from "@/app/util/v1/compareAllV1";
 import { CSSProperties, FC } from "react";

@@ -1,4 +1,4 @@
-import { CompareAllArgs } from "@/app/components/compareTool/compareToolContext";
+import { CompareToolArgs } from "@/app/components/compareTool/compareToolContext";
 import { GameData } from "@/app/gameData/gameData";
 import { Attachment, DamageFalloffMultiplier, GunData, NonShotgunData, ShotgunData } from "@/app/gameData/v1/gameDataV1";
 import AttachmentRestriction from "@/app/types/attachmentRestriction";
@@ -41,7 +41,7 @@ export default function compareAllV1(
     characterClasses,
     gunTypes,
     attachmentRestrictions
-  }: CompareAllArgs & { gameData: GameData }
+  }: CompareToolArgs & { gameData: GameData }
 ): ResultType {
 
   const result: [name: string, (NonShotgunData & AdditionGunData) | (ShotgunData & AdditionGunData & AdditionalShotgunData)][] = Object.entries(gameData.guns)

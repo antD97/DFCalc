@@ -1,9 +1,9 @@
 'use client';
 
-import ColumnHeaderTooltip from "@/app/components/compareTool/columnHeaderTooltip";
-import { avgDamageColumn, Column, dpsColumn, gunNameColumn, stkColumn, ttkColumn } from "@/app/components/compareTool/columns";
 import { useCompareToolData } from "@/app/components/compareTool/compareToolContext";
-import GunDataCell from "@/app/components/compareTool/gunDataCell";
+import ColumnHeaderTooltip from "@/app/components/compareTool/resultsTable/columnHeaderTooltip";
+import { avgDamageColumn, Column, dpsColumn, gunNameColumn, stkColumn, ttkColumn } from "@/app/components/compareTool/resultsTable/columns";
+import GunDataCell from "@/app/components/compareTool/resultsTable/gunDataCell";
 import { useGameData } from "@/app/components/gameDataContext";
 import { boxVariants } from "@/app/components/ui/box";
 import compareAllV1, { ResultType } from "@/app/util/v1/compareAllV1";
@@ -16,14 +16,14 @@ import { useDebouncedCallback } from "use-debounce";
 type ColumnState = { column: Column, width: number | null };
 type SortMode = { column: Column, direction: 'ascending' | 'descending' }
 
-const CompareResultsTable = () => {
+const CompareResultsTable: FC = () => {
   const { gameDataState } = useGameData();
   if (gameDataState.state !== 'loaded') {
     throw new Error('Compare results table cannot not be rendered with no loaded game data');
   }
   const gameData = gameDataState.gameData;
 
-  const { compareAllArgs } = useCompareToolData();
+  const compareAllArgs = useCompareToolData();
 
   const [sortMode, setSortMode] = useState<SortMode>({ column: ttkColumn, direction: ttkColumn.sortDirPreference });
 
