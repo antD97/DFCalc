@@ -1,8 +1,8 @@
-import { useCompareToolData } from "@/app/components/compareTool/compareToolContext";
+import { CompareToolAction, useCompareToolData } from "@/app/components/compareTool/compareToolContext";
 import { H } from "@/app/components/ui/header";
 import { Input } from "@/app/components/ui/input";
 import { Label } from "@/app/components/ui/label";
-import { ChangeEvent, ChangeEventHandler, Dispatch, FC, InputHTMLAttributes } from "react";
+import { ChangeEventHandler, Dispatch, FC, InputHTMLAttributes } from "react";
 
 const Settings: FC = () => {
   const {
@@ -30,7 +30,7 @@ const Settings: FC = () => {
             type="number"
             className="w-12 text-center"
             value={String(targetHp)}
-            onChange={(e) => { dispatch({ type: 'setTargetHp', argType: 'numericalInputEvent', event: e }) }}
+            onChange={numberInputEventHandler(dispatch, 'setTargetHp', 1, 1000)}
           />
         </div>
 
@@ -39,8 +39,8 @@ const Settings: FC = () => {
           <Input
             type="number"
             className="w-12 text-center"
-            value={distance}
-            onChange={(e) => { dispatch({ type: 'setDistance', argType: 'numericalInputEvent', event: e }) }}
+            value={String(distance)}
+            onChange={numberInputEventHandler(dispatch, 'setDistance', 1, 5000)}
           />
         </div>
       </div>
@@ -52,19 +52,19 @@ const Settings: FC = () => {
           <HitDistributionInput
             label="Head"
             value={headWeight}
-            onChange={(e) => { dispatch({ type: 'setHeadWeight', argType: 'numericalInputEvent', event: e }) }}
+            onChange={numberInputEventHandler(dispatch, 'setHeadWeight', 0, 100, [thoraxWeight, stomachWeight, armsWeight, upperLegsWeight, lowerLegsWeight])}
             weightsTotal={weightsTotal}
           />
           <HitDistributionInput
             label="Thorax"
             value={thoraxWeight}
-            onChange={(e) => { dispatch({ type: 'setThoraxWeight', argType: 'numericalInputEvent', event: e }) }}
+            onChange={numberInputEventHandler(dispatch, 'setThoraxWeight', 0, 100, [headWeight, stomachWeight, armsWeight, upperLegsWeight, lowerLegsWeight])}
             weightsTotal={weightsTotal}
           />
           <HitDistributionInput
             label="Stomach"
             value={stomachWeight}
-            onChange={(e) => { dispatch({ type: 'setStomachWeight', argType: 'numericalInputEvent', event: e }) }}
+            onChange={numberInputEventHandler(dispatch, 'setStomachWeight', 0, 100, [headWeight, thoraxWeight, armsWeight, upperLegsWeight, lowerLegsWeight])}
             weightsTotal={weightsTotal}
           />
         </div>
@@ -72,19 +72,19 @@ const Settings: FC = () => {
           <HitDistributionInput
             label="Arms"
             value={armsWeight}
-            onChange={(e) => { dispatch({ type: 'setArmsWeight', argType: 'numericalInputEvent', event: e }) }}
+            onChange={numberInputEventHandler(dispatch, 'setArmsWeight', 0, 100, [headWeight, thoraxWeight, stomachWeight, upperLegsWeight, lowerLegsWeight])}
             weightsTotal={weightsTotal}
           />
           <HitDistributionInput
             label="Upper Legs"
             value={upperLegsWeight}
-            onChange={(e) => { dispatch({ type: 'setUpperLegsWeight', argType: 'numericalInputEvent', event: e }) }}
+            onChange={numberInputEventHandler(dispatch, 'setUpperLegsWeight', 0, 100, [headWeight, thoraxWeight, stomachWeight, armsWeight, lowerLegsWeight])}
             weightsTotal={weightsTotal}
           />
           <HitDistributionInput
             label="Lower Legs"
             value={lowerLegsWeight}
-            onChange={(e) => { dispatch({ type: 'setLowerLegsWeight', argType: 'numericalInputEvent', event: e }) }}
+            onChange={numberInputEventHandler(dispatch, 'setLowerLegsWeight', 0, 100, [headWeight, thoraxWeight, stomachWeight, armsWeight, upperLegsWeight])}
             weightsTotal={weightsTotal}
           />
         </div>
@@ -105,7 +105,7 @@ const HitDistributionInput: FC<HitDistributionInputProps> = ({ label, value, wei
     <div className="flex">
       <Label className="w-28">{label}</Label>
       <div className="relative">
-        <Input type="number" value={value} onChange={onChange} className="w-24 text-start" />
+        <Input type="number" value={String(value)} onChange={onChange} className="w-24 text-start" />
         <span className="absolute right-0 text-white/50 pointer-events-none">
           {`${((value / weightsTotal) * 100).toFixed(1)}%`}
         </span>
@@ -113,5 +113,36 @@ const HitDistributionInput: FC<HitDistributionInputProps> = ({ label, value, wei
     </div>
   );
 };
+
+function numberInputEventHandler(
+  dispatch: Dispatch<CompareToolAction>,
+  actionType:
+    'setTargetHp'
+    | 'setDistance'
+    | 'setHeadWeight'
+    | 'setThoraxWeight'
+    | 'setArmsWeight'
+    | 'setStomachWeight'
+    | 'setUpperLegsWeight'
+    | 'setLowerLegsWeight',
+  min: number,
+  max: number,
+  cannotBeZero?: number[]
+): ChangeEventHandler<HTMLInputElement> {
+
+  return (e) => {
+    const inputValue = e.target.value;
+    if (inputValue !== null) {
+      var number = Number(inputValue);
+
+      // not all hit distribution values can be zero
+      if (number === 0 && cannotBeZero && cannotBeZero.every(v => v === 0)) { return; }
+
+      if (number > max) number = max;
+      if (number < min) number = min;
+      dispatch({ type: actionType, value: number });
+    }
+  };
+}
 
 export default Settings;

@@ -27,12 +27,11 @@ const CompareResultsTable: FC = () => {
 
   const [sortMode, setSortMode] = useState<SortMode>({ column: ttkColumn, direction: ttkColumn.sortDirPreference });
 
-  // update result list on dependency change with debounce
-  const debouncedCalcResult = useDebouncedCallback(() => compareAllV1({ gameData, ...compareAllArgs }), 1000);
-  const result = useMemo(() => {
-    const result = debouncedCalcResult();
-    return result ? result : compareAllV1({ gameData, ...compareAllArgs });
-  }, [gameData, compareAllArgs]);
+  const [result, setResult] = useState<ResultType>(compareAllV1({ gameData, ...compareAllArgs }));
+  const debouncedCompareAll = useDebouncedCallback(() => {
+    setResult(compareAllV1({ gameData, ...compareAllArgs }))
+  }, 1000, { leading: true });
+  useEffect(() => { debouncedCompareAll(); }, [gameData, compareAllArgs]);
   const sortedResultList = useMemo(() => sortResult(result, sortMode), [result, sortMode]);
 
   const [columnStates, setColumnStates] = useState<ColumnState[]>([
@@ -46,7 +45,7 @@ const CompareResultsTable: FC = () => {
   // adjust column widths
   const fullWidthRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    if (gameDataState.state === 'loaded') { updateTableColumnWidths(fullWidthRef, columnStates, setColumnStates) }
+    if (gameDataState.state === 'loaded') { updateTableColumnWidths(fullWidthRef, columnStates, setColumnStates); }
   }, []);
 
   return (

@@ -24,6 +24,7 @@ const GunNameTooltip: FC<{
             <UL>
               <LI>Base Damage: {gunResultData.damage}</LI>
               {gunResultData.type === 'Shotgun' && (<LI>Num Bullets: {gunResultData.numBullets}</LI>)}
+              <LI>Fire Rate: {gunResultData.fireRate} rpm</LI>
               <LI>Classes: {gunResultData.characterClass.length === 4 ? 'All' : gunResultData.characterClass.join(', ')}</LI>
             </UL>
 

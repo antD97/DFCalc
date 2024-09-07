@@ -19,22 +19,22 @@ export type CompareToolArgs = {
   attachmentRestrictions: AttachmentRestriction[]
 };
 
-type CompareToolAction =
-  { type: 'setTargetHp', argType: 'numericalInputEvent', event: ChangeEvent<HTMLInputElement> }
-  | { type: 'setDistance', argType: 'numericalInputEvent', event: ChangeEvent<HTMLInputElement> }
-  | { type: 'setHeadWeight', argType: 'numericalInputEvent', event: ChangeEvent<HTMLInputElement> }
-  | { type: 'setThoraxWeight', argType: 'numericalInputEvent', event: ChangeEvent<HTMLInputElement> }
-  | { type: 'setArmsWeight', argType: 'numericalInputEvent', event: ChangeEvent<HTMLInputElement> }
-  | { type: 'setStomachWeight', argType: 'numericalInputEvent', event: ChangeEvent<HTMLInputElement> }
-  | { type: 'setUpperLegsWeight', argType: 'numericalInputEvent', event: ChangeEvent<HTMLInputElement> }
-  | { type: 'setLowerLegsWeight', argType: 'numericalInputEvent', event: ChangeEvent<HTMLInputElement> }
-  | { type: 'setCharacterClasses', argType: '', characterClasses: CharacterClass[] }
-  | { type: 'setGunTypes', argType: '', gunTypes: GunType[] }
-  | { type: 'setAttachmentRestrictions', argType: '', attachmentRestrictions: AttachmentRestriction[] };
+export type CompareToolAction =
+  { type: 'setTargetHp', value: number }
+  | { type: 'setDistance', value: number }
+  | { type: 'setHeadWeight', value: number }
+  | { type: 'setThoraxWeight', value: number }
+  | { type: 'setArmsWeight', value: number }
+  | { type: 'setStomachWeight', value: number }
+  | { type: 'setUpperLegsWeight', value: number }
+  | { type: 'setLowerLegsWeight', value: number }
+  | { type: 'setCharacterClasses', value: CharacterClass[] }
+  | { type: 'setGunTypes', value: GunType[] }
+  | { type: 'setAttachmentRestrictions', value: AttachmentRestriction[] };
 
 const defaultCompareToolData: CompareToolArgs = {
   targetHp: 100.0,
-  distance: 20,
+  distance: 50,
   headWeight: 0.0,
   thoraxWeight: 1.0,
   armsWeight: 0.0,
@@ -56,33 +56,18 @@ const defaultCompareToolData: CompareToolArgs = {
 };
 
 const reducer = (state: CompareToolArgs, action: CompareToolAction): CompareToolArgs => {
-
-  switch (action.argType) {
-
-    case 'numericalInputEvent':
-      const n = Number(action.event.target.value);
-      if (action.event.target.value !== '' && n >= 0) {
-        switch (action.type) {
-          case 'setTargetHp': return { ...state, targetHp: n };
-          case 'setDistance': return { ...state, distance: n };
-          case 'setHeadWeight': return { ...state, headWeight: n };
-          case 'setThoraxWeight': return { ...state, thoraxWeight: n };
-          case 'setArmsWeight': return { ...state, armsWeight: n };
-          case 'setStomachWeight': return { ...state, stomachWeight: n };
-          case 'setUpperLegsWeight': return { ...state, upperLegsWeight: n };
-          case 'setLowerLegsWeight': return { ...state, lowerLegsWeight: n };
-        }
-      } else {
-        console.log(state)
-        return state;
-      }
-
-    default:
-      switch (action.type) {
-        case 'setCharacterClasses': return { ...state, characterClasses: action.characterClasses };
-        case 'setGunTypes': return { ...state, gunTypes: action.gunTypes };
-        case 'setAttachmentRestrictions': return { ...state, attachmentRestrictions: action.attachmentRestrictions };
-      }
+  switch (action.type) {
+    case 'setTargetHp': return { ...state, targetHp: action.value };
+    case 'setDistance': return { ...state, distance: action.value };
+    case 'setHeadWeight': return { ...state, headWeight: action.value };
+    case 'setThoraxWeight': return { ...state, thoraxWeight: action.value };
+    case 'setArmsWeight': return { ...state, armsWeight: action.value };
+    case 'setStomachWeight': return { ...state, stomachWeight: action.value };
+    case 'setUpperLegsWeight': return { ...state, upperLegsWeight: action.value };
+    case 'setLowerLegsWeight': return { ...state, lowerLegsWeight: action.value };
+    case 'setCharacterClasses': return { ...state, characterClasses: action.value };
+    case 'setGunTypes': return { ...state, gunTypes: action.value };
+    case 'setAttachmentRestrictions': return { ...state, attachmentRestrictions: action.value };
   }
 };
 
