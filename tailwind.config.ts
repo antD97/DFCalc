@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       boxShadow: {
-        'inner-lg': 'inset 0 8px 8px -5px rgb(0 0 0 / 0.2), inset 0px -8px 8px -5px rgb(0 0 0 / 0.2)',
+        'inner-lg': 'inset 0 15px 10px -15px rgb(0 0 0 / 0.6), inset 0 -15px 10px -15px rgb(0 0 0 / 0.6)',
       }
     },
   },

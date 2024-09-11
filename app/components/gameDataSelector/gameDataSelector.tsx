@@ -30,7 +30,7 @@ const GameDataSelector: FC<HTMLAttributes<HTMLDivElement>> = ({ className }) => 
   useEffect(() => { loadLatestGameData('Havoc Warfare'); }, []);
 
   return (
-    <Box className={twMerge('flex flex-col self-center mb-6 w-full', className)} maxWidth="small">
+    <Box className={twMerge('flex flex-col self-center w-full', className)} maxWidth="small">
 
       <div className="relative flex justify-center items-center text-2xl pb-4">
         <H level="3" className="text-2xl">Game Data</H>

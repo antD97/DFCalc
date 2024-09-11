@@ -11,6 +11,20 @@ input::-webkit-inner-spin-button {
 
 /* Firefox */
 input[type=number] {
-    appearance: textfield;
+  appearance: textfield;
   -moz-appearance: textfield;
+}
+
+/* Overlay Scrollbars */
+.os-scrollbar-handle {
+  background: rgba(195, 195, 195, 0.5) !important;
+}
+
+.os-scrollbar-handle:hover {
+  background: rgba(225, 225, 225, 0.5) !important;
+}
+
+.os-scrollbar-handle:active {
+  background: rgba(255, 255, 255, 0.5) !important;
+  /* background: rgba(245, 158, 11, 0.5) !important; */
 }

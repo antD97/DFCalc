@@ -6,6 +6,7 @@ import { avgDamageColumn, Column, dpsColumn, gunNameColumn, stkColumn, ttkColumn
 import GunDataCell from "@/app/components/compareTool/resultsTable/gunDataCell";
 import { useGameData } from "@/app/components/gameDataContext";
 import { boxVariants } from "@/app/components/ui/box";
+import CustomScroll from "@/app/components/ui/customScroll";
 import compareAllV1, { ResultType } from "@/app/util/v1/compareAllV1";
 import { motion } from "framer-motion";
 import { Dispatch, FC, RefObject, SetStateAction, useEffect, useMemo, useRef, useState } from "react";
@@ -52,52 +53,54 @@ const CompareResultsTable: FC = () => {
     <>
       <div ref={fullWidthRef} className="w-full"></div>
 
-      <table className="block overflow-scroll max-h-96 rounded-none sm:rounded-lg">
+      <CustomScroll className="max-h-96 rounded-none sm:rounded-lg">
+        <table className="block">
 
-        {/* head */}
-        <thead className="block w-fit sticky top-0 bg-neutral-900 z-10">
-          <tr className="block">
+          {/* head */}
+          <thead className="block w-fit sticky top-0 bg-neutral-900 z-10">
+            <tr className="block">
 
-            {/* column headers */}
-            {columnStates.map(({ column, width }) => (
-              <th key={column.long} style={cssRowWidths(width)}>
-                <div className={`w-full h-full flex ${column.long === 'Gun Name' ? 'justify-start' : 'justify-end'}`}>
-                  <ColumnHeaderTooltip column={column}>
-                    <button
-                      className="left-0 px-2 hover:underline"
-                      onClick={() => { setSortMode(getNextSortMode(column, sortMode)) }}
-                    >
-                      {column.long !== 'Gun Name' && <SortArrow sortMode={sortMode} column={column} />}
-                      {column.short}
-                      {column.long === 'Gun Name' && <SortArrow sortMode={sortMode} column={column} />}
-                    </button>
-                  </ColumnHeaderTooltip>
-                </div>
-              </th>
-            ))}
-          </tr>
-        </thead>
-
-        {/* body */}
-        <tbody className={twMerge(boxVariants({ variant: 'inner', maxWidth: 'none' }), 'p-0 w-fit block shadow-none rounded-none')}>
-
-          {/* gun rows */}
-          {sortedResultList.map(([gunName, gunResultData]) => (
-            <motion.tr key={gunName} layout="position" className="block divide-x-2 divide-neutral-900 hover:bg-neutral-900/50">
-
-              {/* gun cells */}
+              {/* column headers */}
               {columnStates.map(({ column, width }) => (
-                <GunDataCell
-                  column={column}
-                  gunName={gunName}
-                  gunResultData={gunResultData}
-                  style={cssRowWidths(width)}
-                />
+                <th key={column.long} style={cssRowWidths(width)}>
+                  <div className={`w-full h-full flex ${column.long === 'Gun Name' ? 'justify-start' : 'justify-end'}`}>
+                    <ColumnHeaderTooltip column={column}>
+                      <button
+                        className="left-0 px-2 hover:underline"
+                        onClick={() => { setSortMode(getNextSortMode(column, sortMode)) }}
+                      >
+                        {column.long !== 'Gun Name' && <SortArrow sortMode={sortMode} column={column} />}
+                        {column.short}
+                        {column.long === 'Gun Name' && <SortArrow sortMode={sortMode} column={column} />}
+                      </button>
+                    </ColumnHeaderTooltip>
+                  </div>
+                </th>
               ))}
-            </motion.tr>
-          ))}
-        </tbody>
-      </table >
+            </tr>
+          </thead>
+
+          {/* body */}
+          <tbody className={twMerge(boxVariants({ variant: 'inner', maxWidth: 'none' }), 'p-0 w-fit block shadow-none rounded-none')}>
+
+            {/* gun rows */}
+            {sortedResultList.map(([gunName, gunResultData]) => (
+              <motion.tr key={gunName} layout="position" className="block divide-x-2 divide-neutral-900 hover:bg-neutral-900/50">
+
+                {/* gun cells */}
+                {columnStates.map(({ column, width }) => (
+                  <GunDataCell
+                    column={column}
+                    gunName={gunName}
+                    gunResultData={gunResultData}
+                    style={cssRowWidths(width)}
+                  />
+                ))}
+              </motion.tr>
+            ))}
+          </tbody>
+        </table>
+      </CustomScroll>
     </>
   );
 };
@@ -134,7 +137,7 @@ function updateTableColumnWidths(
 ) {
   if (fullWidthRef.current) {
 
-    const updateColumnWidths = () => {
+    const o = new ResizeObserver(() => {
       if (!fullWidthRef.current) { return; }
       const fullWidth = fullWidthRef.current.offsetWidth;
 
@@ -175,9 +178,7 @@ function updateTableColumnWidths(
           }));
         }
       }
-    }
-
-    const o = new ResizeObserver(entries => entries.forEach(e => updateColumnWidths()));
+    });
     o.observe(fullWidthRef.current!!);
   }
 }

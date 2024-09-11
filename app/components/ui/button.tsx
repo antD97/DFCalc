@@ -1,6 +1,6 @@
-import { VariantProps, cva } from 'class-variance-authority'
-import { ButtonHTMLAttributes, forwardRef } from 'react'
-import { twMerge } from 'tailwind-merge'
+import { VariantProps, cva } from 'class-variance-authority';
+import { ButtonHTMLAttributes, forwardRef } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 const buttonVariants = cva(
   'shadow active:shadow-none px-4 rounded',
@@ -15,7 +15,7 @@ const buttonVariants = cva(
       'variant': 'white'
     }
   }
-)
+);
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> { }
 
@@ -27,4 +27,4 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ variant, className,
   )
 })
 
-export { Button, buttonVariants }
+export { Button, buttonVariants };

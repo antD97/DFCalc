@@ -4,6 +4,7 @@ import { ubuntu } from "@/app/components/ui/fonts";
 import "@/app/globals.css";
 import { ThemeProvider } from "@mui/material";
 import type { Metadata } from "next";
+import 'overlayscrollbars/overlayscrollbars.css';
 
 export const metadata: Metadata = {
   title: "DFCalc",
@@ -17,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`flex flex-col items-center w-screen max-w-screen min-h-screen bg-[url('imgs/background.png')] bg-cover bg-center bg-fixed ${ubuntu.className} text-white`}>
+      <body className={`flex flex-col items-center w-full max-w-screen min-h-screen bg-[url('imgs/background.png')] bg-cover bg-center bg-fixed ${ubuntu.className} text-white`}>
         <ThemeProvider theme={theme}>
           <main className="flex-grow w-full flex flex-col items-center max-w-screen-lg">
             {children}

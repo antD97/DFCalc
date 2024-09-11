@@ -25,7 +25,7 @@ const Accordion = forwardRef<HTMLDivElement, AccordionProps>(({ initiallyOpen = 
     <div ref={ref} className='flex flex-col' {...props} >
       <button
         onClick={() => { setIsOpen(!isOpen) }}
-        className='flex justify-center items-center gap-x-4 text-lg text-center'
+        className='flex justify-center items-center gap-x-4 text-lg text-center hover:text-amber-500'
       >
         {
           isOpen ? (<><IoIosArrowUp />{text}<IoIosArrowUp /></>)
