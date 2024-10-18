@@ -38,4 +38,6 @@ const Box = forwardRef<HTMLDivElement, BoxProps>(({ variant, maxWidth, className
   )
 })
 
+Box.displayName = "Box";
+
 export { Box, boxVariants }

@@ -1,21 +1,12 @@
-import GunType from "./gunType";
 
-type GunTypeAttachmentRestriction = {
-  restrictionType: 'byGunType';
-  gunType: GunType;
-};
-
-type SpecifiedGunAttachmentRestriction = {
-  restrictionType: 'byName';
-  gunName: string;
-}
-
-type BaseAttachmentRestriction = {
+type AttachmentRestriction = {
+  type: 'excludeAttachment'
+  gun: { type: 'name', name: string } | { type: 'all' };
+  attachment: { type: 'name', name: string } | { type: 'all' };
+} | {
+  type: 'requireAttachment'
+  gun: string;
   attachment: string;
 };
-
-type AttachmentRestriction = BaseAttachmentRestriction & (
-  GunTypeAttachmentRestriction | SpecifiedGunAttachmentRestriction
-);
 
 export default AttachmentRestriction;

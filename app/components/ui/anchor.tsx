@@ -26,4 +26,6 @@ const A = forwardRef<HTMLAnchorElement, AnchorProps>(({ className, href, childre
   )
 })
 
+A.displayName = "Anchor";
+
 export { A, anchorVariants }

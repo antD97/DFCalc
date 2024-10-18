@@ -14,6 +14,6 @@ const Tooltip: FC<MuiTooltipProps> = ({ title, ...props }) => {
   );
 };
 
-const isInTooltipTitle = () => useContext(TooltipTitleContext);
+const useIsInTooltipTitle = () => useContext(TooltipTitleContext);
 
-export { isInTooltipTitle, Tooltip };
+export { useIsInTooltipTitle, Tooltip };

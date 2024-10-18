@@ -37,4 +37,7 @@ const Accordion = forwardRef<HTMLDivElement, AccordionProps>(({ initiallyOpen = 
   )
 })
 
+Accordion.displayName = 'Accordion';
+
 export { Accordion, accordionVariants };
+

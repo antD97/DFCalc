@@ -1,6 +1,6 @@
 import { avgDamageColumn, Column, dpsColumn, stkColumn } from "@/app/components/compareTool/resultsTable/columns";
 import GunNameTooltip from "@/app/components/compareTool/resultsTable/gunDetailsTooltip";
-import GunType from "@/app/types/gunType";
+import GunClass from "@/app/types/gunClass";
 import { GunResultData } from "@/app/util/v1/compareAllV1";
 import { CSSProperties, FC } from "react";
 import { IoIosConstruct } from "react-icons/io";
@@ -72,10 +72,9 @@ const GunDataCell: FC<{
     }
   };
 
-function toShortGunType(gunType: GunType): 'AR' | 'LMG' | 'MR' | 'P' | 'SG' | 'SR' | 'SMG' {
+function toShortGunType(gunType: GunClass): 'AR' | 'LMG' | 'MR' | 'P' | 'SG' | 'SR' | 'SMG' {
   switch (gunType) {
     case 'Assault Rifle': return 'AR';
-    case 'Battle Rifle': return 'AR';
     case 'Light Machine Gun': return 'LMG';
     case 'Marksman Rifle': return 'MR';
     case 'Pistol': return 'P';

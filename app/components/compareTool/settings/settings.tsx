@@ -9,7 +9,7 @@ const Settings: FC = () => {
     targetHp,
     distance,
     headWeight,
-    thoraxWeight,
+    chestWeight,
     stomachWeight,
     armsWeight,
     upperLegsWeight,
@@ -17,11 +17,11 @@ const Settings: FC = () => {
     dispatch
   } = useCompareToolData();
 
-  const weightsTotal = headWeight + thoraxWeight + stomachWeight + armsWeight + upperLegsWeight + lowerLegsWeight;
+  const weightsTotal = headWeight + chestWeight + stomachWeight + armsWeight + upperLegsWeight + lowerLegsWeight;
 
   return (
     <>
-      <H level="3" className="text-2xl mb-4">Settings</H>
+      <H level="4" className="text-lg mb-4">General</H>
 
       <div className="flex flex-col items-center sm:flex-row ">
         <div className="grow flex basis-0">
@@ -52,19 +52,19 @@ const Settings: FC = () => {
           <HitDistributionInput
             label="Head"
             value={headWeight}
-            onChange={numberInputEventHandler(dispatch, 'setHeadWeight', 0, 100, [thoraxWeight, stomachWeight, armsWeight, upperLegsWeight, lowerLegsWeight])}
+            onChange={numberInputEventHandler(dispatch, 'setHeadWeight', 0, 100, [chestWeight, stomachWeight, armsWeight, upperLegsWeight, lowerLegsWeight])}
             weightsTotal={weightsTotal}
           />
           <HitDistributionInput
-            label="Thorax"
-            value={thoraxWeight}
-            onChange={numberInputEventHandler(dispatch, 'setThoraxWeight', 0, 100, [headWeight, stomachWeight, armsWeight, upperLegsWeight, lowerLegsWeight])}
+            label="Chest"
+            value={chestWeight}
+            onChange={numberInputEventHandler(dispatch, 'setChestWeight', 0, 100, [headWeight, stomachWeight, armsWeight, upperLegsWeight, lowerLegsWeight])}
             weightsTotal={weightsTotal}
           />
           <HitDistributionInput
             label="Stomach"
             value={stomachWeight}
-            onChange={numberInputEventHandler(dispatch, 'setStomachWeight', 0, 100, [headWeight, thoraxWeight, armsWeight, upperLegsWeight, lowerLegsWeight])}
+            onChange={numberInputEventHandler(dispatch, 'setStomachWeight', 0, 100, [headWeight, chestWeight, armsWeight, upperLegsWeight, lowerLegsWeight])}
             weightsTotal={weightsTotal}
           />
         </div>
@@ -72,19 +72,19 @@ const Settings: FC = () => {
           <HitDistributionInput
             label="Arms"
             value={armsWeight}
-            onChange={numberInputEventHandler(dispatch, 'setArmsWeight', 0, 100, [headWeight, thoraxWeight, stomachWeight, upperLegsWeight, lowerLegsWeight])}
+            onChange={numberInputEventHandler(dispatch, 'setArmsWeight', 0, 100, [headWeight, chestWeight, stomachWeight, upperLegsWeight, lowerLegsWeight])}
             weightsTotal={weightsTotal}
           />
           <HitDistributionInput
             label="Upper Legs"
             value={upperLegsWeight}
-            onChange={numberInputEventHandler(dispatch, 'setUpperLegsWeight', 0, 100, [headWeight, thoraxWeight, stomachWeight, armsWeight, lowerLegsWeight])}
+            onChange={numberInputEventHandler(dispatch, 'setUpperLegsWeight', 0, 100, [headWeight, chestWeight, stomachWeight, armsWeight, lowerLegsWeight])}
             weightsTotal={weightsTotal}
           />
           <HitDistributionInput
             label="Lower Legs"
             value={lowerLegsWeight}
-            onChange={numberInputEventHandler(dispatch, 'setLowerLegsWeight', 0, 100, [headWeight, thoraxWeight, stomachWeight, armsWeight, upperLegsWeight])}
+            onChange={numberInputEventHandler(dispatch, 'setLowerLegsWeight', 0, 100, [headWeight, chestWeight, stomachWeight, armsWeight, upperLegsWeight])}
             weightsTotal={weightsTotal}
           />
         </div>
@@ -120,7 +120,7 @@ function numberInputEventHandler(
     'setTargetHp'
     | 'setDistance'
     | 'setHeadWeight'
-    | 'setThoraxWeight'
+    | 'setChestWeight'
     | 'setArmsWeight'
     | 'setStomachWeight'
     | 'setUpperLegsWeight'

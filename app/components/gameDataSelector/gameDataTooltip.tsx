@@ -3,13 +3,15 @@ import { OL } from "@/app/components/ui/list";
 import { LI } from "@/app/components/ui/listItem";
 import { P } from "@/app/components/ui/paragraph";
 import { Tooltip } from "@/app/components/ui/tooltip";
-import { FC } from "react";
+import { CSSProperties, FC } from "react";
 
 const GameDataTooltip: FC<{
   className: string,
+  style: CSSProperties,
   children: React.ReactElement<unknown, any>;
 }> = ({
   className,
+  style,
   children
 }) => {
     return (
@@ -17,6 +19,7 @@ const GameDataTooltip: FC<{
         placement="bottom-end"
         arrow
         className={className}
+        style={style}
         title={
           <>
             <P className="pb-2">

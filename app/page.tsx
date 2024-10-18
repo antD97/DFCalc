@@ -33,12 +33,7 @@ export default function Home() {
       </Box>
 
       <GameDataProvider>
-        <GameDataSelector />
-        <div className="w-1/2 mb-8 mt-16 flex items-center">
-          <div className="grow border-b" />
-          <H level="2" className="px-8 text-4xl">Compare All</H>
-          <div className="grow border-b" />
-        </div>
+        <GameDataSelector className="mb-8" />
         <ToolSwitcher />
       </GameDataProvider>
     </>

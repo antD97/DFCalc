@@ -1,6 +1,6 @@
 {
     "version": 1,
-    "description": "Havoc Warfare Alpha",
+    "description": "Havoc Warfare (Alpha)",
     "lastUpdated": "2024-08-26",
     "credits": "antD",
     "attachments": {
@@ -43,7 +43,7 @@
                 ]
             },
             "Precision Tactical Suppressor": {
-                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "effects": [ { "type": "range multiplier", "amount": 0.16667 } ],
                 "compatibleGuns": [
                     "CAR-15",
                     "PTR-32",
@@ -80,7 +80,7 @@
                 ]
             },
             "AK Practical Suppressor": {
-                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "effects": [ { "type": "range multiplier", "amount": 0.16667 } ],
                 "compatibleGuns": [ "AKS-74", "AK-12", "AKM", "SKS", "SR-3M", "PKM" ]
             },
             "SMG Echo Suppressor": {
@@ -102,7 +102,7 @@
                 "compatibleGuns": [ "PTR-32", "G3" ]
             },
             "G3 Enhanced Standard Barrel Combo": {
-                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "effects": [ { "type": "range multiplier", "amount": 0.16667 } ],
                 "compatibleGuns": [ "PTR-32", "G3" ]
             },
             "AKS-74 Practical Long Barrel Combo": {
@@ -110,7 +110,7 @@
                 "compatibleGuns": [ "AKS-74" ]
             },
             "AKS-74 Practical Standard Barrel Combo": {
-                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "effects": [ { "type": "range multiplier", "amount": 0.16667 } ],
                 "compatibleGuns": [ "AKS-74" ]
             },
             "QBZ95-1 Prac Short Barrel": {
@@ -122,7 +122,7 @@
                 "compatibleGuns": [ "QBZ95-1" ]
             },
             "M4A1 Integral Suppressor": {
-                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "effects": [ { "type": "range multiplier", "amount": 0.16667 } ],
                 "compatibleGuns": [ "M4A1" ],
                 "incompatibleAttachments": [ "muzzle" ]
             },
@@ -131,7 +131,7 @@
                 "compatibleGuns": [ "M4A1", "M16A4" ]
             },
             "M4 Elite Standard Barrel Combo": {
-                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "effects": [ { "type": "range multiplier", "amount": 0.16667 } ],
                 "compatibleGuns": [ "M4A1", "M16A4" ]
             },
             "M4 Elite Short Barrel Combo": {
@@ -139,7 +139,7 @@
                 "compatibleGuns": [ "M4A1", "M16A4" ]
             },
             "M4 Practical Long Barrel Combo": {
-                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "effects": [ { "type": "range multiplier", "amount": 0.16667 } ],
                 "compatibleGuns": [ "M4A1", "M16A4" ]
             },
             "M16A4 Practical Standard Barrel Combo": {
@@ -159,7 +159,7 @@
                 "compatibleGuns": [ "AKM" ]
             },
             "AKM Practical Long Barrel Combo": {
-                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "effects": [ { "type": "range multiplier", "amount": 0.16667 } ],
                 "compatibleGuns": [ "AKM" ]
             },
             "AKM Practical Standard Barrel Combo": {
@@ -171,7 +171,7 @@
                 "compatibleGuns": [ "AKM" ]
             },
             "AKM Elite Long Barrel Combo": {
-                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "effects": [ { "type": "range multiplier", "amount": 0.16667 } ],
                 "compatibleGuns": [ "AKM" ]
             },
             "AKM Beaver Long Barrel Combo": {
@@ -220,7 +220,7 @@
                 "compatibleGuns": [ "K416" ]
             },
             "K416 A8 Barrel Combo": {
-                "effects": [ { "type": "range multiplier", "amount": -0.166666667 } ],
+                "effects": [ { "type": "range multiplier", "amount": -0.16667 } ],
                 "compatibleGuns": [ "K416" ]
             },
             "K416 Elite Heavy Barrel Combo": {
@@ -236,7 +236,7 @@
                 "compatibleGuns": [ "Bizon" ]
             },
             "Bizon Practical Standard Barrel": {
-                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "effects": [ { "type": "range multiplier", "amount": 0.16667 } ],
                 "compatibleGuns": [ "Bizon", "Vityaz" ]
             },
             "Bizon Practical Short Barrel": {
@@ -248,7 +248,7 @@
                 "compatibleGuns": [ "UZI" ]
             },
             "UZI Practical Long Barrel": {
-                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "effects": [ { "type": "range multiplier", "amount": 0.16667 } ],
                 "compatibleGuns": [ "UZI" ]
             },
             "UZI Performance Long Barrel": {
@@ -264,7 +264,7 @@
                 "compatibleGuns": [ "MP5" ]
             },
             "MP5 Long Barrel Combo": {
-                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "effects": [ { "type": "range multiplier", "amount": 0.16667 } ],
                 "compatibleGuns": [ "MP5" ]
             },
             "MP5 Short Barrel Combo": {
@@ -310,7 +310,7 @@
                 "compatibleGuns": [ "Vector" ]
             },
             "AUG Elite Integral Suppressor": {
-                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "effects": [ { "type": "range multiplier", "amount": 0.16667 } ],
                 "compatibleGuns": [ "AUG" ],
                 "incompatibleAttachments": [ "muzzle" ]
             },
@@ -359,7 +359,7 @@
                 "compatibleGuns": [ "M14" ]
             },
             "M14 Practical Standard Barrel": {
-                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "effects": [ { "type": "range multiplier", "amount": 0.16667 } ],
                 "compatibleGuns": [ "M14" ]
             },
             "M14 Practical Ultra-Long Barrel": {
@@ -367,7 +367,7 @@
                 "compatibleGuns": [ "M14" ]
             },
             "SG 552 Heavy Barrel": {
-                "effects": [ { "type": "range multiplier", "amount": 0.166666667 } ],
+                "effects": [ { "type": "range multiplier", "amount": 0.16667 } ],
                 "compatibleGuns": [ "SG 552" ]
             },
             "Mini-14 Enhanced Barrel": {
@@ -696,7 +696,7 @@
             "armMultiplier": 1.0,
             "upperLegMultiplier": 1.0,
             "lowerLegMultiplier": 0.8,
-            "type": "Battle Rifle",
+            "type": "Assault Rifle",
             "characterClass": [ "Support", "Engineer" ]
         },
         "K416": {
@@ -872,7 +872,7 @@
             "armMultiplier": 1.0,
             "upperLegMultiplier": 1.0,
             "lowerLegMultiplier": 1.0,
-            "type": "Battle Rifle",
+            "type": "Assault Rifle",
             "characterClass": [ "Engineer" ]
         },
         "AUG": {
@@ -906,7 +906,7 @@
             "armMultiplier": 1.0,
             "upperLegMultiplier": 1.0,
             "lowerLegMultiplier": 1.0,
-            "type": "Battle Rifle",
+            "type": "Assault Rifle",
             "characterClass": [ "Engineer" ]
         },
         "M7": {
@@ -923,7 +923,7 @@
             "armMultiplier": 1.0,
             "upperLegMultiplier": 1.0,
             "lowerLegMultiplier": 1.0,
-            "type": "Battle Rifle",
+            "type": "Assault Rifle",
             "characterClass": [ "Engineer" ]
         },
         "PKM": {

@@ -1,9 +1,9 @@
 'use client';
 
-import { isInTooltipTitle } from '@/app/components/ui/tooltip'
-import { cva, VariantProps } from 'class-variance-authority'
-import { forwardRef, HTMLAttributes, OlHTMLAttributes } from 'react'
-import { twMerge } from 'tailwind-merge'
+import { useIsInTooltipTitle } from '@/app/components/ui/tooltip';
+import { cva, VariantProps } from 'class-variance-authority';
+import { forwardRef, HTMLAttributes, OlHTMLAttributes } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 const orderedListVariants = cva(
   'list-decimal flex flex-col last:pb-0',
@@ -23,7 +23,7 @@ const orderedListVariants = cva(
 interface OrderedListProps extends OlHTMLAttributes<HTMLOListElement>, VariantProps<typeof orderedListVariants> { }
 
 const OL = forwardRef<HTMLOListElement, OrderedListProps>(({ variant, className, children, ...props }, ref) => {
-  if (!variant && isInTooltipTitle()) { variant = 'tooltip'; }
+  if (useIsInTooltipTitle() && !variant) { variant = 'tooltip'; }
 
   return (
     <ol
@@ -54,7 +54,7 @@ const unorderedListVariants = cva(
 interface UnorderedListProps extends HTMLAttributes<HTMLUListElement>, VariantProps<typeof unorderedListVariants> { }
 
 const UL = forwardRef<HTMLUListElement, UnorderedListProps>(({ variant, className, children, ...props }, ref) => {
-  if (!variant && isInTooltipTitle()) { variant = 'tooltip'; }
+  if (useIsInTooltipTitle() && !variant) { variant = 'tooltip'; }
 
   return (
     <ul
@@ -67,4 +67,7 @@ const UL = forwardRef<HTMLUListElement, UnorderedListProps>(({ variant, classNam
   )
 })
 
-export { OL, orderedListVariants, UL, unorderedListVariants }
+OL.displayName = "OrderedList";
+UL.displayName = "UnorderedList";
+
+export { OL, orderedListVariants, UL, unorderedListVariants };

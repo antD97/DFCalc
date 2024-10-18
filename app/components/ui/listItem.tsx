@@ -1,6 +1,6 @@
 'use client';
 
-import { isInTooltipTitle } from '@/app/components/ui/tooltip'
+import { useIsInTooltipTitle } from '@/app/components/ui/tooltip'
 import { cva, VariantProps } from 'class-variance-authority'
 import { forwardRef, HTMLAttributes } from 'react'
 import { twMerge } from 'tailwind-merge'
@@ -23,7 +23,7 @@ const listItemVariants = cva(
 interface ListItemProps extends HTMLAttributes<HTMLLIElement>, VariantProps<typeof listItemVariants> { }
 
 const LI = forwardRef<HTMLLIElement, ListItemProps>(({ variant, className, children, ...props }, ref) => {
-  if (!variant && isInTooltipTitle()) { variant = 'tooltip'; }
+  if (useIsInTooltipTitle() && !variant) { variant = 'tooltip'; }
 
   return (
     <li
@@ -35,5 +35,7 @@ const LI = forwardRef<HTMLLIElement, ListItemProps>(({ variant, className, child
     </li>
   )
 })
+
+LI.displayName = "ListItem";
 
 export { LI, listItemVariants }

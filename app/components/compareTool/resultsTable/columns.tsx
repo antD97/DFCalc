@@ -8,7 +8,7 @@ export const gunNameColumn = {
 
 export const avgDamageColumn = {
   'short': 'Dmg',
-  'long': 'Average Damage per Shot',
+  'long': 'Damage per Shot',
   'description': 'The average amount of damage dealt per shot using the above settings.',
   'sortDirPreference': 'descending',
   'gunDataPropertyName': ['avgDamage', 'minAvgDamage']

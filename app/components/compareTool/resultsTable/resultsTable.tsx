@@ -28,11 +28,14 @@ const CompareResultsTable: FC = () => {
 
   const [sortMode, setSortMode] = useState<SortMode>({ column: ttkColumn, direction: ttkColumn.sortDirPreference });
 
-  const [result, setResult] = useState<ResultType>(compareAllV1({ gameData, ...compareAllArgs }));
+  const [result, setResult] = useState<ResultType>({});
+
   const debouncedCompareAll = useDebouncedCallback(() => {
     setResult(compareAllV1({ gameData, ...compareAllArgs }))
   }, 1000, { leading: true });
-  useEffect(() => { debouncedCompareAll(); }, [gameData, compareAllArgs]);
+
+  useEffect(() => { debouncedCompareAll(); }, [debouncedCompareAll, gameData, compareAllArgs]);
+
   const sortedResultList = useMemo(() => sortResult(result, sortMode), [result, sortMode]);
 
   const [columnStates, setColumnStates] = useState<ColumnState[]>([
@@ -47,14 +50,14 @@ const CompareResultsTable: FC = () => {
   const fullWidthRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (gameDataState.state === 'loaded') { updateTableColumnWidths(fullWidthRef, columnStates, setColumnStates); }
-  }, []);
+  }, [gameDataState.state, columnStates]);
 
   return (
     <>
       <div ref={fullWidthRef} className="w-full"></div>
 
-      <CustomScroll className="max-h-96 rounded-none sm:rounded-lg">
-        <table className="block">
+      <CustomScroll className="h-96 rounded-none sm:rounded-lg">
+        <table className="min-h-96 flex flex-col">
 
           {/* head */}
           <thead className="block w-fit sticky top-0 bg-neutral-900 z-10">
@@ -81,7 +84,7 @@ const CompareResultsTable: FC = () => {
           </thead>
 
           {/* body */}
-          <tbody className={twMerge(boxVariants({ variant: 'inner', maxWidth: 'none' }), 'p-0 w-fit block shadow-none rounded-none')}>
+          <tbody className={twMerge(boxVariants({ variant: 'inner', maxWidth: 'none' }), 'p-0 w-fit block shadow-none rounded-none grow')}>
 
             {/* gun rows */}
             {sortedResultList.map(([gunName, gunResultData]) => (
@@ -90,6 +93,7 @@ const CompareResultsTable: FC = () => {
                 {/* gun cells */}
                 {columnStates.map(({ column, width }) => (
                   <GunDataCell
+                    key={column.long}
                     column={column}
                     gunName={gunName}
                     gunResultData={gunResultData}
@@ -112,7 +116,7 @@ function sortResult(result: ResultType, sortMode: SortMode) {
       case 'Gun Name':
         compareVal = gunAName.localeCompare(gunBName);
         break;
-      case 'Average Damage per Shot':
+      case 'Damage per Shot':
         compareVal = gunBData.avgDamage - gunAData.avgDamage;
         break;
       case 'Damage per Second':

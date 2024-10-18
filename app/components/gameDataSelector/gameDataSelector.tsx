@@ -11,7 +11,7 @@ import { Label } from "@/app/components/ui/label";
 import { P } from "@/app/components/ui/paragraph";
 import gameDataListSchema from "@/app/gameData/gameDataListSchema";
 import { CircularProgress } from "@mui/material";
-import { FC, HTMLAttributes, useEffect, useRef } from "react";
+import { FC, HTMLAttributes, useCallback, useEffect, useRef } from "react";
 import { IoIosInformationCircle } from "react-icons/io";
 import { twMerge } from "tailwind-merge";
 
@@ -19,23 +19,23 @@ const GameDataSelector: FC<HTMLAttributes<HTMLDivElement>> = ({ className }) => 
   const { gameDataState, loadGameData, setGameDataLoadingState, setGameDataErrorState } = useGameData();
   const loadUrlInput = useRef<HTMLInputElement>(null);
 
-  const loadLatestGameData = async (gameMode: 'Havoc Warfare' | 'Tactical Turmoil') => {
+  const loadLatestGameData = useCallback(async (gameMode: 'Havoc Warfare' | 'Tactical Turmoil') => {
     setGameDataLoadingState();
     const latestGameDataUrlResult = await getLatestGameDataURL(gameMode);
     if (latestGameDataUrlResult.result === 'success') { loadGameData(latestGameDataUrlResult.url); }
     else { setGameDataErrorState(latestGameDataUrlResult.message) }
-  };
+  }, [setGameDataLoadingState, loadGameData, setGameDataErrorState]);
 
   // initial game data load
-  useEffect(() => { loadLatestGameData('Havoc Warfare'); }, []);
+  useEffect(() => { loadLatestGameData('Havoc Warfare'); }, [loadLatestGameData]);
 
   return (
     <Box className={twMerge('flex flex-col self-center w-full', className)} maxWidth="small">
 
-      <div className="relative flex justify-center items-center text-2xl pb-4">
+      <div className="relative mx-auto text-2xl mb-4">
         <H level="3" className="text-2xl">Game Data</H>
-        <GameDataTooltip className="absolute right-0">
-          <button className="absolute right-0"><IoIosInformationCircle /></button>
+        <GameDataTooltip className="absolute ml-1" style={{ left: '100%', top: '50%', transform: 'translateY(-50%)' }}>
+          <button><IoIosInformationCircle /></button>
         </GameDataTooltip>
       </div>
 

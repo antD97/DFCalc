@@ -1,15 +1,14 @@
-import { H } from "@/app/components/ui/header";
 import { UL } from "@/app/components/ui/list";
 import { LI } from "@/app/components/ui/listItem";
 import { P } from "@/app/components/ui/paragraph";
 import { Tooltip } from "@/app/components/ui/tooltip";
 import { GunResultData } from "@/app/util/v1/compareAllV1";
-import { FC } from "react";
+import React, { FC } from "react";
 import { IoIosConstruct } from "react-icons/io";
 
 const GunNameTooltip: FC<{
   gunResultData: GunResultData,
-  children: React.ReactElement<unknown, any>;
+  children: React.ReactElement<unknown, any>
 }> = ({
   gunResultData,
   children
@@ -35,7 +34,7 @@ const GunNameTooltip: FC<{
                 const start = dfm.from.toFixed(1);
                 const end = isLast ? null : allDfm[i + 1].from.toFixed(1);
                 const multiplier = allDfm[i].multiplier;
-                return <LI>{start}{end ? `→${end}` : '+'} meters: x{multiplier}</LI>;
+                return <LI key={i}>{start}{end ? `→${end}` : '+'} meters: {multiplier}x</LI>;
               })}
             </UL>
 
@@ -43,8 +42,20 @@ const GunNameTooltip: FC<{
               (gunResultData.barrel || gunResultData.muzzle) && (<>
                 <P className="pb-0">Attachments <IoIosConstruct className="inline text-amber-500" /></P>
                 <UL>
-                  {gunResultData.barrel && <LI>{gunResultData.barrel.name}</LI>}
-                  {gunResultData.muzzle && <LI>{gunResultData.muzzle.name}</LI>}
+                  {
+                    [gunResultData.barrel, gunResultData.muzzle]
+                      .filter(attachment => attachment !== null)
+                      .map(attachment => {
+
+                        const rangeMultiplier = attachment.data.effects.find(effect => effect.type === 'range multiplier')?.amount ?? 0;
+
+                        let rangeDescription: React.ReactNode | null = null;
+                        if (rangeMultiplier > 0) { rangeDescription = <><br /><i>+{rangeMultiplier}x range</i></> }
+                        else if (rangeMultiplier < 0) { rangeDescription = <><br /><i>{rangeMultiplier}x range</i></> }
+
+                        return <LI key={attachment.name}>{attachment.name}{rangeDescription}</LI>;
+                      })
+                  }
                 </UL>
 
                 <P className="pb-0">Range Multipliers With Attachments <IoIosConstruct className="inline text-amber-500" /></P>
@@ -54,7 +65,7 @@ const GunNameTooltip: FC<{
                     const start = dfm.from.toFixed(1);
                     const end = isLast ? null : allDfm[i + 1].from.toFixed(1);
                     const multiplier = allDfm[i].multiplier;
-                    return <LI>{start}{end ? `→${end}` : '+'} meters: x{multiplier}</LI>;
+                    return <LI key={i}>{start}{end ? `→${end}` : '+'} meters: {multiplier}x</LI>;
                   })}
                 </UL>
               </>)

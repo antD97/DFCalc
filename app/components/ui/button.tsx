@@ -3,12 +3,12 @@ import { ButtonHTMLAttributes, forwardRef } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 const buttonVariants = cva(
-  'shadow active:shadow-none px-4 rounded',
+  'px-4 rounded',
   {
     variants: {
       'variant': {
-        'primary': 'bg-amber-500 disabled:bg-amber-500 hover:bg-amber-400 active:bg-amber-300 text-black',
-        'white': 'bg-neutral-100 disabled:bg-neutral-100 hover:bg-neutral-300 active:bg-neutral-400 text-black',
+        'primary': 'border text-amber-500 border-amber-500 hover:bg-black/30 disabled:opacity-50 disabled:bg-transparent',
+        'white': 'border hover:bg-white/10 disabled:opacity-50 disabled:bg-transparent',
       }
     },
     defaultVariants: {
@@ -19,12 +19,25 @@ const buttonVariants = cva(
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> { }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ variant, className, children, ...props }, ref) => {
-  return (
-    <button ref={ref} className={twMerge(buttonVariants({ variant }), className)} {...props}>
-      {children}
-    </button>
-  )
-})
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ variant, className, ...props }, ref) => (
+  <button ref={ref} className={twMerge(buttonVariants({ variant }), className)} {...props} />
+));
 
-export { Button, buttonVariants };
+interface StateButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> { isEnabled: boolean; }
+
+const StateButton = forwardRef<HTMLButtonElement, StateButtonProps>(({ isEnabled, className, ...props }, ref) => {
+  const cn = isEnabled ? 'text-neutral-900 bg-amber-500 border-transparent hover:bg-amber-500 hover:cursor-default' : 'opacity-50';
+  return (
+    <Button
+      variant="white"
+      className={twMerge(cn, className)}
+      ref={ref}
+      {...props}
+    />
+  );
+});
+
+Button.displayName = "Button";
+StateButton.displayName = "StateButton";
+
+export { Button, StateButton, buttonVariants };

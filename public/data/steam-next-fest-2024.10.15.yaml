@@ -1,0 +1,2846 @@
+version: 1
+description: Tactical Turmoil data from Steam Next Fest; Havoc Warfare data from closed alpha
+lastUpdated: "2024-10-15"
+credits: antD
+attachments:
+  muzzle:
+    Silent Suppressor:
+      effects:
+        - type: range multiplier
+          amount: 0.25
+      compatibleGuns:
+        - CAR-15
+        - PTR-32
+        - AKS-74
+        - QBZ95-1
+        - M4A1
+        - M16A4
+        - AK-12
+        - AKM
+        - SKS
+        - SCAR-H
+        - K416
+        - Bizon
+        - UZI
+        - Vityaz
+        - MP5
+        - SMG-45
+        - SR-3M
+        - P90
+        - Vector
+        - G3
+        - AUG
+        - M7
+        - PKM
+        - M249
+        - M14
+        - SG 552
+        - Mini-14
+        - SVD
+        - SR-25
+        - R93
+        - M700
+        - SV-98
+    Precision Tactical Suppressor:
+      effects:
+        - type: range multiplier
+          amount: 0.16667
+      compatibleGuns:
+        - CAR-15
+        - PTR-32
+        - AKS-74
+        - QBZ95-1
+        - M4A1
+        - M16A4
+        - AK-12
+        - AKM
+        - SKS
+        - SCAR-H
+        - K416
+        - Bizon
+        - UZI
+        - Vityaz
+        - MP5
+        - SMG-45
+        - SR-3M
+        - P90
+        - Vector
+        - G3
+        - AUG
+        - M7
+        - PKM
+        - M249
+        - M14
+        - SG 552
+        - Mini-14
+        - SVD
+        - SR-25
+        - R93
+        - M700
+        - SV-98
+    AK Practical Suppressor:
+      effects:
+        - type: range multiplier
+          amount: 0.16667
+      compatibleGuns:
+        - AKS-74
+        - AK-12
+        - AKM
+        - SKS
+        - SR-3M
+        - PKM
+    SMG Echo Suppressor:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - Bizon
+        - UZI
+        - Vityaz
+        - MP5
+        - SMG-45
+        - P90
+        - Vector
+        - G17
+        - 93R
+    Resonant Sniper Rifle Suppressor:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - SVD
+        - SR-25
+        - R93
+        - M700
+        - SV-98
+        - AWM
+  barrel:
+    G3 Enhanced Long Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - PTR-32
+        - G3
+    G3 Hurricane Short Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: -0.125
+      compatibleGuns:
+        - PTR-32
+        - G3
+    G3 Enhanced Standard Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.16667
+      compatibleGuns:
+        - PTR-32
+        - G3
+    AKS-74 Practical Long Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - AKS-74
+    AKS-74 Practical Standard Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.16667
+      compatibleGuns:
+        - AKS-74
+    QBZ95-1 Prac Short Barrel:
+      effects:
+        - type: range multiplier
+          amount: -0.05
+      compatibleGuns:
+        - QBZ95-1
+    QBZ95-1 Longbow Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - QBZ95-1
+    M4A1 Integral Suppressor:
+      effects:
+        - type: range multiplier
+          amount: 0.16667
+      compatibleGuns:
+        - M4A1
+      incompatibleAttachments:
+        - muzzle
+    M4 Elite Long Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - M4A1
+        - M16A4
+    M4 Elite Standard Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.16667
+      compatibleGuns:
+        - M4A1
+        - M16A4
+    M4 Elite Short Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: -0.125
+      compatibleGuns:
+        - M4A1
+        - M16A4
+    M4 Practical Long Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.16667
+      compatibleGuns:
+        - M4A1
+        - M16A4
+    M16A4 Practical Standard Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: -0.05
+      compatibleGuns:
+        - M16A4
+    AK-12 Elite Bipod Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - AK-12
+    AK-12 Practical Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: -0.125
+      compatibleGuns:
+        - AK-12
+    AKM Performance Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.05
+      compatibleGuns:
+        - AKM
+    AKM Practical Long Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.16667
+      compatibleGuns:
+        - AKM
+    AKM Practical Standard Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: -0.05
+      compatibleGuns:
+        - AKM
+    AKM Beaver Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.125
+      compatibleGuns:
+        - AKM
+    AKM Elite Long Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.16667
+      compatibleGuns:
+        - AKM
+    AKM Beaver Long Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - AKM
+    VSS Tsunami Long Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.25
+      compatibleGuns:
+        - AS Val
+        - VSS
+    M1014 Practical Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.25
+      compatibleGuns:
+        - M1014
+    S12K Practical Long Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.25
+      compatibleGuns:
+        - S12K
+    S12K Elite Precision Long Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.25
+      compatibleGuns:
+        - S12K
+    SKS Elite Ultra-Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - SKS
+    SKS Elite Standard Barrel:
+      effects:
+        - type: range multiplier
+          amount: -0.125
+      compatibleGuns:
+        - SKS
+    SCAR-H Practical Standard Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.05
+      compatibleGuns:
+        - SCAR-H
+    SCAR-H Practical Short Barrel:
+      effects:
+        - type: range multiplier
+          amount: -0.125
+      compatibleGuns:
+        - SCAR-H
+    SCAR-H Practical Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - SCAR-H
+    K416 Short Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: -0.125
+      compatibleGuns:
+        - K416
+    K416 A8 Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: -0.16667
+      compatibleGuns:
+        - K416
+    K416 Elite Heavy Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.05
+      compatibleGuns:
+        - K416
+    K416 A8 Long Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - K416
+    Bizon Practical Ultra-Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.25
+      compatibleGuns:
+        - Bizon
+    Bizon Practical Standard Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.16667
+      compatibleGuns:
+        - Bizon
+        - Vityaz
+    Bizon Practical Short Barrel:
+      effects:
+        - type: range multiplier
+          amount: -0.125
+      compatibleGuns:
+        - Bizon
+        - Vityaz
+    UZI Practical Standard Barrel:
+      effects:
+        - type: range multiplier
+          amount: -0.125
+      compatibleGuns:
+        - UZI
+    UZI Practical Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.16667
+      compatibleGuns:
+        - UZI
+    UZI Performance Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - UZI
+    MP5 Tactical Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.05
+      compatibleGuns:
+        - MP5
+    MP5 Performance Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.05
+      compatibleGuns:
+        - MP5
+    MP5 Long Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.16667
+      compatibleGuns:
+        - MP5
+    MP5 Short Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: -0.125
+      compatibleGuns:
+        - MP5
+      incompatibleAttachments:
+        - muzzle
+    MP5 Integral Suppressor:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - MP5
+      incompatibleAttachments:
+        - muzzle
+    SMG-45 Practical Heavy Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.05
+      compatibleGuns:
+        - SMG-45
+    SMG-45 Practical Short Barrel:
+      effects:
+        - type: range multiplier
+          amount: -0.125
+      compatibleGuns:
+        - SMG-45
+    SMG-45 Practical Ultra-Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - SMG-45
+    P90 Practical Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - P90
+    P90 Elite Heavy Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: -0.125
+      compatibleGuns:
+        - P90
+    Vector Longsword Ultra-Long Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - Vector
+    Vector Rail Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.05
+      compatibleGuns:
+        - Vector
+    Vector Fortress Heavy Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: -0.125
+      compatibleGuns:
+        - Vector
+    AUG Elite Integral Suppressor:
+      effects:
+        - type: range multiplier
+          amount: 0.16667
+      compatibleGuns:
+        - AUG
+      incompatibleAttachments:
+        - muzzle
+    AUG Practical Integral 3x Scope Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.05
+      compatibleGuns:
+        - AUG
+    AUG Practical Standard Barrel:
+      effects:
+        - type: range multiplier
+          amount: -0.125
+      compatibleGuns:
+        - AUG
+    AUG Elite Bipod Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - AUG
+    ASh-12 High Accuracy Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: -0.125
+      compatibleGuns:
+        - ASh-12
+    M7 Elite Ultra-Long Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - M7
+    M7 Practical Long Barrel Combo:
+      effects:
+        - type: range multiplier
+          amount: 0.05
+      compatibleGuns:
+        - M7
+    PKM Practical Short Barrel:
+      effects:
+        - type: range multiplier
+          amount: -0.125
+      compatibleGuns:
+        - PKM
+    PKM Elite Standard Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - PKM
+    M249 Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - M249
+    M249 Short Barrel:
+      effects:
+        - type: range multiplier
+          amount: -0.125
+      compatibleGuns:
+        - M249
+    M14 Practical Short Barrel:
+      effects:
+        - type: range multiplier
+          amount: -0.125
+      compatibleGuns:
+        - M14
+    M14 Practical Standard Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.16667
+      compatibleGuns:
+        - M14
+    M14 Practical Ultra-Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - M14
+    SG 552 Heavy Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.16667
+      compatibleGuns:
+        - SG 552
+    Mini-14 Enhanced Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - Mini-14
+    SVD Practical Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.1875
+      compatibleGuns:
+        - SVD
+    SVD Elite Ultra-Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - SVD
+    SR-25 Practical Short Barrel:
+      effects:
+        - type: range multiplier
+          amount: -0.125
+      compatibleGuns:
+        - SR-25
+    SR-25 Practical Ultra-Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - SR-25
+    SR-25 Practical Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.18
+      compatibleGuns:
+        - SR-25
+    R93 Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - R93
+    R93 Short Barrel:
+      effects:
+        - type: range multiplier
+          amount: -0.18
+      compatibleGuns:
+        - R93
+    SV-98 Light Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.18
+      compatibleGuns:
+        - SV-98
+    SV-98 Ultra-Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - SV-98
+    SV-98 Short Barrel:
+      effects:
+        - type: range multiplier
+          amount: -0.18
+      compatibleGuns:
+        - SV-98
+    AWM Skyline Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - AWM
+    Revolver Practical Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.05
+      compatibleGuns:
+        - Revolver
+    Revolver Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.18
+      compatibleGuns:
+        - Revolver
+    Revolver Short Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.05
+      compatibleGuns:
+        - Revolver
+    93R Practical Light Barrel:
+      effects:
+        - type: range multiplier
+          amount: -0.05
+      compatibleGuns:
+        - 93R
+    93R Practical Heavy Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.05
+      compatibleGuns:
+        - 93R
+    93R Practical Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.18
+      compatibleGuns:
+        - 93R
+    93R Ultra-Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 1.3
+      compatibleGuns:
+        - 93R
+    Desert Eagle Practical Comp. Barrel:
+      effects:
+        - type: range multiplier
+          amount: -0.125
+      compatibleGuns:
+        - Desert Eagle
+    Desert Eagle Practical Long Barrel:
+      effects:
+        - type: range multiplier
+          amount: 0.3
+      compatibleGuns:
+        - Desert Eagle
+guns:
+  CAR-15:
+    type: Assault Rifle
+    caliber: 5.56x45mm
+    fireRate: 632
+  PTR-32:
+    type: Assault Rifle
+    caliber: 7.62x39mm
+    fireRate: 632
+  AKS-74:
+    type: Assault Rifle
+    caliber: 5.45x39mm
+    fireRate: 533
+  QBZ95-1:
+    type: Assault Rifle
+    caliber: 5.8x42mm
+    fireRate: 679
+  M4A1:
+    type: Assault Rifle
+    caliber: 5.56x45mm
+    fireRate: 800
+  M16A4:
+    type: Assault Rifle
+    caliber: 5.56x45mm
+    fireRate: 672
+  AK-12:
+    type: Assault Rifle
+    caliber: 5.45x39mm
+    fireRate: 735
+  AKM:
+    type: Assault Rifle
+    caliber: 7.62x39mm
+    fireRate: 600
+  AS Val:
+    type: Assault Rifle
+    caliber: 9x39mm
+    fireRate: 972
+  M870:
+    type: Shotgun
+    caliber: 12 Gauge
+    fireRate: 67
+  M1014:
+    type: Shotgun
+    caliber: 12 Gauge
+    fireRate: 300
+  S12K:
+    type: Shotgun
+    caliber: 12 Gauge
+    fireRate: 300
+  SKS:
+    type: Marksman Rifle
+    caliber: 7.62x39mm
+    fireRate: 585
+  SCAR-H:
+    type: Assault Rifle
+    caliber: 7.62x51mm
+    fireRate: 585
+  K416:
+    type: Assault Rifle
+    caliber: 5.56x45mm
+    fireRate: 880
+  Bizon:
+    type: Submachine Gun
+    caliber: 9x19mm
+    fireRate: 659
+  UZI:
+    type: Submachine Gun
+    caliber: 9x19mm
+    fireRate: 780
+  Vityaz:
+    type: Submachine Gun
+    caliber: 9x19mm
+    fireRate: 700
+  MP5:
+    type: Submachine Gun
+    caliber: 9x19mm
+    fireRate: 820
+  SMG-45:
+    type: Submachine Gun
+    caliber: .45 ACP
+    fireRate: 605
+  SR-3M:
+    type: Submachine Gun
+    caliber: 9x39mm
+    fireRate: 747
+  P90:
+    type: Submachine Gun
+    caliber: 5.7x28mm
+    fireRate: 898
+  Vector:
+    type: Submachine Gun
+    caliber: .45 ACP
+    fireRate: 1091
+  G3:
+    type: Assault Rifle
+    caliber: 7.62x51mm
+    fireRate: 533
+  AUG:
+    type: Assault Rifle
+    caliber: 5.56x45mm
+    fireRate: 679
+  ASh-12:
+    type: Assault Rifle
+    caliber: 12.7x55mm
+    fireRate: 500
+  M7:
+    type: Assault Rifle
+    caliber: 6.8x51mm
+    fireRate: 649
+  PKM:
+    type: Light Machine Gun
+    caliber: 7.62x54mmR
+    fireRate: 669
+  M249:
+    type: Light Machine Gun
+    caliber: 5.56x45mm
+    fireRate: 858
+  M14:
+    type: Marksman Rifle
+    caliber: 7.62x51
+    fireRate: 727
+  SG 552:
+    type: Assault Rifle
+    caliber: 5.56x45mm
+    fireRate: 906
+  VSS:
+    type: Marksman Rifle
+    caliber: 9x39mm
+    fireRate: 480
+  Mini-14:
+    type: Marksman Rifle
+    caliber: 5.56x45mm
+    fireRate: 590
+  SVD:
+    type: Marksman Rifle
+    caliber: 7.62x54mmR
+    fireRate: 300
+  SR-25:
+    type: Marksman Rifle
+    caliber: 7.62x51mm
+    fireRate: 364
+  R93:
+    type: Sniper Rifle
+    caliber: 7.62x51mm
+    fireRate: 50
+  M700:
+    type: Sniper Rifle
+    caliber: 7.62x51mm
+    fireRate: 48
+  SV-98:
+    type: Sniper Rifle
+    caliber: 7.62x54mmR
+    fireRate: 40
+  AWM:
+    type: Sniper Rifle
+    caliber: .338 Lapua
+    fireRate: 35
+  G18:
+    type: Pistol
+    caliber: 9x19mm
+    fireRate: 1172
+  G17:
+    type: Pistol
+    caliber: 9x19mm
+    fireRate: 462
+  QSZ-92G:
+    type: Pistol
+    caliber: 9x19mm
+    fireRate: 375
+  Revolver:
+    type: Pistol
+    caliber: .357 Magnum
+    fireRate: 182
+  93R:
+    type: Pistol
+    caliber: 9x19mm
+    fireRate: 375
+  Desert Eagle:
+    type: Pistol
+    caliber: .50 AE
+    fireRate: 207
+havocWarfare:
+  guns:
+    CAR-15:
+      characterClass:
+        - Assault
+        - Support
+        - Engineer
+        - Recon
+      damage: 25
+      damageFalloffMultipliers:
+        - from: 30
+          multiplier: 0.85
+        - from: 50
+          multiplier: 0.7
+        - from: 80
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 0.9
+      lowerLegMultiplier: 0.9
+    PTR-32:
+      characterClass:
+        - Assault
+      damage: 28
+      damageFalloffMultipliers:
+        - from: 30
+          multiplier: 0.85
+        - from: 50
+          multiplier: 0.7
+        - from: 80
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 0.8
+      lowerArmMultiplier: 0.8
+      upperLegMultiplier: 0.8
+      lowerLegMultiplier: 0.8
+    AKS-74:
+      characterClass:
+        - Assault
+        - Support
+        - Engineer
+        - Recon
+      damage: 27
+      damageFalloffMultipliers:
+        - from: 30
+          multiplier: 0.8
+        - from: 50
+          multiplier: 0.7
+        - from: 80
+          multiplier: 0.6
+      headMultiplier: 2
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    QBZ95-1:
+      characterClass:
+        - Assault
+      damage: 22
+      damageFalloffMultipliers:
+        - from: 40
+          multiplier: 0.85
+        - from: 70
+          multiplier: 0.7
+        - from: 100
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    M4A1:
+      characterClass:
+        - Assault
+      damage: 20
+      damageFalloffMultipliers:
+        - from: 30
+          multiplier: 0.9
+        - from: 50
+          multiplier: 0.7
+        - from: 80
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    M16A4:
+      characterClass:
+        - Assault
+        - Support
+        - Engineer
+        - Recon
+      damage: 25
+      damageFalloffMultipliers:
+        - from: 30
+          multiplier: 0.85
+        - from: 50
+          multiplier: 0.7
+        - from: 80
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    AK-12:
+      characterClass:
+        - Assault
+      damage: 24
+      damageFalloffMultipliers:
+        - from: 30
+          multiplier: 0.75
+        - from: 50
+          multiplier: 0.7
+        - from: 80
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    AKM:
+      characterClass:
+        - Assault
+      damage: 26
+      damageFalloffMultipliers:
+        - from: 30
+          multiplier: 0.85
+        - from: 50
+          multiplier: 0.7
+        - from: 80
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    AS Val:
+      characterClass:
+        - Assault
+      damage: 20
+      damageFalloffMultipliers:
+        - from: 20
+          multiplier: 0.85
+        - from: 40
+          multiplier: 0.7
+        - from: 60
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 0.8
+      lowerLegMultiplier: 0.8
+    M870:
+      characterClass:
+        - Assault
+        - Support
+        - Engineer
+        - Recon
+      damage: 17
+      numPellets: 8
+      damageFalloffMultipliers:
+        - from: 10
+          multiplier: 0.9
+        - from: 15
+          multiplier: 0.8
+        - from: 20
+          multiplier: 0.3
+        - from: 80
+          multiplier: 0
+          isAffectedByAttachments: false
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    M1014:
+      characterClass:
+        - Assault
+        - Support
+        - Engineer
+        - Recon
+      damage: 15
+      numPellets: 8
+      damageFalloffMultipliers:
+        - from: 6
+          multiplier: 0.9
+        - from: 12
+          multiplier: 0.8
+        - from: 18
+          multiplier: 0.3
+        - from: 50
+          multiplier: 0
+          isAffectedByAttachments: false
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    S12K:
+      characterClass:
+        - Assault
+        - Support
+        - Engineer
+        - Recon
+      damage: 14
+      numPellets: 8
+      damageFalloffMultipliers:
+        - from: 4
+          multiplier: 0.9
+        - from: 8
+          multiplier: 0.7
+        - from: 12
+          multiplier: 0.3
+        - from: 50
+          multiplier: 0
+          isAffectedByAttachments: false
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    SKS:
+      characterClass:
+        - Assault
+        - Recon
+      damage: 27
+      damageFalloffMultipliers:
+        - from: 55
+          multiplier: 0.85
+        - from: 90
+          multiplier: 0.7
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    SCAR-H:
+      characterClass:
+        - Support
+        - Engineer
+      damage: 26
+      damageFalloffMultipliers:
+        - from: 40
+          multiplier: 0.9
+        - from: 70
+          multiplier: 0.75
+      headMultiplier: 1.8
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 0.8
+    K416:
+      characterClass:
+        - Support
+      damage: 21
+      damageFalloffMultipliers:
+        - from: 20
+          multiplier: 0.85
+        - from: 40
+          multiplier: 0.7
+        - from: 60
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 0.8
+      lowerArmMultiplier: 0.8
+      upperLegMultiplier: 0.8
+      lowerLegMultiplier: 0.8
+    Bizon:
+      characterClass:
+        - Support
+      damage: 25
+      damageFalloffMultipliers:
+        - from: 15
+          multiplier: 0.75
+        - from: 25
+          multiplier: 0.65
+        - from: 35
+          multiplier: 0.55
+        - from: 45
+          multiplier: 0.45
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    UZI:
+      characterClass:
+        - Support
+        - Recon
+      damage: 24
+      damageFalloffMultipliers:
+        - from: 15
+          multiplier: 0.75
+        - from: 25
+          multiplier: 0.65
+        - from: 35
+          multiplier: 0.55
+        - from: 45
+          multiplier: 0.45
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    Vityaz:
+      characterClass:
+        - Support
+      damage: 25
+      damageFalloffMultipliers:
+        - from: 15
+          multiplier: 0.75
+        - from: 25
+          multiplier: 0.65
+        - from: 35
+          multiplier: 0.55
+        - from: 45
+          multiplier: 0.45
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    MP5:
+      characterClass:
+        - Support
+      damage: 26
+      damageFalloffMultipliers:
+        - from: 15
+          multiplier: 0.75
+        - from: 25
+          multiplier: 0.6
+        - from: 35
+          multiplier: 0.5
+        - from: 45
+          multiplier: 0.45
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 0.7
+      lowerLegMultiplier: 0.7
+    SMG-45:
+      characterClass:
+        - Support
+        - Recon
+      damage: 26
+      damageFalloffMultipliers:
+        - from: 20
+          multiplier: 0.85
+        - from: 35
+          multiplier: 0.7
+        - from: 50
+          multiplier: 0.6
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 0.925
+      lowerArmMultiplier: 0.925
+      upperLegMultiplier: 0.925
+      lowerLegMultiplier: 0.925
+    SR-3M:
+      characterClass:
+        - Support
+      damage: 27
+      damageFalloffMultipliers:
+        - from: 15
+          multiplier: 0.85
+        - from: 25
+          multiplier: 0.7
+        - from: 35
+          multiplier: 0.6
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    P90:
+      characterClass:
+        - Support
+        - Recon
+      damage: 22
+      damageFalloffMultipliers:
+        - from: 15
+          multiplier: 0.75
+        - from: 25
+          multiplier: 0.65
+        - from: 35
+          multiplier: 0.5
+        - from: 45
+          multiplier: 0.45
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    Vector:
+      characterClass:
+        - Support
+        - Recon
+      damage: 20
+      damageFalloffMultipliers:
+        - from: 15
+          multiplier: 0.75
+        - from: 25
+          multiplier: 0.65
+        - from: 35
+          multiplier: 0.55
+        - from: 45
+          multiplier: 0.45
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 0.9
+      lowerLegMultiplier: 0.9
+    G3:
+      characterClass:
+        - Engineer
+      damage: 26
+      damageFalloffMultipliers:
+        - from: 40
+          multiplier: 0.9
+        - from: 70
+          multiplier: 0.75
+        - from: 100
+          multiplier: 0.6
+      headMultiplier: 2
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    AUG:
+      characterClass:
+        - Engineer
+      damage: 20
+      damageFalloffMultipliers:
+        - from: 40
+          multiplier: 0.9
+        - from: 70
+          multiplier: 0.8
+        - from: 100
+          multiplier: 0.7
+      headMultiplier: 2.5
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    ASh-12:
+      characterClass:
+        - Engineer
+      damage: 34
+      damageFalloffMultipliers:
+        - from: 40
+          multiplier: 0.9
+        - from: 70
+          multiplier: 0.8
+        - from: 100
+          multiplier: 0.6
+      headMultiplier: 1.6
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    M7:
+      characterClass:
+        - Engineer
+      damage: 25
+      damageFalloffMultipliers:
+        - from: 40
+          multiplier: 0.9
+        - from: 70
+          multiplier: 0.75
+        - from: 100
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    PKM:
+      characterClass:
+        - Engineer
+      damage: 25
+      damageFalloffMultipliers:
+        - from: 40
+          multiplier: 0.85
+        - from: 70
+          multiplier: 0.7
+        - from: 100
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 0.8
+      lowerLegMultiplier: 0.8
+    M249:
+      characterClass:
+        - Engineer
+      damage: 20
+      damageFalloffMultipliers:
+        - from: 40
+          multiplier: 0.85
+        - from: 70
+          multiplier: 0.7
+        - from: 100
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 0.8
+      lowerLegMultiplier: 0.8
+    M14:
+      characterClass:
+        - Engineer
+      damage: 27
+      damageFalloffMultipliers:
+        - from: 27
+          multiplier: 0.7
+        - from: 40
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 0.8
+      lowerLegMultiplier: 0.8
+    SG 552:
+      characterClass:
+        - Recon
+      damage: 19
+      damageFalloffMultipliers:
+        - from: 40
+          multiplier: 0.85
+        - from: 70
+          multiplier: 0.7
+        - from: 100
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 0.8
+      lowerLegMultiplier: 0.8
+    VSS:
+      characterClass:
+        - Recon
+      damage: 33
+      damageFalloffMultipliers:
+        - from: 120
+          multiplier: 0.85
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    Mini-14:
+      characterClass:
+        - Recon
+      damage: 25
+      damageFalloffMultipliers:
+        - from: 90
+          multiplier: 0.85
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    SVD:
+      characterClass:
+        - Recon
+      damage: 40
+      damageFalloffMultipliers:
+        - from: 70
+          multiplier: 0.9
+        - from: 90
+          multiplier: 0.625
+      headMultiplier: 1.5
+      abdomenMultiplier: 1
+      shoulderMultiplier: 0.7
+      lowerArmMultiplier: 0.7
+      upperLegMultiplier: 0.7
+      lowerLegMultiplier: 0.7
+    SR-25:
+      characterClass:
+        - Recon
+      damage: 35
+      damageFalloffMultipliers:
+        - from: 90
+          multiplier: 0.85
+      headMultiplier: 1.5
+      abdomenMultiplier: 1
+      shoulderMultiplier: 0.9
+      lowerArmMultiplier: 0.9
+      upperLegMultiplier: 0.9
+      lowerLegMultiplier: 0.9
+    R93:
+      characterClass:
+        - Recon
+      damage: 74
+      damageFalloffMultipliers:
+        - from: 70
+          multiplier: 0.7
+      headMultiplier: 2.4
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    M700:
+      characterClass:
+        - Recon
+      damage: 72
+      damageFalloffMultipliers:
+        - from: 70
+          multiplier: 0.7
+      headMultiplier: 2.4
+      abdomenMultiplier: 1
+      shoulderMultiplier: 0.93
+      lowerArmMultiplier: 0.93
+      upperLegMultiplier: 0.93
+      lowerLegMultiplier: 0.93
+    SV-98:
+      characterClass:
+        - Recon
+      damage: 76
+      damageFalloffMultipliers:
+        - from: 70
+          multiplier: 0.7
+      headMultiplier: 2.4
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    AWM:
+      characterClass:
+        - Recon
+      damage: 85
+      damageFalloffMultipliers:
+        - from: 70
+          multiplier: 0.7
+      headMultiplier: 2.4
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    G18:
+      characterClass:
+        - Assault
+        - Support
+        - Engineer
+        - Recon
+      damage: 19
+      damageFalloffMultipliers:
+        - from: 10
+          multiplier: 0.7
+        - from: 20
+          multiplier: 0.6
+        - from: 30
+          multiplier: 0.5
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 0
+      lowerLegMultiplier: 0
+    G17:
+      characterClass:
+        - Assault
+        - Support
+        - Engineer
+        - Recon
+      damage: 24
+      damageFalloffMultipliers:
+        - from: 27
+          multiplier: 0.75
+        - from: 54
+          multiplier: 0.6
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    QSZ-92G:
+      characterClass:
+        - Assault
+        - Support
+        - Engineer
+        - Recon
+      damage: 25
+      damageFalloffMultipliers:
+        - from: 27
+          multiplier: 0.75
+        - from: 54
+          multiplier: 0.6
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    Revolver:
+      characterClass:
+        - Assault
+        - Support
+        - Engineer
+        - Recon
+      damage: 49
+      damageFalloffMultipliers: []
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    93R:
+      characterClass:
+        - Assault
+        - Support
+        - Engineer
+        - Recon
+      damage: 20
+      damageFalloffMultipliers:
+        - from: 22
+          multiplier: 0.8
+        - from: 44
+          multiplier: 0.65
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    Desert Eagle:
+      characterClass:
+        - Assault
+        - Support
+        - Engineer
+        - Recon
+      damage: 49
+      damageFalloffMultipliers:
+        - from: 35
+          multiplier: 0.85
+        - from: 77.5
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+tacticalTurmoil:
+  ammunition:
+    armorPenetrationFalloffs:
+      low0:
+        level1: 0.4
+        level2: 0.3
+        level3: 0.2
+        level4: 0.2
+        level5: 0.2
+        level6: 0.2
+      low1:
+        level1: 0.6
+        level2: 0.6
+        level3: 0.4
+        level4: 0.3
+        level5: 0.2
+        level6: 0.2
+      low2:
+        level1: 0.7
+        level2: 0.7
+        level3: 0.7
+        level4: 0.5
+        level5: 0.4
+        level6: 0.3
+      medium3:
+        level1: 0.9
+        level2: 0.9
+        level3: 0.9
+        level4: 0.9
+        level5: 0.5
+        level6: 0.4
+      medium4:
+        level1: 1
+        level2: 1
+        level3: 1
+        level4: 1
+        level5: 1
+        level6: 0.6
+      high5:
+        level1: 1.1
+        level2: 1.1
+        level3: 1.1
+        level4: 1.1
+        level5: 1.1
+        level6: 1.1
+      high6:
+        level1: 1.2
+        level2: 1.2
+        level3: 1.2
+        level4: 1.2
+        level5: 1.2
+        level6: 1.2
+      buckshotLow0:
+        level1: 0.4
+        level2: 0.3
+        level3: 0.2
+        level4: 0.15
+        level5: 0.15
+        level6: 0.15
+      buckshotLow1:
+        level1: 0.6
+        level2: 0.6
+        level3: 0.4
+        level4: 0.3
+        level5: 0.2
+        level6: 0.15
+      buckshotMedium3:
+        level1: 0.9
+        level2: 0.9
+        level3: 0.9
+        level4: 0.9
+        level5: 0.43
+        level6: 0.35
+    calibers:
+      .357 Magnum:
+        sameArmorClassDamageMultiplier: 0.75
+        variants:
+          HP:
+            penetrationLevel: 2
+            armorPenetrationFalloff: low2
+            damageRatio: 1
+          JHP:
+            penetrationLevel: 3
+            armorPenetrationFalloff: medium3
+            damageRatio: 1
+          FMJ:
+            penetrationLevel: 4
+            armorPenetrationFalloff: medium4
+            damageRatio: 1
+      .45 ACP:
+        sameArmorClassDamageMultiplier: 0.75
+        variants:
+          HS:
+            penetrationLevel: 1
+            armorPenetrationFalloff: low1
+            damageRatio: 1
+          JHP:
+            penetrationLevel: 2
+            armorPenetrationFalloff: low2
+            damageRatio: 1
+          RIP:
+            penetrationLevel: 0
+            armorPenetrationFalloff: low0
+            damageRatio: 1.3
+          FMJ:
+            penetrationLevel: 3
+            armorPenetrationFalloff: medium3
+            damageRatio: 1
+          AP:
+            penetrationLevel: 4
+            armorPenetrationFalloff: medium4
+            damageRatio: 1
+      .50 AE:
+        sameArmorClassDamageMultiplier: 0.75
+        variants:
+          HP:
+            penetrationLevel: 2
+            armorPenetrationFalloff: low2
+            damageRatio: 1
+          JHP:
+            penetrationLevel: 3
+            armorPenetrationFalloff: medium3
+            damageRatio: 1
+          FMJ:
+            penetrationLevel: 4
+            armorPenetrationFalloff: medium4
+            damageRatio: 1
+      12 Gauge:
+        sameArmorClassDamageMultiplier: 0.75
+        variants:
+          7mm Buckshot:
+            numPellets: 8
+            penetrationLevel: 1
+            armorPenetrationFalloff: buckshotLow1
+            damageRatio: 1
+          Slug GT:
+            penetrationLevel: 2
+            armorPenetrationFalloff: low2
+            damageRatio: 4.5
+          Slug RIP:
+            penetrationLevel: 0
+            armorPenetrationFalloff: low0
+            damageRatio: 5.5
+          8.5mm Buckshot:
+            numPellets: 8
+            penetrationLevel: 0
+            armorPenetrationFalloff: buckshotLow0
+            damageRatio: 1.4
+          Flechette:
+            numPellets: 8
+            penetrationLevel: 3
+            armorPenetrationFalloff: buckshotMedium3
+            damageRatio: 0.7
+          Slug FTX:
+            penetrationLevel: 3
+            armorPenetrationFalloff: medium3
+            damageRatio: 4.5
+          Slug AP-20:
+            penetrationLevel: 4
+            armorPenetrationFalloff: medium4
+            damageRatio: 4.5
+      12.7x55mm:
+        sameArmorClassDamageMultiplier: 0.9
+        variants:
+          PS12A:
+            penetrationLevel: 3
+            armorPenetrationFalloff: medium3
+            damageRatio: 1
+          PS12:
+            penetrationLevel: 4
+            armorPenetrationFalloff: medium4
+            damageRatio: 1
+          PS12B:
+            penetrationLevel: 5
+            armorPenetrationFalloff: high5
+            damageRatio: 1
+      5.45x39mm:
+        sameArmorClassDamageMultiplier: 0.75
+        variants:
+          PRS:
+            penetrationLevel: 1
+            armorPenetrationFalloff: low1
+            damageRatio: 1
+          T:
+            penetrationLevel: 2
+            armorPenetrationFalloff: low2
+            damageRatio: 1
+          PS:
+            penetrationLevel: 3
+            armorPenetrationFalloff: medium3
+            damageRatio: 1
+          BT:
+            penetrationLevel: 4
+            armorPenetrationFalloff: medium4
+            damageRatio: 1
+          BS:
+            penetrationLevel: 5
+            armorPenetrationFalloff: high5
+            damageRatio: 1
+      5.56x45mm:
+        sameArmorClassDamageMultiplier: 0.75
+        variants:
+          RRLP:
+            penetrationLevel: 1
+            armorPenetrationFalloff: low1
+            damageRatio: 1
+          FMJ:
+            penetrationLevel: 2
+            armorPenetrationFalloff: low2
+            damageRatio: 1
+          M855:
+            penetrationLevel: 3
+            armorPenetrationFalloff: medium3
+            damageRatio: 1
+          M855A1:
+            penetrationLevel: 4
+            armorPenetrationFalloff: medium4
+            damageRatio: 1
+          M995:
+            penetrationLevel: 5
+            armorPenetrationFalloff: high5
+            damageRatio: 1
+      5.7x28mm:
+        sameArmorClassDamageMultiplier: 0.75
+        variants:
+          SS198LF:
+            penetrationLevel: 1
+            armorPenetrationFalloff: low1
+            damageRatio: 1
+          SS197SR:
+            penetrationLevel: 2
+            armorPenetrationFalloff: low2
+            damageRatio: 1
+          R37.F:
+            penetrationLevel: 0
+            armorPenetrationFalloff: low0
+            damageRatio: 1.3
+          L191:
+            penetrationLevel: 3
+            armorPenetrationFalloff: medium3
+            damageRatio: 1
+          SS193:
+            penetrationLevel: 4
+            armorPenetrationFalloff: medium4
+            damageRatio: 1
+          SS190:
+            penetrationLevel: 5
+            armorPenetrationFalloff: high5
+            damageRatio: 1
+      5.8x42mm:
+        sameArmorClassDamageMultiplier: 0.75
+        variants:
+          DBP87:
+            penetrationLevel: 2
+            armorPenetrationFalloff: low2
+            damageRatio: 1
+          DVP88:
+            penetrationLevel: 3
+            armorPenetrationFalloff: medium3
+            damageRatio: 1
+          DBP10:
+            penetrationLevel: 4
+            armorPenetrationFalloff: medium4
+            damageRatio: 1
+          DVC12:
+            penetrationLevel: 5
+            armorPenetrationFalloff: high5
+            damageRatio: 1
+      6.8x51mm:
+        sameArmorClassDamageMultiplier: 0.75
+        variants:
+          FMJ:
+            penetrationLevel: 4
+            armorPenetrationFalloff: medium4
+            damageRatio: 1
+          Hybrid:
+            penetrationLevel: 5
+            armorPenetrationFalloff: high5
+            damageRatio: 1
+          AP:
+            penetrationLevel: 6
+            armorPenetrationFalloff: high5
+            damageRatio: 1
+      7.62x39mm:
+        sameArmorClassDamageMultiplier: 0.75
+        variants:
+          LP:
+            penetrationLevel: 1
+            armorPenetrationFalloff: low1
+            damageRatio: 1
+          T45M:
+            penetrationLevel: 2
+            armorPenetrationFalloff: low2
+            damageRatio: 1
+          PS:
+            penetrationLevel: 3
+            armorPenetrationFalloff: medium3
+            damageRatio: 1
+          BP:
+            penetrationLevel: 4
+            armorPenetrationFalloff: medium4
+            damageRatio: 1
+          AP:
+            penetrationLevel: 5
+            armorPenetrationFalloff: high5 # uses armor penetration falloff typical of a penetration level 5 ammunition
+            damageRatio: 1
+      7.62x51mm:
+        sameArmorClassDamageMultiplier: 0.8
+        variants:
+          BPZ:
+            penetrationLevel: 3
+            armorPenetrationFalloff: medium3
+            damageRatio: 1
+          M80:
+            penetrationLevel: 4
+            armorPenetrationFalloff: medium4
+            damageRatio: 1
+          M62:
+            penetrationLevel: 5
+            armorPenetrationFalloff: high5
+            damageRatio: 1
+          M61:
+            penetrationLevel: 6
+            armorPenetrationFalloff: high6
+            damageRatio: 1
+      7.62x54mmR:
+        sameArmorClassDamageMultiplier: 0.75
+        variants:
+          BPZ:
+            penetrationLevel: 3
+            armorPenetrationFalloff: medium3
+            damageRatio: 1
+          LPS:
+            penetrationLevel: 4
+            armorPenetrationFalloff: medium4
+            damageRatio: 1
+          BT:
+            penetrationLevel: 5
+            armorPenetrationFalloff: high5
+            damageRatio: 1
+          SNB:
+            penetrationLevel: 6
+            armorPenetrationFalloff: high6
+            damageRatio: 1
+      9x19mm:
+        sameArmorClassDamageMultiplier: 0.75
+        variants:
+          PSO:
+            penetrationLevel: 1
+            armorPenetrationFalloff: low1
+            damageRatio: 1
+          Pst:
+            penetrationLevel: 2
+            armorPenetrationFalloff: low2
+            damageRatio: 1
+          RIP:
+            penetrationLevel: 0
+            armorPenetrationFalloff: low0
+            damageRatio: 1.3
+          AP6.3:
+            penetrationLevel: 3
+            armorPenetrationFalloff: medium3
+            damageRatio: 1
+          PBP:
+            penetrationLevel: 4
+            armorPenetrationFalloff: medium4
+            damageRatio: 1
+      9x39mm:
+        sameArmorClassDamageMultiplier: 0.75
+        variants:
+          SP5:
+            penetrationLevel: 3
+            armorPenetrationFalloff: medium3
+            damageRatio: 1
+          SP6:
+            penetrationLevel: 4
+            armorPenetrationFalloff: medium3
+            damageRatio: 1
+          BP:
+            penetrationLevel: 5
+            armorPenetrationFalloff: high5
+            damageRatio: 1
+      .338 Lapua:
+        sameArmorClassDamageMultiplier: 0.75
+        variants:
+          AP:
+            penetrationLevel: 7
+            armorPenetrationFalloff: high5 # uses armor penetration falloff typical of a penetration level 5 ammunition
+            damageRatio: 1
+  armor:
+    helmets:
+      Vintage Steel Helmet:
+        level: 1
+        durability: 10
+      Security Helmet:
+        level: 1
+        durability: 10
+      Boonie Hat:
+        level: 1
+        durability: 10
+      H01 Tactical Helmet:
+        level: 2
+        durability: 12
+      DRO Tactical Helmet:
+        level: 2
+        durability: 15
+      Retro Motorcycle Helmet:
+        level: 2
+        durability: 18
+      Outdoor Baseball Cap:
+        level: 1
+        durability: 12
+      MC Ballistic Helmet:
+        level: 2
+        durability: 20
+      Anti-Riot Helmet:
+        level: 3
+        durability: 28
+      H07 Tactical Helmet:
+        level: 3
+        durability: 28
+      DAS Ballistic Helmet:
+        level: 3
+        durability: 40
+      MC201:
+        level: 3
+        durability: 34
+      D6 Tactical Helmet:
+        level: 4
+        durability: 42
+      MHS Tactical Helmet:
+        level: 4
+        durability: 30
+      GT1 Tactical Helmet:
+        level: 4
+        durability: 48
+      DICH Training Helmet:
+        level: 4
+        durability: 4
+      Mask-1 Iron Helmet:
+        level: 5
+        durability: 5
+      H09 Anti-Riot Helmet:
+        level: 5
+        durability: 45
+      GN Heavy Helmet:
+        level: 5
+        durability: 50
+      DICH-1 Tactical Helmet:
+        level: 5
+        durability: 40
+      H70 Elite Helmet:
+        level: 6
+        durability: 55
+    vests:
+      Motorcycle Vest:
+        level: 1
+        durability: 20
+      Security Vest:
+        level: 1
+        durability: 20
+      Nylon Vest:
+        level: 1
+        durability: 25
+      Light Vest:
+        level: 1
+        durability: 30
+      Basic Vest:
+        level: 2
+        durability: 30
+      HT Tactical Vest:
+        level: 2
+        durability: 35
+      TG Tactical Vest:
+        level: 2
+        durability: 40
+      Universal Tactical Vest:
+        level: 2
+        durability: 50
+      Standard Issue Vest:
+        level: 3
+        durability: 50
+      Hvk Fast-Detach Ballistic Vest:
+        level: 3
+        durability: 60
+      TG-H Vest:
+        level: 3
+        durability: 75
+      Marksman Tactical Vest:
+        level: 3
+        durability: 85
+      HMP Strategic Vest:
+        level: 4
+        durability: 80
+      Samurai Vest:
+        level: 4
+        durability: 80
+      Bee Vest:
+        level: 4
+        durability: 90
+      DT-AVS Vest:
+        level: 4
+        durability: 100
+      MK-2 Tactical Vest:
+        level: 4
+        durability: 110
+      Elite Vest:
+        level: 5
+        durability: 95
+      HVK-II Vest:
+        level: 5
+        durability: 115
+      FS Composite Vest:
+        level: 5
+        durability: 105
+      Heavy Assault Vest:
+        level: 5
+        durability: 125
+      HA-2 Vest:
+        level: 6
+        durability: 115
+  guns:
+    CAR-15:
+      damage: 25
+      armorPenetration: 32
+      damageFalloffMultipliers:
+        - from: 30
+          multiplier: 0.85
+        - from: 50
+          multiplier: 0.7
+        - from: 80
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 0.9
+      lowerLegMultiplier: 0.9
+    PTR-32:
+      damage: 28
+      armorPenetration: 36
+      damageFalloffMultipliers:
+        - from: 30
+          multiplier: 0.85
+        - from: 50
+          multiplier: 0.7
+        - from: 80
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 0.8
+      lowerArmMultiplier: 0.8
+      upperLegMultiplier: 0.8
+      lowerLegMultiplier: 0.8
+    AKS-74:
+      damage: 27
+      armorPenetration: 36
+      damageFalloffMultipliers:
+        - from: 30
+          multiplier: 0.8
+        - from: 50
+          multiplier: 0.7
+        - from: 80
+          multiplier: 0.6
+      headMultiplier: 2
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    QBZ95-1:
+      damage: 22
+      armorPenetration: 42
+      damageFalloffMultipliers:
+        - from: 40
+          multiplier: 0.85
+        - from: 70
+          multiplier: 0.7
+        - from: 100
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    M4A1:
+      damage: 20
+      armorPenetration: 32
+      damageFalloffMultipliers:
+        - from: 30
+          multiplier: 0.9
+        - from: 50
+          multiplier: 0.7
+        - from: 80
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    M16A4:
+      damage: 25
+      armorPenetration: 39
+      damageFalloffMultipliers:
+        - from: 30
+          multiplier: 0.85
+        - from: 50
+          multiplier: 0.7
+        - from: 80
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    AK-12:
+      damage: 24
+      armorPenetration: 41
+      damageFalloffMultipliers:
+        - from: 30
+          multiplier: 0.75
+        - from: 50
+          multiplier: 0.7
+        - from: 80
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    AKM:
+      damage: 26
+      armorPenetration: 42
+      damageFalloffMultipliers:
+        - from: 30
+          multiplier: 0.85
+        - from: 50
+          multiplier: 0.7
+        - from: 80
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    AS Val:
+      damage: 20
+      armorPenetration: 48
+      damageFalloffMultipliers:
+        - from: 20
+          multiplier: 0.85
+        - from: 40
+          multiplier: 0.7
+        - from: 60
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 0.8
+      lowerLegMultiplier: 0.8
+    M870:
+      damage: 17
+      armorPenetration: 16
+      damageFalloffMultipliers:
+        - from: 10
+          multiplier: 0.9
+        - from: 15
+          multiplier: 0.8
+        - from: 20
+          multiplier: 0.3
+        - from: 80
+          multiplier: 0
+          isAffectedByAttachments: false
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    M1014:
+      damage: 15
+      armorPenetration: 16
+      damageFalloffMultipliers:
+        - from: 6
+          multiplier: 0.9
+        - from: 12
+          multiplier: 0.8
+        - from: 18
+          multiplier: 0.3
+        - from: 50
+          multiplier: 0
+          isAffectedByAttachments: false
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    S12K:
+      damage: 14
+      armorPenetration: 16
+      damageFalloffMultipliers:
+        - from: 4
+          multiplier: 0.9
+        - from: 8
+          multiplier: 0.7
+        - from: 12
+          multiplier: 0.3
+        - from: 50
+          multiplier: 0
+          isAffectedByAttachments: false
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    SKS:
+      damage: 27
+      armorPenetration: 40
+      damageFalloffMultipliers:
+        - from: 55
+          multiplier: 0.85
+        - from: 90
+          multiplier: 0.7
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    SCAR-H:
+      damage: 26
+      armorPenetration: 38
+      damageFalloffMultipliers:
+        - from: 40
+          multiplier: 0.9
+        - from: 70
+          multiplier: 0.75
+      headMultiplier: 1.8
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 0.8
+    K416:
+      damage: 21
+      armorPenetration: 35
+      damageFalloffMultipliers:
+        - from: 20
+          multiplier: 0.85
+        - from: 40
+          multiplier: 0.7
+        - from: 60
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 0.8
+      lowerArmMultiplier: 0.8
+      upperLegMultiplier: 0.8
+      lowerLegMultiplier: 0.8
+    Bizon:
+      damage: 25
+      armorPenetration: 35
+      damageFalloffMultipliers:
+        - from: 15
+          multiplier: 0.75
+        - from: 25
+          multiplier: 0.65
+        - from: 35
+          multiplier: 0.55
+        - from: 45
+          multiplier: 0.45
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    UZI:
+      damage: 24
+      armorPenetration: 35
+      damageFalloffMultipliers:
+        - from: 15
+          multiplier: 0.75
+        - from: 25
+          multiplier: 0.65
+        - from: 35
+          multiplier: 0.55
+        - from: 45
+          multiplier: 0.45
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    Vityaz:
+      damage: 25
+      armorPenetration: 35
+      damageFalloffMultipliers:
+        - from: 15
+          multiplier: 0.75
+        - from: 25
+          multiplier: 0.65
+        - from: 35
+          multiplier: 0.55
+        - from: 45
+          multiplier: 0.45
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    MP5:
+      damage: 26
+      armorPenetration: 32
+      damageFalloffMultipliers:
+        - from: 15
+          multiplier: 0.75
+        - from: 25
+          multiplier: 0.6
+        - from: 35
+          multiplier: 0.5
+        - from: 45
+          multiplier: 0.45
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 0.7
+      lowerLegMultiplier: 0.7
+    SMG-45:
+      damage: 26
+      armorPenetration: 40
+      damageFalloffMultipliers:
+        - from: 20
+          multiplier: 0.85
+        - from: 35
+          multiplier: 0.7
+        - from: 50
+          multiplier: 0.6
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 0.925
+      lowerArmMultiplier: 0.925
+      upperLegMultiplier: 0.925
+      lowerLegMultiplier: 0.925
+    SR-3M:
+      damage: 27
+      armorPenetration: 48
+      damageFalloffMultipliers:
+        - from: 15
+          multiplier: 0.85
+        - from: 25
+          multiplier: 0.7
+        - from: 35
+          multiplier: 0.6
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    P90:
+      damage: 22
+      armorPenetration: 35
+      damageFalloffMultipliers:
+        - from: 15
+          multiplier: 0.75
+        - from: 25
+          multiplier: 0.65
+        - from: 35
+          multiplier: 0.5
+        - from: 45
+          multiplier: 0.45
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    Vector:
+      damage: 20
+      armorPenetration: 28
+      damageFalloffMultipliers:
+        - from: 15
+          multiplier: 0.75
+        - from: 25
+          multiplier: 0.65
+        - from: 35
+          multiplier: 0.55
+        - from: 45
+          multiplier: 0.45
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 0.9
+      lowerLegMultiplier: 0.9
+    G3:
+      damage: 26
+      armorPenetration: 42
+      damageFalloffMultipliers:
+        - from: 40
+          multiplier: 0.9
+        - from: 70
+          multiplier: 0.75
+        - from: 100
+          multiplier: 0.6
+      headMultiplier: 2
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    AUG:
+      damage: 20
+      armorPenetration: 35
+      damageFalloffMultipliers:
+        - from: 40
+          multiplier: 0.9
+        - from: 70
+          multiplier: 0.8
+        - from: 100
+          multiplier: 0.7
+      headMultiplier: 2.5
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    ASh-12:
+      damage: 34
+      armorPenetration: 55
+      damageFalloffMultipliers:
+        - from: 40
+          multiplier: 0.9
+        - from: 70
+          multiplier: 0.8
+        - from: 100
+          multiplier: 0.6
+      headMultiplier: 1.6
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    M7:
+      damage: 25
+      armorPenetration: 42
+      damageFalloffMultipliers:
+        - from: 40
+          multiplier: 0.9
+        - from: 70
+          multiplier: 0.75
+        - from: 100
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    PKM:
+      damage: 25
+      armorPenetration: 42
+      damageFalloffMultipliers:
+        - from: 40
+          multiplier: 0.85
+        - from: 70
+          multiplier: 0.7
+        - from: 100
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 0.8
+      lowerLegMultiplier: 0.8
+    M249:
+      damage: 20
+      armorPenetration: 38
+      damageFalloffMultipliers:
+        - from: 40
+          multiplier: 0.85
+        - from: 70
+          multiplier: 0.7
+        - from: 100
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 0.8
+      lowerLegMultiplier: 0.8
+    M14:
+      damage: 27
+      armorPenetration: 41
+      damageFalloffMultipliers:
+        - from: 27
+          multiplier: 0.7
+        - from: 40
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 0.8
+      lowerLegMultiplier: 0.8
+    SG 552:
+      damage: 19
+      armorPenetration: 30
+      damageFalloffMultipliers:
+        - from: 40
+          multiplier: 0.85
+        - from: 70
+          multiplier: 0.7
+        - from: 100
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 0.8
+      lowerLegMultiplier: 0.8
+    VSS:
+      damage: 33
+      armorPenetration: 48
+      damageFalloffMultipliers:
+        - from: 120
+          multiplier: 0.85
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    Mini-14:
+      damage: 25
+      armorPenetration: 38
+      damageFalloffMultipliers:
+        - from: 90
+          multiplier: 0.85
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    SVD:
+      damage: 40
+      armorPenetration: 52
+      damageFalloffMultipliers:
+        - from: 70
+          multiplier: 0.9
+        - from: 90
+          multiplier: 0.625
+      headMultiplier: 1.5
+      abdomenMultiplier: 1
+      shoulderMultiplier: 0.7
+      lowerArmMultiplier: 0.7
+      upperLegMultiplier: 0.7
+      lowerLegMultiplier: 0.7
+    SR-25:
+      damage: 35
+      armorPenetration: 55
+      damageFalloffMultipliers:
+        - from: 90
+          multiplier: 0.85
+      headMultiplier: 1.5
+      abdomenMultiplier: 1
+      shoulderMultiplier: 0.9
+      lowerArmMultiplier: 0.9
+      upperLegMultiplier: 0.9
+      lowerLegMultiplier: 0.9
+    R93:
+      damage: 74
+      armorPenetration: 53
+      damageFalloffMultipliers:
+        - from: 70
+          multiplier: 0.7
+      headMultiplier: 2.4
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    M700:
+      damage: 72
+      armorPenetration: 53
+      damageFalloffMultipliers:
+        - from: 70
+          multiplier: 0.7
+      headMultiplier: 2.4
+      abdomenMultiplier: 1
+      shoulderMultiplier: 0.93
+      lowerArmMultiplier: 0.93
+      upperLegMultiplier: 0.93
+      lowerLegMultiplier: 0.93
+    SV-98:
+      damage: 76
+      armorPenetration: 53
+      damageFalloffMultipliers:
+        - from: 70
+          multiplier: 0.7
+      headMultiplier: 2.4
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    AWM:
+      damage: 85
+      armorPenetration: 10
+      damageFalloffMultipliers:
+        - from: 70
+          multiplier: 0.7
+      headMultiplier: 2.4
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    G18:
+      damage: 19
+      armorPenetration: 16
+      damageFalloffMultipliers:
+        - from: 10
+          multiplier: 0.7
+        - from: 20
+          multiplier: 0.6
+        - from: 30
+          multiplier: 0.5
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 0
+      lowerLegMultiplier: 0
+    G17:
+      damage: 24
+      armorPenetration: 25
+      damageFalloffMultipliers:
+        - from: 27
+          multiplier: 0.75
+        - from: 54
+          multiplier: 0.6
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    QSZ-92G:
+      damage: 25
+      armorPenetration: 32
+      damageFalloffMultipliers:
+        - from: 27
+          multiplier: 0.75
+        - from: 54
+          multiplier: 0.6
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    Revolver:
+      damage: 49
+      armorPenetration: 39
+      damageFalloffMultipliers: []
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    93R:
+      damage: 20
+      armorPenetration: 32
+      damageFalloffMultipliers:
+        - from: 22
+          multiplier: 0.8
+        - from: 44
+          multiplier: 0.65
+      headMultiplier: 1.25
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1
+    Desert Eagle:
+      damage: 49
+      armorPenetration: 34
+      damageFalloffMultipliers:
+        - from: 35
+          multiplier: 0.85
+        - from: 77.5
+          multiplier: 0.6
+      headMultiplier: 1.9
+      abdomenMultiplier: 1
+      shoulderMultiplier: 1
+      lowerArmMultiplier: 1
+      upperLegMultiplier: 1
+      lowerLegMultiplier: 1

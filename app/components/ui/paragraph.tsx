@@ -1,9 +1,9 @@
 'use client';
 
-import { VariantProps, cva } from 'class-variance-authority'
-import { HTMLAttributes, forwardRef } from 'react'
-import { twMerge } from 'tailwind-merge'
-import { isInTooltipTitle } from './tooltip'
+import { VariantProps, cva } from 'class-variance-authority';
+import { HTMLAttributes, forwardRef } from 'react';
+import { twMerge } from 'tailwind-merge';
+import { useIsInTooltipTitle } from './tooltip';
 
 const paragraphVariants = cva(
   '',
@@ -23,7 +23,7 @@ const paragraphVariants = cva(
 interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement>, VariantProps<typeof paragraphVariants> { }
 
 const P = forwardRef<HTMLHeadingElement, ParagraphProps>(({ variant, className, children, ...props }, ref) => {
-  if (!variant && isInTooltipTitle()) { variant = 'tooltip'; }
+  if (useIsInTooltipTitle() && !variant) { variant = 'tooltip'; }
 
   return (
     <p
@@ -36,4 +36,6 @@ const P = forwardRef<HTMLHeadingElement, ParagraphProps>(({ variant, className, 
   )
 })
 
-export { P, paragraphVariants }
+P.displayName = "Paragraph";
+
+export { P, paragraphVariants };

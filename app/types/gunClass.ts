@@ -1,7 +1,6 @@
 
-type GunType = 'Assault Rifle'
+type GunClass = 'Assault Rifle'
   | 'Marksman Rifle'
-  | 'Battle Rifle'
   | 'Submachine Gun'
   | 'Light Machine Gun'
   | 'Marksman Rifle'
@@ -9,4 +8,4 @@ type GunType = 'Assault Rifle'
   | 'Pistol'
   | 'Shotgun';
 
-export default GunType;
+export default GunClass;

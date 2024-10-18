@@ -1,9 +1,9 @@
 'use client';
 
-import { isInTooltipTitle } from '@/app/components/ui/tooltip'
-import { VariantProps, cva } from 'class-variance-authority'
-import { HTMLAttributes, forwardRef } from 'react'
-import { twMerge } from 'tailwind-merge'
+import { useIsInTooltipTitle } from '@/app/components/ui/tooltip';
+import { VariantProps, cva } from 'class-variance-authority';
+import { HTMLAttributes, forwardRef } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 const headerVariants = cva(
   '',
@@ -26,7 +26,7 @@ interface HeaderProps extends HTMLAttributes<HTMLHeadingElement>, VariantProps<t
 }
 
 const H = forwardRef<HTMLHeadingElement, HeaderProps>(({ level, variant, className, ...props }, ref) => {
-  if (!variant && isInTooltipTitle()) { variant = 'tooltip'; }
+  if (useIsInTooltipTitle() && !variant) { variant = 'tooltip'; }
   const cn = twMerge(headerVariants({ variant }), className);
 
   switch (level) {
@@ -39,4 +39,6 @@ const H = forwardRef<HTMLHeadingElement, HeaderProps>(({ level, variant, classNa
   }
 })
 
-export { H, headerVariants }
+H.displayName = "Header";
+
+export { H, headerVariants };

@@ -5,6 +5,7 @@ import { CompareToolDataProvider } from "@/app/components/compareTool/compareToo
 import { useGameData } from "@/app/components/gameDataContext";
 import InspectTool from "@/app/components/inspectTool";
 import { Box } from "@/app/components/ui/box";
+import { Button } from "@/app/components/ui/button";
 import { H } from "@/app/components/ui/header";
 import { P } from "@/app/components/ui/paragraph";
 import { ButtonHTMLAttributes, FC, useState } from "react";
@@ -20,13 +21,15 @@ const ToolSwitcher: FC = () => {
       {
         gameDataState.state === 'loaded' ? (
           <>
-            <div className="max-w-screen-sm w-full flex justify-around text-2xl pb-4 lg:max-w-none">
+            <div className="max-w-screen-sm w-2/3 flex justify-around items-center text-2xl pb-8 gap-8 lg:max-w-none">
+              <div className="grow border-b" />
               <ToolButton isSelected={currentTool === 'compare'} onClick={() => { setCurrentTool('compare') }}>
                 Compare
               </ToolButton>
               <ToolButton isSelected={currentTool === 'inspect'} onClick={() => { setCurrentTool('inspect') }}>
-                Inspect
+                Scenario
               </ToolButton>
+              <div className="grow border-b" />
             </div>
             {currentTool === 'compare' && <CompareToolDataProvider><CompareTool /></CompareToolDataProvider>}
             {currentTool === 'inspect' && <InspectTool />}
@@ -45,8 +48,9 @@ const ToolSwitcher: FC = () => {
 };
 
 const ToolButton: FC<ButtonHTMLAttributes<HTMLButtonElement> & { isSelected: boolean }> = ({ isSelected, ...props }) => (
-  <button
-    className={`px-4 py-2 border rounded-lg ${isSelected ? 'text-amber-500 border border-amber-500' : 'text-white border-transparent hover:border-white'}`}
+  <Button
+    variant={isSelected ? 'primary' : 'white'}
+    className={`py-2 rounded-lg hover:bg-transparent ${isSelected ? 'hover:cursor-default' : 'border-transparent hover:border-white'}`}
     {...props}
   />
 );

@@ -23,7 +23,7 @@ export default function RootLayout({
           <main className="flex-grow w-full flex flex-col items-center max-w-screen-lg">
             {children}
           </main>
-          <footer className="self-center justify-self-end flex gap-x-4 pt-4">
+          <footer className="self-center justify-self-end flex gap-x-4 pt-8">
             <A href="issues" className="no-underline text-white/50 hover:text-white hover:no-underline">Issues</A>
             <A href="contribute" className="no-underline text-white/50 hover:text-white hover:no-underline">Contribute</A>
             <A href="https://github.com/antD97/DFCalc" className="no-underline text-white/50 hover:text-white hover:no-underline">Source</A>
